@@ -51,18 +51,6 @@ export default function AdminLoginPage() {
     }
   }
 
-  const handleDemoLogin = () => {
-    setUsername("admin")
-    setPassword("admin")
-    // Auto-submit after a brief delay
-    setTimeout(() => {
-      const form = document.querySelector('form') as HTMLFormElement
-      if (form) {
-        form.requestSubmit()
-      }
-    }, 100)
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="w-full max-w-md">
@@ -164,31 +152,10 @@ export default function AdminLoginPage() {
               </Button>
             </form>
 
-            {/* Demo Login */}
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-red-500/20" />
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-zinc-950 text-gray-400">
-                  Quick Access
-                </span>
-              </div>
-            </div>
-
-            <Button
-              type="button"
-              onClick={handleDemoLogin}
-              variant="outline"
-              className="w-full border-red-500/50 hover:bg-red-500/10 text-red-400 h-12"
-            >
-              Use Demo Credentials
-            </Button>
-
-            {/* Info */}
-            <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4">
-              <p className="text-sm text-red-300 text-center">
-                <strong>Demo Login:</strong> admin / admin
+            {/* Security Notice */}
+            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4">
+              <p className="text-sm text-yellow-300 text-center">
+                <strong>Security:</strong> Change default credentials in .env.local
               </p>
             </div>
           </CardContent>
