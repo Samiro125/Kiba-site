@@ -276,7 +276,7 @@ const products = [
     game: "Counter-Strike: Global Offensive",
     image: "/images/cs2-main.png",
     prices: [
-      { duration: "1 month", amount: "$5.99", originalAmount: "$12.99" },
+      { duration: "1 month", amount: "$4.99", originalAmount: "$12.99" },
       { duration: "lifetime", amount: "$17.99", originalAmount: "$29.99" },
     ],
     rating: 4.9,
