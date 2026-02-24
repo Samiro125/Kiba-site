@@ -1,207 +1,319 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Search, Filter, ArrowLeft, Zap, Shield, CheckCircle, Monitor, ArrowRight, Grid, List, Sparkles } from "lucide-react"
+import { Search, Filter, ArrowLeft } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Product } from "@/lib/types"
-import { Badge } from "@/components/ui/badge"
 
-const categories = ["All", "Game Cheat", "Spoofer", "Account", "Tool"]
+const products = [
+  {
+    id: "fortnite",
+    title: "FORTNITE",
+    game: "Fortnite",
+    image: "/images/fortnitee.png",
+    price: "$14.65",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "rust",
+    title: "RUST",
+    game: "Rust",
+    image: "/images/rustt.png",
+    price: "$14.65",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "valorant",
+    title: "VALORANT",
+    game: "Valorant",
+    image: "/images/kiba-cheats-banner-20valo.webp",
+    price: "$16.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "r6-siege",
+    title: "RAINBOW SIX SIEGE",
+    game: "R6 Siege",
+    image: "/images/r6666.png",
+    price: "$15.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "battlefield",
+    title: "BATTLEFIELD 6",
+    game: "Battlefield",
+    image: "/images/bf6-20main.png",
+    price: "$14.65",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "apex",
+    title: "APEX LEGENDS",
+    game: "Apex",
+    image: "/images/apex-20-282-29.png",
+    price: "$14.65",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "arc-raiders",
+    title: "ARC RAIDERS",
+    game: "Arc Raiders",
+    image: "/images/arc-20raiders.png",
+    price: "$12.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "temp-spoofer",
+    title: "TEMP SPOOFER",
+    game: "Spoofer",
+    image: "/images/temp.jpg",
+    price: "$5.99",
+    rating: 5,
+    category: "Spoofer",
+  },
+  {
+    id: "perm-spoofer",
+    title: "PERM SPOOFER",
+    game: "Spoofer",
+    image: "/images/perm.webp",
+    price: "$8.99",
+    rating: 5,
+    category: "Spoofer",
+  },
+  {
+    id: "cod",
+    title: "CALL OF DUTY",
+    game: "Call of Duty",
+    image: "/images/cod.png",
+    price: "$13.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "csgo",
+    title: "CS:GO",
+    game: "Counter-Strike",
+    image: "/images/cs2-main.png",
+    price: "$13.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "minecraft",
+    title: "MINECRAFT",
+    game: "Minecraft",
+    image: "/images/minecraft-vmx.webp",
+    price: "$13.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "marvel-rivals",
+    title: "MARVEL RIVALS",
+    game: "Marvel Rivals",
+    image: "/images/marvel-rivals-vmx.webp",
+    price: "$14.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "fivem",
+    title: "FIVEM",
+    game: "FiveM / GTA V",
+    image: "/images/fivem.png",
+    price: "$14.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "accounts",
+    title: "ACCOUNTS",
+    game: "Accounts",
+    image: "/images/accounts.png",
+    price: "$9.99",
+    rating: 5,
+    category: "Accounts",
+  },
+]
 
 export default function ProductsPage() {
-  const [products, setProducts] = useState<Product[]>([])
-  const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
-
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const res = await fetch("/api/products")
-        if (res.ok) {
-          const data = await res.json()
-          setProducts(data)
-        }
-      } catch (error) {
-        console.error("Failed to fetch products", error)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchProducts()
-  }, [])
+  const [showFilterMenu, setShowFilterMenu] = useState(false)
 
   const filteredProducts = products.filter(
-    (product) => {
-      const matchesSearch = (product.name?.toLowerCase() || "").includes(searchQuery.toLowerCase()) ||
-        (product.game?.toLowerCase() || "").includes(searchQuery.toLowerCase())
-      const matchesCategory = selectedCategory === "All" || product.category === selectedCategory
-      return matchesSearch && matchesCategory
-    }
+    (product) =>
+      product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.game.toLowerCase().includes(searchQuery.toLowerCase()),
   )
 
   return (
-    <div className="flex min-h-screen flex-col bg-transparent selection:bg-red-500/30 overflow-hidden text-left">
-      <div className="fixed inset-0 pointer-events-none z-0">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-red-600/5 rounded-full blur-[200px]" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-red-900/5 rounded-full blur-[180px]" />
+    <div className="flex min-h-screen flex-col bg-black">
+      {/* Red Gradient Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-red-950/50 via-black to-black" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-red-500/10 rounded-full blur-3xl" />
       </div>
+      
+      {/* Main Content */}
+      <main className="flex-1 pt-20 relative z-10">
+        <div className="container px-6 py-12">
+          {/* Back to Home */}
+          <Link
+            href="/"
+            className="mb-8 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Home
+          </Link>
 
-      <main className="flex-1 pt-32 pb-40 relative z-10">
-        <div className="container mx-auto px-6 max-w-7xl">
+          {/* Page Header */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold text-red-500 mb-6">All Products</h1>
 
-          {/* Hero Section */}
-          <div className="mb-20 space-y-6">
-            <Link href="/" className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.3em] text-zinc-600 hover:text-red-500 transition-colors group">
-              <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform" />
-              Store Protocol
-            </Link>
-            <h1 className="text-6xl md:text-8xl font-black text-white italic tracking-tighter uppercase leading-none">
-              Software <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-red-500 to-white">Repository</span>
-            </h1>
-          </div>
-
-          {/* Filter Bar */}
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12 p-8 rounded-[2rem] bg-zinc-900/40 border border-white/5 backdrop-blur-2xl">
-            <div className="flex flex-wrap items-center gap-3">
-              {categories.map(cat => (
-                <Button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  variant="ghost"
-                  className={`h-12 px-6 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${selectedCategory === cat
-                      ? "bg-red-600 text-white shadow-xl shadow-red-900/40"
-                      : "text-zinc-500 hover:text-zinc-200 hover:bg-white/5"
-                    }`}
-                >
-                  {cat}
-                </Button>
-              ))}
-            </div>
-
-            <div className="w-full lg:w-96 relative group">
-              <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-600 group-focus-within:text-red-500 transition-colors" />
-              <Input
-                placeholder="FILTER BY GAME OR MODULE..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="h-14 bg-black/40 border-white/5 rounded-xl pl-12 text-[10px] font-black tracking-[0.2em] text-zinc-400 focus:border-red-500/40 transition-all uppercase"
-              />
-            </div>
-          </div>
-
-          {/* Products List */}
-          {loading ? (
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map(i => (
-                <div key={i} className="aspect-[4/5] rounded-[2.5rem] bg-zinc-900/40 animate-pulse border border-white/5" />
-              ))}
-            </div>
-          ) : (
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {filteredProducts.map((product) => {
-                const out = product.totalStock === 0
-                return (
-                  <Link key={product.id} href={`/products/${product.id}`} className="group relative">
-                    <Card className="rounded-[2.5rem] border border-white/5 bg-zinc-900/20 backdrop-blur-3xl overflow-hidden transition-all duration-700 hover:border-red-500/30 hover:-translate-y-2 group-hover:shadow-[0_40px_100px_rgba(220,38,38,0.1)]">
-                      <div className="relative aspect-[4/5] overflow-hidden">
-                        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/20 to-transparent z-10" />
-                        <Image
-                          src={product.image || "/placeholder.svg"}
-                          alt={product.name}
-                          fill
-                          className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                        />
-
-                        <div className="absolute top-8 left-8 z-20 flex gap-2">
-                          <Badge className="bg-white text-black font-black text-[8px] px-3 py-1 rounded-full border-none">
-                            {product.category}
-                          </Badge>
-                          {out && (
-                            <Badge className="bg-red-600 text-white font-black text-[8px] px-3 py-1 rounded-full border-none shadow-lg shadow-red-900/40">
-                              OUT OF STOCK
-                            </Badge>
-                          )}
-                        </div>
-
-                        <div className="absolute top-8 right-8 z-20">
-                          <div className="w-10 h-10 rounded-xl bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white">
-                            <Sparkles className="w-4 h-4 transition-transform group-hover:rotate-12" />
-                          </div>
-                        </div>
-
-                        {/* Hover Overlay Info */}
-                        <div className="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-                      </div>
-
-                      <div className="p-10 relative z-20 space-y-6">
-                        <div className="space-y-1">
-                          <p className="text-[9px] font-black text-red-600 uppercase tracking-[0.4em]">{product.game}</p>
-                          <h3 className="text-3xl font-black text-white italic tracking-tighter uppercase">{product.name}</h3>
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                          <div className="flex flex-col">
-                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Pricing Model</span>
-                            <span className="text-2xl font-black text-white italic tracking-tighter">
-                              ${product.durations && product.durations.length > 0
-                                ? Math.min(...product.durations.map(d => d.price)).toFixed(2)
-                                : product.price.toFixed(2)}
-                            </span>
-                          </div>
-
-                          <div className="flex flex-col items-end">
-                            <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Inventory Status</span>
-                            <span className={`text-[10px] font-black uppercase tracking-widest ${out ? 'text-red-500' : 'text-green-500'}`}>
-                              {out ? 'Depleted' : `${product.totalStock} Active Keys`}
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="pt-4 flex items-center gap-4">
-                          <Button className="flex-1 h-14 rounded-2xl bg-white text-black hover:bg-red-600 hover:text-white font-black uppercase tracking-widest text-[10px] transition-all duration-300">
-                            View Modules
-                          </Button>
-                          <div className="w-14 h-14 rounded-2xl bg-zinc-800/80 border border-white/5 flex items-center justify-center text-zinc-400 group-hover:bg-red-600/10 group-hover:text-red-500 transition-all">
-                            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                          </div>
-                        </div>
-                      </div>
-                    </Card>
-                  </Link>
-                )
-              })}
-            </div>
-          )}
-
-          {/* Empty State */}
-          {!loading && filteredProducts.length === 0 && (
-            <div className="py-40 text-center space-y-6 flex flex-col items-center">
-              <div className="w-24 h-24 rounded-[2rem] bg-zinc-900 border border-white/5 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-red-600/5 blur-2xl" />
-                <Search className="h-10 w-10 text-zinc-800" />
-              </div>
-              <div className="space-y-2">
-                <h3 className="text-3xl font-black text-white italic tracking-tighter uppercase">No Modules Extracted</h3>
-                <p className="text-zinc-500 font-bold text-xs uppercase tracking-widest">Your current search query returned 0 results from the repository.</p>
+            {/* Search and Filter */}
+            <div className="flex gap-3">
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-500" />
+                <Input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-zinc-900 border-zinc-800 pl-10 text-white placeholder:text-gray-500 focus-visible:ring-red-500"
+                />
               </div>
               <Button
-                onClick={() => { setSearchQuery(""); setSelectedCategory("All"); }}
                 variant="outline"
-                className="border-white/5 bg-white/5 text-white font-black text-[10px] tracking-widest uppercase h-12 px-8 rounded-xl"
+                onClick={() => setShowFilterMenu(!showFilterMenu)}
+                className="border-zinc-800 bg-zinc-900 text-white hover:bg-zinc-800 hover:text-white"
               >
-                Reset Store Protocol
+                <Filter className="mr-2 h-4 w-4" />
+                Filter
               </Button>
+            </div>
+          </div>
+
+          {/* Products Grid */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredProducts.map((product) => (
+              <Link key={product.id} href={`/products/${product.id}`} className="animate-fade-in" style={{ animationDelay: `${products.indexOf(product) * 0.05}s`, animationFillMode: "both" }}>
+                <Card className="group overflow-hidden border-zinc-800 bg-zinc-900/50 backdrop-blur transition-all duration-500 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/15 hover:-translate-y-2 cursor-pointer hover-border-glow">
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={product.image || "/placeholder.svg"}
+                      alt={product.title}
+                      width={1050}
+                      height={1050}
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-white bg-red-600/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                        View Product
+                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="mb-2 font-bold text-white group-hover:text-red-500 transition-all duration-300 group-hover:translate-x-1">
+                      {product.title}
+                    </h3>
+                    <div className="mb-2 flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="h-4 w-4 fill-yellow-400 transition-all duration-300 group-hover:scale-110 group-hover:fill-yellow-300" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
+                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-lg font-bold text-green-500 transition-all duration-300 group-hover:text-green-400 group-hover:scale-110 origin-left">{product.price}</span>
+                      <span className="text-xs text-gray-400 transition-colors duration-300 group-hover:text-zinc-300">{product.category}</span>
+                    </div>
+                  </div>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          {filteredProducts.length === 0 && (
+            <div className="py-12 text-center">
+              <p className="text-gray-400">No products found matching your search.</p>
             </div>
           )}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-zinc-800 bg-black py-8">
+        <div className="container px-6">
+          <div className="grid gap-8 md:grid-cols-4">
+            <div>
+              <h3 className="mb-4 text-lg font-bold text-white">KIBACHEATS</h3>
+              <p className="text-sm text-gray-400">
+                Providing high-quality gaming enhancements since 2018. Our mission is to improve your daily gaming
+                experience.
+              </p>
+            </div>
+            <div>
+              <h4 className="mb-4 text-sm font-semibold text-white">Quick Links</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>
+                  <Link href="/" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">
+                    Products
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/status" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">
+                    Status
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/reviews" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">
+                    Reviews
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 text-sm font-semibold text-white">Games</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>Fortnite</li>
+                <li>Rust</li>
+                <li>Valorant</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 text-sm font-semibold text-white">Contact Us</h4>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>+1 (555) 456-7890</li>
+                <li>support@kibacheats.com</li>
+                <li>Join our Discord for faster support</li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-zinc-800 pt-8 text-center">
+            <p className="text-sm text-gray-400">© 2025 KIBA CHEATS. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
