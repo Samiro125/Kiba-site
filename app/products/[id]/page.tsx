@@ -1361,18 +1361,29 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         if (selectedPlan === 2) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_d5f0b2c9d1ac5abead44a4f3fe952f4f")
                         if (selectedPlan === 3) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_0d25afe42f6e5b063580c9f0cb819011")
                         return
-                      } else if (actualId === "csgo" || actualId === "minecraft" || actualId === "marvel-rivals" || actualId === "dead-by-daylight" || actualId === "bf6") {
-                        // CS:GO, Minecraft, Marvel Rivals, Dead by Daylight, BF6 use Storrik checkout
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        const variantIds = [
-                          "var_34c4467e47cc9d1768e7374e15f9a214", // 1 week
-                          "var_81d4d2cf6b8c3c9eba72c0ce44a614a5", // 1 month
-                          "var_6d10d745980b73bdda5c9b3fddfa9d67", // lifetime
-                        ]
-                        w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", variantIds[selectedPlan] || variantIds[0])
-                        return
+} else if (actualId === "csgo") {
+  // CS:GO uses Storrik checkout with dedicated variant IDs (2 plans: 1 month, lifetime)
+  const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
+  if (!w.storrik) return
+  w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
+  const variantIds = [
+  "var_aba2e9c8e344db1d44a5823e3c7dbef1", // 1 month
+  "var_240673484e2e727572300cfb62d8aafc", // lifetime
+  ]
+  w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", variantIds[selectedPlan] || variantIds[0])
+  return
+  } else if (actualId === "minecraft" || actualId === "marvel-rivals" || actualId === "dead-by-daylight" || actualId === "bf6") {
+  // Minecraft, Marvel Rivals, Dead by Daylight, BF6 use Storrik checkout
+  const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
+  if (!w.storrik) return
+  w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
+  const variantIds = [
+  "var_34c4467e47cc9d1768e7374e15f9a214", // 1 week
+  "var_81d4d2cf6b8c3c9eba72c0ce44a614a5", // 1 month
+  "var_6d10d745980b73bdda5c9b3fddfa9d67", // lifetime
+  ]
+  w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", variantIds[selectedPlan] || variantIds[0])
+  return
                       } else if (actualId === "accounts") {
                         // Accounts use Storrik checkout modal
                         const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
