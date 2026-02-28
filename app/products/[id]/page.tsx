@@ -18,7 +18,7 @@ const products = [
     id: "fortnite",
     name: "FORTNITE CHEAT",
     game: "Fortnite",
-    image: "/images/fortnitee.png",
+    image: "/images/fortnite-extra.png",
     prices: [
       { duration: "1 day", amount: "$7.99", originalAmount: "$14.99" },
       { duration: "1 week", amount: "$23.99", originalAmount: "$39.99", popular: true },
@@ -45,159 +45,10 @@ const products = [
     ],
   },
   {
-    id: "rust",
-    name: "RUST CHEAT",
-    game: "Rust",
-    image: "/images/rustt.png",
-    prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
-      { duration: "1 week", amount: "$27.99", originalAmount: "$44.99", popular: true },
-      { duration: "1 month", amount: "$59.99", originalAmount: "$89.99" },
-      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true },
-    ],
-    rating: 4.8,
-    totalReviews: 1089,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "20/11/2024" },
-      { label: "Anti-Cheat System", value: "EAC" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "ESP for players, animals, and resources",
-      "Aimbot with adjustable FOV and smoothing",
-      "No recoil for all weapons",
-      "Item ESP for loot and containers",
-      "Silent melee attacks",
-      "Admin flags detection",
-      "Customizable colors and filters",
-    ],
-  },
-  {
-    id: "valorant",
-    name: "VALORANT CHEAT",
-    game: "Valorant",
-    image: "/images/kiba-cheats-banner-20valo.webp",
-    prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
-      { duration: "1 week", amount: "$27.99", originalAmount: "$44.99", popular: true },
-      { duration: "1 month", amount: "$57.99", originalAmount: "$89.99" },
-      { duration: "lifetime", amount: "$94.99", originalAmount: "$149.99" },
-    ],
-    rating: 4.9,
-    totalReviews: 1367,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "23/11/2024" },
-      { label: "Anti-Cheat System", value: "Vanguard" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Precision aimbot with bone selection",
-      "ESP with player boxes and health",
-      "Triggerbot with customizable delay",
-      "Recoil control system",
-      "Agent glow and outline ESP",
-      "Visibility checks",
-      "Stream-proof overlay",
-    ],
-  },
-  {
-    id: "apex",
-    name: "APEX LEGENDS CHEAT",
-    game: "Apex Legends",
-    image: "/images/apex-new.png",
-    prices: [
-      { duration: "1 day", amount: "$7.99", originalAmount: "$14.99" },
-      { duration: "1 week", amount: "$19.99", originalAmount: "$34.99", popular: true },
-      { duration: "1 month", amount: "$43.99", originalAmount: "$69.99" },
-      { duration: "lifetime", amount: "$74.99", originalAmount: "$119.99" },
-    ],
-    rating: 4.7,
-    totalReviews: 1143,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "21/11/2024" },
-      { label: "Anti-Cheat System", value: "EAC" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Advanced aimbot with prediction",
-      "ESP for players and items",
-      "Glow ESP for legends",
-      "No recoil system",
-      "2D radar overlay",
-      "Spectator list",
-      "Item filter customization",
-    ],
-  },
-  {
-    id: "r6",
-    name: "RAINBOW SIX SIEGE CHEAT",
-    game: "Rainbow Six Siege",
-    image: "/images/r6666.png",
-    prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
-      { duration: "1 week", amount: "$29.99", originalAmount: "$49.99", popular: true },
-      { duration: "1 month", amount: "$59.99", originalAmount: "$89.99" },
-      { duration: "lifetime", amount: "$89.99", originalAmount: "$149.99" },
-    ],
-    rating: 4.8,
-    totalReviews: 967,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "19/11/2024" },
-      { label: "Anti-Cheat System", value: "BattleEye" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Aimbot with smooth targeting",
-      "ESP showing operators through walls",
-      "Gadget ESP for traps and equipment",
-      "No recoil for all weapons",
-      "Crosshair customization",
-      "Team identification",
-      "Distance-based filtering",
-    ],
-  },
-  {
-    id: "bf6",
-    name: "BATTLEFIELD 6 CHEAT",
-    game: "Battlefield 6",
-    image: "/images/bf6-20main.png",
-    prices: [
-      { duration: "1 week", amount: "$13.99", originalAmount: "$24.99" },
-      { duration: "1 month", amount: "$24.99", originalAmount: "$39.99" },
-      { duration: "lifetime", amount: "$44.99", originalAmount: "$69.99" },
-    ],
-    rating: 4.6,
-    totalReviews: 834,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "18/11/2024" },
-      { label: "Anti-Cheat System", value: "FairFight" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Aimbot for infantry and vehicles",
-      "ESP for players and vehicles",
-      "Projectile prediction",
-      "No spread and no recoil",
-      "Vehicle ESP with health",
-      "Explosive warnings",
-      "3D radar system",
-    ],
-  },
-  {
     id: "arc-raiders",
     name: "ARC RAIDERS CHEAT",
     game: "Arc Raiders",
-    image: "/images/arc-raiders-new.png",
+    image: "/images/arc-raiders-extra.png",
     prices: [
       { duration: "1 day", amount: "$7.99", originalAmount: "$14.99" },
       { duration: "1 week", amount: "$23.99", originalAmount: "$39.99", popular: true },
@@ -244,7 +95,7 @@ const products = [
     id: "call-of-duty",
     name: "CALL OF DUTY CHEAT",
     game: "Call of Duty",
-    image: "/images/cod.png",
+    image: "/images/cod-extra.png",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
       { duration: "1 week", amount: "$13.99", originalAmount: "$24.99", popular: true },
@@ -268,121 +119,6 @@ const products = [
       "UAV jammer detection",
       "Customizable crosshair",
       "Instant delivery and 24/7 support",
-    ],
-  },
-  {
-    id: "csgo",
-    name: "CS:GO CHEAT",
-    game: "Counter-Strike: Global Offensive",
-    image: "/images/cs2-main.png",
-    prices: [
-      { duration: "1 month", amount: "$4.99", originalAmount: "$12.99" },
-      { duration: "lifetime", amount: "$17.99", originalAmount: "$29.99" },
-    ],
-    rating: 4.9,
-    totalReviews: 1521,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "27/11/2024" },
-      { label: "Anti-Cheat System", value: "VAC" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Advanced aimbot with RCS",
-      "ESP for players and weapons",
-      "Skin changer for all weapons",
-      "Bunny hop automation",
-      "Rank reveal system",
-      "Flash reduction",
-      "Radar hack with bomb timer",
-    ],
-  },
-  {
-    id: "minecraft",
-    name: "MINECRAFT CHEAT",
-    game: "Minecraft",
-    image: "/images/minecraft-vmx.webp",
-    prices: [
-      { duration: "1 week", amount: "$13.99", originalAmount: "$24.99" },
-      { duration: "1 month", amount: "$24.99", originalAmount: "$39.99" },
-      { duration: "lifetime", amount: "$44.99", originalAmount: "$69.99" },
-    ],
-    rating: 4.9,
-    totalReviews: 1678,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "28/11/2024" },
-      { label: "Anti-Cheat System", value: "VARIOUS" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "X-Ray for ores and chests",
-      "Fly and speed hacks",
-      "Kill aura with reach",
-      "Auto-mine and auto-farm",
-      "Inventory management",
-      "Nuker for fast mining",
-      "Compatible with most servers",
-    ],
-  },
-  {
-    id: "dead-by-daylight",
-    name: "DEAD BY DAYLIGHT CHEAT",
-    game: "Dead by Daylight",
-    image: "/images/dbd-vmx.webp",
-    prices: [
-      { duration: "1 week", amount: "$13.99", originalAmount: "$24.99" },
-      { duration: "1 month", amount: "$24.99", originalAmount: "$39.99" },
-      { duration: "lifetime", amount: "$44.99", originalAmount: "$69.99" },
-    ],
-    rating: 4.7,
-    totalReviews: 845,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "28/11/2024" },
-      { label: "Anti-Cheat System", value: "EAC" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Survivor ESP with distance",
-      "Killer ESP and aura detection",
-      "Generator and hook locations",
-      "Totem and chest ESP",
-      "Exit gate markers",
-      "Skill check assistance",
-      "Customizable ESP colors",
-    ],
-  },
-  {
-    id: "marvel-rivals",
-    name: "MARVEL RIVALS CHEAT",
-    game: "Marvel Rivals",
-    image: "/images/marvel-rivals-vmx.webp",
-    prices: [
-      { duration: "1 week", amount: "$13.99", originalAmount: "$24.99" },
-      { duration: "1 month", amount: "$24.99", originalAmount: "$39.99" },
-      { duration: "lifetime", amount: "$44.99", originalAmount: "$69.99" },
-    ],
-    rating: 4.8,
-    totalReviews: 923,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Last Updated", value: "28/11/2024" },
-      { label: "Anti-Cheat System", value: "PROPRIETARY" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Aimbot with hero targeting",
-      "ESP for all heroes",
-      "Ability cooldown tracker",
-      "Ultimate charge indicator",
-      "No recoil system",
-      "Hero highlight ESP",
-      "Team status overlay",
     ],
   },
   {
@@ -418,7 +154,7 @@ const products = [
     id: "perm-spoofer",
     name: "PERM SPOOFER",
     game: "Universal",
-    image: "/images/perm-spoofer-red.jpg",
+    image: "/images/perm-spoofer-extra.jpg",
     prices: [
       { duration: "one-time", amount: "$13.99", originalAmount: "$19.99" },
       { duration: "lifetime", amount: "$24.99", originalAmount: "$34.99" },
@@ -448,7 +184,7 @@ const products = [
     id: "temp-spoofer",
     name: "TEMP SPOOFER",
     game: "Universal",
-    image: "/images/temp-spoofer-green.jpg",
+    image: "/images/temp-spoofer-extra.jpg",
     prices: [
       { duration: "3 day", amount: "$7.99", originalAmount: "$12.99" },
       { duration: "1 week", amount: "$9.99", originalAmount: "$14.99" },
@@ -515,31 +251,7 @@ const relatedProducts = [
     id: "fortnite",
     title: "Fortnite Cheats",
     game: "Fortnite",
-    image: "/images/fortnitee.png",
-    price: "$7.99",
-    badge: "Undetected",
-  },
-  {
-    id: "rust",
-    title: "Rust Cheats",
-    game: "Rust",
-    image: "/images/rustt.png",
-    price: "$7.99",
-    badge: "Undetected",
-  },
-  {
-    id: "r6",
-    title: "Rainbow Six Siege Cheats",
-    game: "Rainbow Six Siege",
-    image: "/images/r6666.png",
-    price: "$7.99",
-    badge: "Undetected",
-  },
-  {
-    id: "bf6",
-    title: "Battlefield 6 Cheats",
-    game: "Battlefield 6",
-    image: "/images/bf6-20main.png",
+    image: "/images/fortnite-extra.png",
     price: "$7.99",
     badge: "Undetected",
   },
@@ -547,15 +259,13 @@ const relatedProducts = [
     id: "arc-raiders",
     title: "Arc Raiders Cheats",
     game: "Arc Raiders",
-    image: "/images/arc-raiders-new.png",
+    image: "/images/arc-raiders-extra.png",
     price: "$7.99",
     badge: "Undetected",
   },
 ]
 
 const productIdMap: Record<string, string> = {
-  "r6-siege": "r6",
-  battlefield: "bf6",
 }
 
 export default function ProductPage({ params }: { params: { id: string } }) {
@@ -1254,9 +964,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   onClick={() => {
                     // Products with direct Shopify checkout
                     const shopifyProducts = [
-                      "valorant", "temp-spoofer", "apex", "r6", "rust", 
+                      "temp-spoofer",
                       "perm-spoofer", "fortnite", "call-of-duty", "accounts",
-                      "csgo", "minecraft", "marvel-rivals", "dead-by-daylight", "bf6"
+
                     ]
                     const isArcDelta = actualId === "arc-raiders" && arcVariant === "delta"
                     const isArcFlo = actualId === "arc-raiders" && arcVariant === "flo"
@@ -1264,17 +974,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     if (isArcDelta || isArcFlo || shopifyProducts.includes(actualId)) {
                       let checkoutUrls: string[] = []
                       
-                      if (actualId === "valorant") {
-                        // Valorant uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_38208c3d47cf3e4655261be6ce8d1be1", "var_700ebfaef0c177276900353d8af81b74")
-                        if (selectedPlan === 1) w.storrik.pay("prod_38208c3d47cf3e4655261be6ce8d1be1", "var_06b4d1bf7e3cf5c4c14add979cb8f22a")
-                        if (selectedPlan === 2) w.storrik.pay("prod_38208c3d47cf3e4655261be6ce8d1be1", "var_2c7f9947db0fc509e6f2daeefa05cb8d")
-                        if (selectedPlan === 3) w.storrik.pay("prod_38208c3d47cf3e4655261be6ce8d1be1", "var_ca1f255023952eeffd219aaa96fd03ae")
-                        return
-                      } else if (isArcDelta) {
+                      if (isArcDelta) {
                         // Arc Raiders Delta uses Storrik checkout modal
                         const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
                         if (!w.storrik) return
@@ -1361,29 +1061,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         if (selectedPlan === 2) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_d5f0b2c9d1ac5abead44a4f3fe952f4f")
                         if (selectedPlan === 3) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_0d25afe42f6e5b063580c9f0cb819011")
                         return
-} else if (actualId === "csgo") {
-  // CS:GO uses Storrik checkout with dedicated variant IDs (2 plans: 1 month, lifetime)
-  const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-  if (!w.storrik) return
-  w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-  const variantIds = [
-  "var_aba2e9c8e344db1d44a5823e3c7dbef1", // 1 month
-  "var_240673484e2e727572300cfb62d8aafc", // lifetime
-  ]
-  w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", variantIds[selectedPlan] || variantIds[0])
-  return
-  } else if (actualId === "minecraft" || actualId === "marvel-rivals" || actualId === "dead-by-daylight" || actualId === "bf6") {
-  // Minecraft, Marvel Rivals, Dead by Daylight, BF6 use Storrik checkout
-  const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-  if (!w.storrik) return
-  w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-  const variantIds = [
-  "var_34c4467e47cc9d1768e7374e15f9a214", // 1 week
-  "var_81d4d2cf6b8c3c9eba72c0ce44a614a5", // 1 month
-  "var_6d10d745980b73bdda5c9b3fddfa9d67", // lifetime
-  ]
-  w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", variantIds[selectedPlan] || variantIds[0])
-  return
                       } else if (actualId === "accounts") {
                         // Accounts use Storrik checkout modal
                         const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
@@ -1525,41 +1202,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 "https://www.fanbasis.com/agency-checkout/antweaks/gLZzk", // 1 month
                 "https://www.fanbasis.com/agency-checkout/antweaks/wmVWr", // lifetime
               ][selectedPlan]
-            : actualId === "valorant"
-              ? [
-                  "https://xyaniu.com/products/val-kiba?variant=56646571131224", // 1 day
-                  "https://xyaniu.com/products/val-kiba?variant=56646571163992", // 1 week
-                  "https://xyaniu.com/products/val-kiba?variant=56646571196760", // 1 month
-                  "https://xyaniu.com/products/val-kiba?variant=56646571229528", // lifetime
-                ][selectedPlan]
-              : actualId === "r6"
-              ? [
-                  "https://www.fanbasis.com/agency-checkout/antweaks/Gv5Q3", // 1 day
-                  "https://www.fanbasis.com/agency-checkout/antweaks/6RrA7", // 1 week
-                  "https://www.fanbasis.com/agency-checkout/antweaks/7LvBw", // 1 month
-                  "https://www.fanbasis.com/agency-checkout/antweaks/86wDl", // lifetime
-                ][selectedPlan]
-              : actualId === "apex"
-                ? [
-                    "https://www.fanbasis.com/agency-checkout/antweaks/4QR4k", // 1 day
-                    "https://www.fanbasis.com/agency-checkout/antweaks/Q0Gx0", // 1 week
-                    "https://www.fanbasis.com/agency-checkout/antweaks/RoJyO", // 1 month
-                    "https://www.fanbasis.com/agency-checkout/antweaks/yryn6", // lifetime
-                  ][selectedPlan]
-                : actualId === "rust"
-                ? rustVariant === "delta"
-                  ? [
-                      "https://www.fanbasis.com/agency-checkout/antweaks/WLOzn", // 1 day
-                      "https://www.fanbasis.com/agency-checkout/antweaks/2vNXW", // 1 week
-                      "https://www.fanbasis.com/agency-checkout/antweaks/32X39", // 1 month
-                      "https://www.fanbasis.com/agency-checkout/antweaks/4R32k", // lifetime
-                    ][selectedPlan]
-                  : [
-                      "https://www.fanbasis.com/agency-checkout/antweaks/jZQjP", // 1 week
-                      "https://www.fanbasis.com/agency-checkout/antweaks/k8QkN", // 1 month
-                      "https://www.fanbasis.com/agency-checkout/antweaks/lxQlg", // lifetime
-                    ][selectedPlan]
-                : actualId === "arc-raiders"
+            : actualId === "arc-raiders"
                   ? arcVariant === "delta"
                     ? [
                         "https://xyaniu.com/products/arc-rd-kiba-delta?variant=56646554354008", // 1 day
@@ -1578,31 +1221,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         "https://www.fanbasis.com/agency-checkout/antweaks/9QNjY", // 1 month
                         "https://www.fanbasis.com/agency-checkout/antweaks/0V7M3", // lifetime
                       ][selectedPlan]
-                    : actualId === "csgo"
-                      ? [
-                          "https://www.fanbasis.com/agency-checkout/antweaks/ZVnKw", // 1 week
-                          "https://www.fanbasis.com/agency-checkout/antweaks/1rNoV", // 1 month
-                          "https://www.fanbasis.com/agency-checkout/antweaks/2vNp1", // lifetime
-                        ][selectedPlan]
-                      : actualId === "minecraft"
-                        ? [
-                            "https://www.fanbasis.com/agency-checkout/antweaks/zKzoq", // 1 week
-                            "https://www.fanbasis.com/agency-checkout/antweaks/APlx9", // 1 month
-                            "https://www.fanbasis.com/agency-checkout/antweaks/E9pBW", // lifetime
-                          ][selectedPlan]
-                        : actualId === "dead-by-daylight"
-                          ? [
-                              "https://www.fanbasis.com/agency-checkout/antweaks/9QNzB", // 1 week
-                              "https://www.fanbasis.com/agency-checkout/antweaks/gLEqG", // 1 month
-                              "https://www.fanbasis.com/agency-checkout/antweaks/jqKwP", // lifetime
-                            ][selectedPlan]
-                          : actualId === "marvel-rivals"
-                            ? [
-                                "https://www.fanbasis.com/agency-checkout/antweaks/mQjz9", // 1 week
-                                "https://www.fanbasis.com/agency-checkout/antweaks/nrkAW", // 1 month
-                                "https://www.fanbasis.com/agency-checkout/antweaks/pQmDp", // lifetime
-                              ][selectedPlan]
-                            : actualId === "fivem"
+                    : actualId === "fivem"
                               ? [
                                   "https://www.fanbasis.com/agency-checkout/antweaks/jZ09z", // 1 week
                                   "https://www.fanbasis.com/agency-checkout/antweaks/lx29J", // 1 month
@@ -1622,31 +1241,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                                   ][selectedPlan]
                                 : actualId === "accounts"
                                   ? "https://storrik.com" // Accounts use Storrik modal
-                                  
-                                  : actualId === "valorant"
-                                    ? [
-                                        "https://www.fanbasis.com/agency-checkout/antweaks/nrkP5", // 1 week
-                                        "https://www.fanbasis.com/agency-checkout/antweaks/pQmPQ", // 1 month
-                                        "https://www.fanbasis.com/agency-checkout/antweaks/vovk8", // lifetime
-                                      ][selectedPlan]
-                                    : actualId === "bf6"
-                                      ? [
-                                          "https://www.fanbasis.com/agency-checkout/antweaks/N9BrD", // 1 week
-                                          "https://www.fanbasis.com/agency-checkout/antweaks/OyDvY", // 1 month
-                                          "https://www.fanbasis.com/agency-checkout/antweaks/PZEw1", // lifetime
-                                        ][selectedPlan]
-                                      : actualId === "apex"
-                                        ? [
-                                            "https://www.fanbasis.com/agency-checkout/antweaks/Q0Gx0", // 1 week
-                                            "https://www.fanbasis.com/agency-checkout/antweaks/RoJyO", // 1 month
-                                            "https://www.fanbasis.com/agency-checkout/antweaks/VPjDv", // lifetime
-                                          ][selectedPlan]
-                                        : [
-                                            "https://fanbasis.com/agency-checkout/antweaks",
-                                            "https://fanbasis.com/agency-checkout/antweaks",
-                                            "https://fanbasis.com/agency-checkout/antweaks",
-                                            "https://fanbasis.com/agency-checkout/antweaks",
-                                          ][selectedPlan]
+                                  : [
+                                      "https://fanbasis.com/agency-checkout/antweaks",
+                                      "https://fanbasis.com/agency-checkout/antweaks",
+                                      "https://fanbasis.com/agency-checkout/antweaks",
+                                      "https://fanbasis.com/agency-checkout/antweaks",
+                                    ][selectedPlan]
         }
       />
     </div>

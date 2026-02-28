@@ -18,13 +18,14 @@ export function SiteHeader() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center transition-all hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(239,68,68,0.3)] duration-300">
               <Image
-                src="/logo-no-background.png"
-                alt="Kiba Cheats"
-                width={260}
+                src="/images/extra-cheats-logo.png"
+                alt="Extra Services"
+                width={65}
                 height={65}
-                className="h-20 w-auto"
+                className="h-16 w-auto"
                 priority
               />
+              <span className="ml-2 text-xl font-bold text-white tracking-wide">Extra Services</span>
             </Link>
           </div>
 

@@ -46,7 +46,7 @@ export default function Home() {
       id: "fortnite",
       title: "FORTNITE",
       game: "Fortnite",
-      image: "/images/fortnitee.png",
+      image: "/images/fortnite-extra.png",
       price: "$13.99",
       rating: 5,
       color: "from-red-500/20 to-red-900/20",
@@ -55,25 +55,16 @@ export default function Home() {
       id: "temp-spoofer",
       title: "TEMP SPOOFER",
       game: "Spoofer",
-      image: "/images/temp-spoofer-green.jpg",
+      image: "/images/temp-spoofer-extra.jpg",
       price: "$7.99",
       rating: 5,
       color: "from-green-500/20 to-green-900/20",
     },
     {
-      id: "rust",
-      title: "RUST",
-      game: "Rust",
-      image: "/images/rustt.png",
-      price: "$13.99",
-      rating: 5,
-      color: "from-red-500/20 to-orange-900/20",
-    },
-    {
       id: "arc-raiders",
       title: "ARC RAIDERS",
       game: "Arc Raiders",
-      image: "/images/arc-raiders-new.png",
+      image: "/images/arc-raiders-extra.png",
       price: "$13.99",
       rating: 5,
       color: "from-green-500/20 to-green-900/20",
@@ -82,91 +73,19 @@ export default function Home() {
       id: "perm-spoofer",
       title: "PERM SPOOFER",
       game: "Universal Spoofer",
-      image: "/images/perm-spoofer-red.jpg",
+      image: "/images/perm-spoofer-extra.jpg",
       price: "$13.99",
       rating: 5,
       color: "from-red-500/20 to-red-900/20",
-    },
-    {
-      id: "apex",
-      title: "APEX LEGENDS",
-      game: "Apex",
-      image: "/images/apex-new.png",
-      price: "$13.99",
-      rating: 5,
-      color: "from-cyan-500/20 to-cyan-900/20",
     },
     {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       game: "Call of Duty",
-      image: "/images/cod.png",
+      image: "/images/cod-extra.png",
       price: "$13.99",
       rating: 5,
       color: "from-red-500/20 to-red-900/20",
-    },
-    {
-      id: "r6-siege",
-      title: "RAINBOW SIX SIEGE",
-      game: "R6 Siege",
-      image: "/images/r6666.png",
-      price: "$13.99",
-      rating: 5,
-      color: "from-red-500/20 to-red-900/20",
-    },
-    {
-      id: "valorant",
-      title: "VALORANT",
-      game: "Valorant",
-      image: "/images/kiba-cheats-banner-20valo.webp",
-      price: "$13.99",
-      rating: 5,
-      color: "from-red-500/20 to-red-900/20",
-    },
-    {
-      id: "csgo",
-      title: "CS:GO",
-      game: "Counter-Strike",
-      image: "/images/cs2-main.png",
-      price: "$13.99",
-      rating: 5,
-      color: "from-yellow-500/20 to-yellow-900/20",
-    },
-    {
-      id: "minecraft",
-      title: "MINECRAFT",
-      game: "Minecraft",
-      image: "/images/minecraft-vmx.webp",
-      price: "$13.99",
-      rating: 5,
-      color: "from-orange-500/20 to-orange-900/20",
-    },
-    {
-      id: "marvel-rivals",
-      title: "MARVEL RIVALS",
-      game: "Marvel Rivals",
-      image: "/images/marvel-rivals-vmx.webp",
-      price: "$13.99",
-      rating: 5,
-      color: "from-red-500/20 to-red-900/20",
-    },
-    {
-      id: "dead-by-daylight",
-      title: "DEAD BY DAYLIGHT",
-      game: "Dead by Daylight",
-      image: "/images/dbd-vmx.webp",
-      price: "$13.99",
-      rating: 5,
-      color: "from-yellow-500/20 to-yellow-900/20",
-    },
-    {
-      id: "battlefield",
-      title: "BATTLEFIELD 6",
-      game: "Battlefield",
-      image: "/images/bf6-20main.png",
-      price: "$13.99",
-      rating: 5,
-      color: "from-green-500/20 to-green-900/20",
     },
     {
       id: "accounts",
@@ -204,8 +123,8 @@ export default function Home() {
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-12">
               {/* Logo */}
               <div className="mb-4">
-                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">KIBA</h1>
-                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">CHEATS</div>
+                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
+                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
               </div>
 
               {/* Heading */}
@@ -303,7 +222,7 @@ export default function Home() {
                         <span className="text-xl font-bold text-red-400 transition-all duration-300 group-hover:text-red-300 group-hover:scale-110 origin-left">
                           {product.price}
                         </span>
-                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">KIBA Cheats</span>
+                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">Extra Services</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -359,7 +278,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card2:text-white">
-                    "The spoofer saved my account! Got banned before but with KIBA's temp spoofer I'm back in the game
+                    "The spoofer saved my account! Got banned before but with Extra's temp spoofer I'm back in the game
                     with zero issues."
                   </p>
                   <div className="flex items-center gap-3">
@@ -382,7 +301,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card3:text-white">
-                    "Been using KIBA for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using Extra Services for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
@@ -429,7 +348,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "The spoofer saved my account! Got banned before but with KIBA's temp spoofer I'm back in the game
+                    "The spoofer saved my account! Got banned before but with Extra's temp spoofer I'm back in the game
                     with zero issues."
                   </p>
                   <div className="flex items-center gap-3">
@@ -452,7 +371,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "Been using KIBA for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using Extra Services for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
@@ -627,12 +546,13 @@ export default function Home() {
             <div>
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Image
-                  src="/logo-no-background.png"
-                  alt="Kiba Cheats"
-                  width={160}
+                  src="/images/extra-cheats-logo.png"
+                  alt="Extra Services"
+                  width={40}
                   height={40}
                   className="h-10 w-auto"
                 />
+                <span className="text-lg font-bold text-white">Extra Services</span>
               </Link>
               <p className="text-sm text-muted-foreground mb-4 md:mb-0">
                 Providing high-quality gaming enhancements since 2018. Our mission is to improve your gaming experience.
@@ -916,7 +836,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Kiba. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Extra Services. All rights reserved.</p>
             <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
