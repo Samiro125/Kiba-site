@@ -13,15 +13,10 @@ export default function GuidesPage() {
     "Apex Legends",
     "Rainbow Six Siege",
     "Fortnite",
-    "Marvel Rivals",
-    "Dead by Daylight",
     "Rust",
-    "Minecraft",
-    "CS:GO",
     "Valorant",
     "Arc Raiders Delta",
     "Arc Raiders Flo",
-    "Battlefield 6",
   ]
 
   const spooferProducts = ["Temp Spoofer", "Perm Spoofer"]
