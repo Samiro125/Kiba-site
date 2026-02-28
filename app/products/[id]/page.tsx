@@ -156,8 +156,8 @@ const products = [
     game: "Universal",
     image: "/images/perm-spoofer-extra.jpg",
     prices: [
-      { duration: "one-time", amount: "$13.99", originalAmount: "$19.99" },
-      { duration: "lifetime", amount: "$24.99", originalAmount: "$34.99" },
+      { duration: "one-time", amount: "$24.99", originalAmount: "$39.99" },
+      { duration: "lifetime", amount: "$79.99", originalAmount: "$129.99" },
     ],
     rating: 5.0,
     totalReviews: 2134,
