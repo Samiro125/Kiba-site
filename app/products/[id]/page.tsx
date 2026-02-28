@@ -776,6 +776,16 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
                         "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
                       ],
+                      "perm-spoofer": [
+                        "https://buy.stripe.com/14A3cwgcD3sU2AyduH3840f", // onetime
+                        "https://buy.stripe.com/aFabJ24tV1kM0sqfCP3840g", // lifetime
+                      ],
+                      "temp-spoofer": [
+                        "https://buy.stripe.com/cNi4gA2lNgfG5MK1LZ3840h", // 3 day
+                        "https://buy.stripe.com/9B6bJ26C3aVm2Ay2Q33840i", // 1 week
+                        "https://buy.stripe.com/7sYbJ28KbfbCa30fCP3840j", // 1 month
+                        "https://buy.stripe.com/5kQ9AUaSj3sUgroaiv3840k", // lifetime
+                      ],
                     }
                     
                     const checkoutUrls = stripeUrls[actualId]
