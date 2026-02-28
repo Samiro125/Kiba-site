@@ -17,7 +17,7 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: "apex", name: "Apex Legends", image: "/images/apex-20-282-29.png", status: "undetected", updatedAt: "Feb 14, 2026 09:42 PM", href: "/products/apex" },
+
   { id: "arc-raiders", name: "Arc Raiders", image: "/images/arc-raiders-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:35 PM", href: "/products/arc-raiders" },
 
   { id: "cod", name: "Call of Duty", image: "/images/cod-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
@@ -25,11 +25,9 @@ const products: Product[] = [
   { id: "fortnite", name: "Fortnite", image: "/images/fortnite-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
   { id: "fivem", name: "FiveM", image: "/images/fivem.png", status: "undetected", updatedAt: "Feb 14, 2026 07:50 PM", href: "/products/fivem" },
 
-  { id: "r6", name: "Rainbow Six Siege", image: "/images/r6666.png", status: "undetected", updatedAt: "Feb 14, 2026 09:20 PM", href: "/products/r6-siege" },
-  { id: "rust", name: "Rust", image: "/images/rustt.png", status: "undetected", updatedAt: "Feb 14, 2026 09:55 PM", href: "/products/rust" },
-  { id: "valorant", name: "Valorant", image: "/images/kiba-cheats-banner-20valo.webp", status: "undetected", updatedAt: "Feb 14, 2026 10:05 PM", href: "/products/valorant" },
-  { id: "temp-spoofer", name: "Temp Spoofer", image: "/images/temp.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/temp-spoofer" },
-  { id: "perm-spoofer", name: "Perm Spoofer", image: "/images/perm.webp", status: "undetected", updatedAt: "Feb 14, 2026 08:40 PM", href: "/products/perm-spoofer" },
+
+  { id: "temp-spoofer", name: "Temp Spoofer", image: "/images/temp-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/temp-spoofer" },
+  { id: "perm-spoofer", name: "Perm Spoofer", image: "/images/perm-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:40 PM", href: "/products/perm-spoofer" },
 
 ]
 

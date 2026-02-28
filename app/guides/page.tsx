@@ -10,11 +10,7 @@ export default function GuidesPage() {
 
   const gameProducts = [
     "Call of Duty",
-    "Apex Legends",
-    "Rainbow Six Siege",
     "Fortnite",
-    "Rust",
-    "Valorant",
     "Arc Raiders Delta",
     "Arc Raiders Flo",
   ]
