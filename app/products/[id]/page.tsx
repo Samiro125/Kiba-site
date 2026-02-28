@@ -187,7 +187,7 @@ const products = [
     image: "/images/temp-spoofer-extra.jpg",
     prices: [
       { duration: "3 day", amount: "$7.99", originalAmount: "$12.99" },
-      { duration: "1 week", amount: "$9.99", originalAmount: "$14.99" },
+      { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
       { duration: "1 month", amount: "$19.99", originalAmount: "$29.99" },
       { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99" },
     ],
