@@ -18,11 +18,11 @@ interface Product {
 
 const products: Product[] = [
   { id: "apex", name: "Apex Legends", image: "/images/apex-20-282-29.png", status: "undetected", updatedAt: "Feb 14, 2026 09:42 PM", href: "/products/apex" },
-  { id: "arc-raiders", name: "Arc Raiders", image: "/images/arc-20raiders.png", status: "undetected", updatedAt: "Feb 14, 2026 09:35 PM", href: "/products/arc-raiders" },
+  { id: "arc-raiders", name: "Arc Raiders", image: "/images/arc-raiders-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:35 PM", href: "/products/arc-raiders" },
 
-  { id: "cod", name: "Call of Duty", image: "/images/cod.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
+  { id: "cod", name: "Call of Duty", image: "/images/cod-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
 
-  { id: "fortnite", name: "Fortnite", image: "/images/fortnitee.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
+  { id: "fortnite", name: "Fortnite", image: "/images/fortnite-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
   { id: "fivem", name: "FiveM", image: "/images/fivem.png", status: "undetected", updatedAt: "Feb 14, 2026 07:50 PM", href: "/products/fivem" },
 
   { id: "r6", name: "Rainbow Six Siege", image: "/images/r6666.png", status: "undetected", updatedAt: "Feb 14, 2026 09:20 PM", href: "/products/r6-siege" },
