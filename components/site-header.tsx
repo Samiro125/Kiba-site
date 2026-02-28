@@ -11,7 +11,7 @@ export function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-red-500/20 bg-zinc-950/95 backdrop-blur-md supports-[backdrop-filter]:bg-zinc-950/90 animate-fade-in">
+    <header className="sticky top-0 z-50 w-full border-b border-white/20 bg-zinc-950/95 backdrop-blur-md supports-[backdrop-filter]:bg-zinc-950/90 animate-fade-in">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex h-24 items-center justify-between lg:grid lg:grid-cols-[260px_1fr_auto] lg:gap-4">
           {/* Logo */}
@@ -35,7 +35,7 @@ export function SiteHeader() {
               <Link
                 href="/"
                 className={`flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 w-[100px] relative group ${
-                  pathname === "/" ? "text-red-500" : "text-white/80 hover:text-red-500"
+                  pathname === "/" ? "text-white" : "text-white/80 hover:text-white"
                 }`}
               >
                 <svg
@@ -51,13 +51,13 @@ export function SiteHeader() {
                 </svg>
                 Store
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-red-500 transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"}`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
               <Link
                 href="/guides"
                 className={`flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 w-[100px] relative group ${
-                  pathname === "/guides" ? "text-red-500" : "text-white/80 hover:text-red-500"
+                  pathname === "/guides" ? "text-white" : "text-white/80 hover:text-white"
                 }`}
               >
                 <svg
@@ -72,13 +72,13 @@ export function SiteHeader() {
                 </svg>
                 Guide
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-red-500 transition-all duration-300 ${pathname === "/guides" ? "w-full" : "w-0 group-hover:w-full"}`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/guides" ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
               <Link
                 href="/reviews"
                 className={`flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 w-[100px] relative group ${
-                  pathname === "/reviews" ? "text-red-500" : "text-white/80 hover:text-red-500"
+                  pathname === "/reviews" ? "text-white" : "text-white/80 hover:text-white"
                 }`}
               >
                 <svg
@@ -92,13 +92,13 @@ export function SiteHeader() {
                 </svg>
                 Reviews
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-red-500 transition-all duration-300 ${pathname === "/reviews" ? "w-full" : "w-0 group-hover:w-full"}`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/reviews" ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
               <Link
                 href="/status"
                 className={`flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 w-[100px] relative group ${
-                  pathname === "/status" ? "text-red-500" : "text-white/80 hover:text-red-500"
+                  pathname === "/status" ? "text-white" : "text-white/80 hover:text-white"
                 }`}
               >
                 <svg
@@ -112,13 +112,13 @@ export function SiteHeader() {
                 </svg>
                 Status
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-red-500 transition-all duration-300 ${pathname === "/status" ? "w-full" : "w-0 group-hover:w-full"}`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/status" ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
               <Link
                 href="/faq"
                 className={`flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 w-[100px] relative group ${
-                  pathname === "/faq" ? "text-red-500" : "text-white/80 hover:text-red-500"
+                  pathname === "/faq" ? "text-white" : "text-white/80 hover:text-white"
                 }`}
               >
                 <svg
@@ -134,7 +134,7 @@ export function SiteHeader() {
                 </svg>
                 FAQ
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-red-500 transition-all duration-300 ${pathname === "/faq" ? "w-full" : "w-0 group-hover:w-full"}`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/faq" ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
             </div>
@@ -158,7 +158,7 @@ export function SiteHeader() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-white hover:text-red-500 transition-all duration-300 hover:scale-110"
+            className="lg:hidden p-2 text-white hover:text-white transition-all duration-300 hover:scale-110"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -177,7 +177,7 @@ export function SiteHeader() {
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
-                  pathname === "/" ? "bg-red-600 text-white" : "text-white/80 hover:bg-zinc-800"
+                  pathname === "/" ? "bg-white text-black" : "text-white/80 hover:bg-zinc-800"
                 }`}
               >
                 <svg
@@ -197,7 +197,7 @@ export function SiteHeader() {
                 href="/guides"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
-                  pathname === "/guides" ? "bg-red-600 text-white" : "text-white/80 hover:bg-zinc-800"
+                  pathname === "/guides" ? "bg-white text-black" : "text-white/80 hover:bg-zinc-800"
                 }`}
               >
                 <svg
@@ -216,7 +216,7 @@ export function SiteHeader() {
                 href="/reviews"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
-                  pathname === "/reviews" ? "bg-red-600 text-white" : "text-white/80 hover:bg-zinc-800"
+                  pathname === "/reviews" ? "bg-white text-black" : "text-white/80 hover:bg-zinc-800"
                 }`}
               >
                 <svg
@@ -234,7 +234,7 @@ export function SiteHeader() {
                 href="/status"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
-                  pathname === "/status" ? "bg-red-600 text-white" : "text-white/80 hover:bg-zinc-800"
+                  pathname === "/status" ? "bg-white text-black" : "text-white/80 hover:bg-zinc-800"
                 }`}
               >
                 <svg
@@ -252,7 +252,7 @@ export function SiteHeader() {
                 href="/faq"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
-                  pathname === "/faq" ? "bg-red-600 text-white" : "text-white/80 hover:bg-zinc-800"
+                  pathname === "/faq" ? "bg-white text-black" : "text-white/80 hover:bg-zinc-800"
                 }`}
               >
                 <svg
