@@ -124,7 +124,7 @@ export default function Home() {
               {/* Logo */}
               <div className="mb-4">
                 <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
-                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">CHEATS</div>
+                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
               </div>
 
               {/* Heading */}
@@ -222,7 +222,7 @@ export default function Home() {
                         <span className="text-xl font-bold text-red-400 transition-all duration-300 group-hover:text-red-300 group-hover:scale-110 origin-left">
                           {product.price}
                         </span>
-                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">Extra Cheats</span>
+                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">Extra Services</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -301,7 +301,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card3:text-white">
-                    "Been using Extra Cheats for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using Extra Services for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
@@ -371,7 +371,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "Been using Extra Cheats for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using Extra Services for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
@@ -547,12 +547,12 @@ export default function Home() {
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Image
                   src="/images/extra-cheats-logo.png"
-                  alt="Extra Cheats"
+                  alt="Extra Services"
                   width={40}
                   height={40}
                   className="h-10 w-auto"
                 />
-                <span className="text-lg font-bold text-white">Extra Cheats</span>
+                <span className="text-lg font-bold text-white">Extra Services</span>
               </Link>
               <p className="text-sm text-muted-foreground mb-4 md:mb-0">
                 Providing high-quality gaming enhancements since 2018. Our mission is to improve your gaming experience.
@@ -836,7 +836,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Extra Cheats. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Extra Services. All rights reserved.</p>
             <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
