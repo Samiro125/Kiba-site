@@ -97,14 +97,14 @@ const products = [
     game: "Call of Duty",
     image: "/images/cod-extra.png",
     prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
+      { duration: "3 day", amount: "$9.99", originalAmount: "$17.99" },
       { duration: "1 week", amount: "$13.99", originalAmount: "$24.99", popular: true },
       { duration: "1 month", amount: "$24.99", originalAmount: "$39.99" },
       { duration: "lifetime", amount: "$44.99", originalAmount: "$69.99" },
     ],
     rating: 4.8,
     totalReviews: 1156,
-    color: "from-red-600 to-red-900",
+    color: "from-zinc-600 to-zinc-900",
     specifications: [
       { label: "Gameplay Modes", value: "AVAILABLE" },
       { label: "Last Updated", value: "26/11/2024" },
@@ -1197,29 +1197,24 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         checkoutUrl={
           actualId === "fortnite"
             ? [
-                "https://www.fanbasis.com/agency-checkout/antweaks/2x4rW", // 1 day
-                "https://www.fanbasis.com/agency-checkout/antweaks/869jg", // 1 week
-                "https://www.fanbasis.com/agency-checkout/antweaks/gLZzk", // 1 month
-                "https://www.fanbasis.com/agency-checkout/antweaks/wmVWr", // lifetime
+                "https://buy.stripe.com/3cI7sM7G7fbCb74fCP38403", // 1 day
+                "https://buy.stripe.com/9B628sgcDfbC8YW4Yb38404", // 1 week
+                "https://buy.stripe.com/00w3cw0dFe7yfnk62f38405", // 1 month
+                "https://buy.stripe.com/aFa3cwf8z3sU1wu9er38406", // lifetime
               ][selectedPlan]
             : actualId === "arc-raiders"
-                  ? arcVariant === "delta"
-                    ? [
-                        "https://xyaniu.com/products/arc-rd-kiba-delta?variant=56646554354008", // 1 day
-                        "https://xyaniu.com/products/arc-rd-kiba-delta?variant=56646554386776", // 1 week
-                        "https://xyaniu.com/products/arc-rd-kiba-delta?variant=56646554419544", // 1 month
-                        "https://xyaniu.com/products/arc-rd-kiba-delta?variant=56646554452312", // lifetime
-                      ][selectedPlan]
-                    : [
-                        "https://www.fanbasis.com/agency-checkout/antweaks/5QnkK", // 1 week
-                        "https://www.fanbasis.com/agency-checkout/antweaks/6XolV", // 1 month
-                        "https://www.fanbasis.com/agency-checkout/antweaks/718my", // lifetime
+                  ? [
+                        "https://buy.stripe.com/8x26oI0dF5B2cb8fCP38407", // 1 day
+                        "https://buy.stripe.com/28EfZid0r8Ne7US4Yb38408", // 1 week
+                        "https://buy.stripe.com/dRmbJ2f8z9Ri0sq62f38409", // 1 month
+                        "https://buy.stripe.com/4gMdRaaSj2oQcb88an3840a", // lifetime
                       ][selectedPlan]
                   : actualId === "call-of-duty"
                     ? [
-                        "https://www.fanbasis.com/agency-checkout/antweaks/86NgW", // 1 week
-                        "https://www.fanbasis.com/agency-checkout/antweaks/9QNjY", // 1 month
-                        "https://www.fanbasis.com/agency-checkout/antweaks/0V7M3", // lifetime
+                        "https://buy.stripe.com/6oUcN6d0r4wY1wubmz3840b", // 3 day
+                        "https://buy.stripe.com/4gMeVe4tVgfG5MK76j3840c", // 1 week
+                        "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
+                        "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
                       ][selectedPlan]
                     : actualId === "fivem"
                               ? [
