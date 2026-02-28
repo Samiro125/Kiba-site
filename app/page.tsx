@@ -204,7 +204,7 @@ export default function Home() {
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-12">
               {/* Logo */}
               <div className="mb-4">
-                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">KIBA</h1>
+                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
                 <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">CHEATS</div>
               </div>
 
@@ -303,7 +303,7 @@ export default function Home() {
                         <span className="text-xl font-bold text-red-400 transition-all duration-300 group-hover:text-red-300 group-hover:scale-110 origin-left">
                           {product.price}
                         </span>
-                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">KIBA Cheats</span>
+                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">Extra Cheats</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -359,7 +359,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card2:text-white">
-                    "The spoofer saved my account! Got banned before but with KIBA's temp spoofer I'm back in the game
+                    "The spoofer saved my account! Got banned before but with Extra's temp spoofer I'm back in the game
                     with zero issues."
                   </p>
                   <div className="flex items-center gap-3">
@@ -382,7 +382,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card3:text-white">
-                    "Been using KIBA for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using Extra Cheats for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
@@ -429,7 +429,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "The spoofer saved my account! Got banned before but with KIBA's temp spoofer I'm back in the game
+                    "The spoofer saved my account! Got banned before but with Extra's temp spoofer I'm back in the game
                     with zero issues."
                   </p>
                   <div className="flex items-center gap-3">
@@ -452,7 +452,7 @@ export default function Home() {
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "Been using KIBA for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using Extra Cheats for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
@@ -627,12 +627,13 @@ export default function Home() {
             <div>
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Image
-                  src="/logo-no-background.png"
-                  alt="Kiba Cheats"
-                  width={160}
+                  src="/images/extra-cheats-logo.png"
+                  alt="Extra Cheats"
+                  width={40}
                   height={40}
                   className="h-10 w-auto"
                 />
+                <span className="text-lg font-bold text-white">Extra Cheats</span>
               </Link>
               <p className="text-sm text-muted-foreground mb-4 md:mb-0">
                 Providing high-quality gaming enhancements since 2018. Our mission is to improve your gaming experience.
@@ -916,7 +917,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Kiba. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Extra Cheats. All rights reserved.</p>
             <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service
