@@ -371,7 +371,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               </div>
 
               {activeTab === "features" && (
-                actualId === "arc-raiders" && arcVariant === "delta" ? (
+                actualId === "arc-raiders" ? (
                   <div>
                     <h3 className="text-white font-bold text-xl mb-2">Features</h3>
 
