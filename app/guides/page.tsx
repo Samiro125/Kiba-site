@@ -23,7 +23,7 @@ export default function GuidesPage() {
         {/* Hero Section */}
         <div className="text-center mb-8 lg:mb-12">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
-            Setup <span className="text-red-500">Guides</span>
+            Setup <span className="text-white">Guides</span>
           </h1>
           <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto">
             Step-by-step instructions to get your KIBA products up and running
@@ -176,7 +176,7 @@ export default function GuidesPage() {
             {selectedProduct === "Temp Spoofer" ? (
               <>
                 {/* Temp Spoofer Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6 hover:border-red-500/40 transition-all duration-500 hover:shadow-lg hover:shadow-red-500/10 animate-fade-in">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6 hover:border-white/40 transition-all duration-500 hover:shadow-lg hover:shadow-white/10 animate-fade-in">
                   <h2 className="text-2xl font-bold text-white mb-2">Temp Spoofer</h2>
                   <p className="text-zinc-400">Hardware ID Spoofing Tool</p>
                 </div>
@@ -207,7 +207,7 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Temporary Spoofing Info */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-4">Temporary Spoofing</h3>
                   <p className="text-zinc-400 mb-6">Changes reset on reboot - ideal for testing or temporary use</p>
 
@@ -226,15 +226,15 @@ export default function GuidesPage() {
                       </h4>
                       <ul className="space-y-2 text-zinc-300">
                         <li className="flex items-start gap-2">
-                          <span className="text-red-500 mt-1">•</span>
+                          <span className="text-white mt-1">•</span>
                           <span>No permanent system modifications</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-red-500 mt-1">•</span>
+                          <span className="text-white mt-1">•</span>
                           <span>Automatic revert on restart</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-red-500 mt-1">•</span>
+                          <span className="text-white mt-1">•</span>
                           <span>Lower risk for beginners</span>
                         </li>
                       </ul>
@@ -254,15 +254,15 @@ export default function GuidesPage() {
                       </h4>
                       <ul className="space-y-2 text-zinc-300">
                         <li className="flex items-start gap-2">
-                          <span className="text-red-500 mt-1">•</span>
+                          <span className="text-white mt-1">•</span>
                           <span>Must re-run after each reboot</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-red-500 mt-1">•</span>
+                          <span className="text-white mt-1">•</span>
                           <span>Less thorough coverage</span>
                         </li>
                         <li className="flex items-start gap-2">
-                          <span className="text-red-500 mt-1">•</span>
+                          <span className="text-white mt-1">•</span>
                           <span>Not suitable for active bans</span>
                         </li>
                       </ul>
@@ -271,9 +271,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 1 - Install Dependencies */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       1
                     </div>
                     <div className="flex-1">
@@ -283,7 +283,7 @@ export default function GuidesPage() {
                         <p className="text-white mb-4">Download and install Visual C++ and DirectX runtimes.</p>
                         <div className="flex gap-3">
                           <Link href="https://gofile.io/d/0aJutp" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -296,7 +296,7 @@ export default function GuidesPage() {
                             </Button>
                           </Link>
                           <Link href="https://gofile.io/d/Purzbq" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -315,9 +315,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 - Disable Protection */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       2
                     </div>
                     <div className="flex-1">
@@ -333,9 +333,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 3 - Run Spoofer */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       3
                     </div>
                     <div className="flex-1">
@@ -347,7 +347,7 @@ export default function GuidesPage() {
                         </p>
                         {/* CHANGE> Updated temp spoofer download link */}
                         <Link href="https://gofile.io/d/83mVvQ" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
                                 strokeLinecap="round"
@@ -365,9 +365,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 4 - Verify Changes */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       4
                     </div>
                     <div className="flex-1">
@@ -394,9 +394,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Common Issues */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -425,13 +425,13 @@ export default function GuidesPage() {
             ) : selectedProduct === "Perm Spoofer" ? (
               <>
                 {/* Perm Spoofer Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Perm Spoofer</h2>
                   <p className="text-zinc-400">Hardware ID Spoofing Tool</p>
                 </div>
 
                 {/* Warning Banner */}
-                <div className="bg-red-950/30 border-2 border-red-500 rounded-lg p-6">
+                <div className="bg-zinc-900/50 border-2 border-white/50 rounded-lg p-6">
                   <div className="flex items-start gap-4">
                     <svg
                       className="h-8 w-8 text-red-500 flex-shrink-0"
@@ -447,7 +447,7 @@ export default function GuidesPage() {
                       />
                     </svg>
                     <div>
-                      <h3 className="text-xl font-bold text-red-500 mb-2">System Modification Warning</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">System Modification Warning</h3>
                       <p className="text-white">
                         HWID spoofing modifies system files. Create a restore point before proceeding.
                       </p>
@@ -456,7 +456,7 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Permanent Spoofing Info */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h3 className="text-2xl font-bold text-white mb-4">Permanent Spoofing</h3>
                   <p className="text-zinc-400 mb-6">
                     Persistent changes that survive reboots - recommended for active users
@@ -561,9 +561,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 1 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       1
                     </div>
                     <div className="flex-1">
@@ -573,7 +573,7 @@ export default function GuidesPage() {
                         <p className="text-white mb-4">Download and install Visual C++ and DirectX runtimes.</p>
                         <div className="flex gap-4">
                           <Link href="https://gofile.io/d/0aJutp" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -586,7 +586,7 @@ export default function GuidesPage() {
                             </Button>
                           </Link>
                           <Link href="https://gofile.io/d/Purzbq" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -605,9 +605,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       2
                     </div>
                     <div className="flex-1">
@@ -623,9 +623,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 3 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       3
                     </div>
                     <div className="flex-1">
@@ -635,7 +635,7 @@ export default function GuidesPage() {
                         <p className="text-white mb-4">
                           Launch as administrator, enter license key, and select target game from the menu.
                         </p>
-                        <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
+                        <Button asChild className="bg-white hover:bg-zinc-200 text-black">
                           <a href="https://gofile.io/d/1F4bMf" target="_blank" rel="noopener noreferrer">
                             <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
@@ -654,9 +654,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 4 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       4
                     </div>
                     <div className="flex-1">
@@ -683,9 +683,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Common Issues */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -714,7 +714,7 @@ export default function GuidesPage() {
             ) : selectedProduct === "Fortnite" ? (
               <>
                 {/* Fortnite Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Fortnite Ultimate</h2>
                   <p className="text-zinc-400">How to download and set up FN public</p>
                 </div>
@@ -736,9 +736,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 1 - DirectX SDK */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       1
                     </div>
                     <div className="flex-1">
@@ -756,7 +756,7 @@ export default function GuidesPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -775,9 +775,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 - Visual C++ */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       2
                     </div>
                     <div className="flex-1">
@@ -795,7 +795,7 @@ export default function GuidesPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -814,9 +814,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 3 - Action Recorder */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       3
                     </div>
                     <div className="flex-1">
@@ -829,7 +829,7 @@ export default function GuidesPage() {
                         </ol>
                         <div className="mt-4">
                           <Link href="https://mirillis.com/download-action" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -848,9 +848,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 4 - Antivirus Disabler */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       4
                     </div>
                     <div className="flex-1">
@@ -872,7 +872,7 @@ export default function GuidesPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -907,9 +907,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 5 - Loader Installation */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       5
                     </div>
                     <div className="flex-1">
@@ -921,7 +921,7 @@ export default function GuidesPage() {
                           <li>Launch the loader application</li>
                           <li>Enter your activation key</li>
                           <li>
-                            Click <span className="text-red-500 font-bold">INJECT</span> to inject the cheat
+                            Click <span className="text-white font-bold">INJECT</span> to inject the cheat
                           </li>
                         </ol>
                         <div className="mt-4">
@@ -939,7 +939,7 @@ export default function GuidesPage() {
                             </Button>
                           </Link>
                           <Link href="https://telegra.ph/START-02-19-46" target="_blank" rel="noopener noreferrer" className="ml-3">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -958,9 +958,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 6 - Verification */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       6
                     </div>
                     <div className="flex-1">
@@ -975,7 +975,7 @@ export default function GuidesPage() {
                           <p className="text-white">Controller Configuration:</p>
                           <ul className="list-disc list-inside space-y-1 text-zinc-400 text-sm">
                             <li>
-                              Click <span className="text-red-500 font-bold">NO</span> if you're not using a controller
+                              Click <span className="text-white font-bold">NO</span> if you're not using a controller
                             </li>
                             <li>
                               Click <span className="text-green-500 font-bold">YES</span> if you're using a controller
@@ -1010,9 +1010,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 7 - Final Steps */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       7
                     </div>
                     <div className="flex-1">
@@ -1032,9 +1032,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 8 - Menu Controls */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       8
                     </div>
                     <div className="flex-1">
@@ -1101,7 +1101,7 @@ export default function GuidesPage() {
             ) : selectedProduct === "Arc Raiders Delta" ? (
               <>
                 {/* Arc Raiders Delta Guide Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div>
                       <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders Delta</h2>
@@ -1121,9 +1121,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 1 - Full Setup Docs */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Follow the Full Setup Guide</h3>
                       <p className="text-zinc-400 mb-4">Complete setup instructions are available in our documentation</p>
@@ -1143,16 +1143,16 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 - Download Loader */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Download Delta Loader</h3>
                       <p className="text-zinc-400 mb-4">Get the loader after completing the setup steps</p>
                       <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
                         <p className="text-white mb-4">Download the Delta loader from MEGA after following the setup guide.</p>
                         <Link href="https://telegra.ph/START-02-19-46" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
@@ -1165,9 +1165,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Support Section */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                     Need Help?
@@ -1188,7 +1188,7 @@ export default function GuidesPage() {
             ) : selectedProduct === "Arc Raiders Flo" ? (
               <>
                 {/* Arc Raiders Flo Guide Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders Flo</h2>
                   <p className="text-zinc-400">Budget Cheat Option - External Software</p>
                 </div>
@@ -1205,16 +1205,16 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 1 - Visual C++ */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Install Visual C++ Runtimes</h3>
                       <p className="text-zinc-400 mb-4">Download and install all Visual C++ redistributable packages</p>
                       <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
                         <p className="text-white mb-4">Install the All-in-One Visual C++ Runtime Package to ensure all required dependencies are available.</p>
                         <Link href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
@@ -1227,16 +1227,16 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 - Defender Control */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Disable Windows Defender</h3>
                       <p className="text-zinc-400 mb-4">Use Defender Control to permanently disable Windows Defender</p>
                       <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
                         <p className="text-white mb-4">Download and use Sordum Defender Control to disable Windows Defender protection.</p>
                         <Link href="https://www.sordum.org/9480/defender-control-v2-1/#google_vignette" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                             </svg>
@@ -1249,9 +1249,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 3 - OpenSSL */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       3
                     </div>
                     <div className="flex-1">
@@ -1264,7 +1264,7 @@ export default function GuidesPage() {
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
                                 strokeLinecap="round"
@@ -1282,9 +1282,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 4 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       4
                     </div>
                     <div className="flex-1">
@@ -1306,9 +1306,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 5 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       5
                     </div>
                     <div className="flex-1">
@@ -1345,9 +1345,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 6 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       6
                     </div>
                     <div className="flex-1">
@@ -1358,7 +1358,7 @@ export default function GuidesPage() {
                           Visit HudSight website and install the overlay software. We'll configure this more in Step 8.
                         </p>
                         <Link href="https://hudsight.com/" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
                                 strokeLinecap="round"
@@ -1376,9 +1376,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 7 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       7
                     </div>
                     <div className="flex-1">
@@ -1394,7 +1394,7 @@ export default function GuidesPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path
                                   strokeLinecap="round"
@@ -1421,9 +1421,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 8 */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       8
                     </div>
                     <div className="flex-1">
@@ -1447,9 +1447,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Troubleshooting */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -1478,7 +1478,7 @@ export default function GuidesPage() {
             ) : selectedProduct === "Arc Raiders Flo" ? (
               <>
                 {/* Arc Raiders Flo Guide Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders Flo</h2>
                   <p className="text-zinc-400">Budget Cheat Option - External Software</p>
                 </div>
@@ -1495,9 +1495,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 1 - Disable Antivirus */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Disable Antivirus</h3>
                       <p className="text-zinc-400 mb-4">Turn off Windows Defender and any third-party antivirus software</p>
@@ -1515,9 +1515,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 - Download and Run Loader */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Download and Run Loader</h3>
                       <p className="text-zinc-400 mb-4">Get your loader and authenticate with your license key</p>
@@ -1527,7 +1527,7 @@ export default function GuidesPage() {
                           <p className="text-white mb-2">2. Extract the files to a folder</p>
                           <p className="text-white mb-4">3. Run the loader as Administrator</p>
                           <Link href="https://gofile.io/d/ZOBu68" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-red-600 hover:bg-red-700 text-white">
+                            <Button className="bg-white hover:bg-zinc-200 text-black">
                               <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                               </svg>
@@ -1549,9 +1549,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 3 - Launch Game */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">3</div>
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">3</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2">Launch Arc Raiders</h3>
                       <p className="text-zinc-400 mb-4">Start the game after the loader is ready</p>
@@ -1572,9 +1572,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Support Section */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                     Need Help?
@@ -1595,15 +1595,15 @@ export default function GuidesPage() {
             ) : selectedProduct === "Rust" ? (
               <>
                 {/* Rust Guide Header */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <h2 className="text-2xl font-bold text-white mb-2">Rust Cheat</h2>
                   <p className="text-zinc-400">External Cheat Software</p>
                 </div>
 
                 {/* Step 1 - Visit Instructions Page */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       1
                     </div>
                     <div className="flex-1">
@@ -1614,7 +1614,7 @@ export default function GuidesPage() {
                           Click the button below to access the complete Rust setup instructions.
                         </p>
                         <Link href="https://telegra.ph/KIBA-FAQ-EU-02-19-2" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
                                 strokeLinecap="round"
@@ -1632,9 +1632,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Step 2 - Download Loader */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <div className="flex items-start gap-4">
-                    <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       2
                     </div>
                     <div className="flex-1">
@@ -1645,7 +1645,7 @@ export default function GuidesPage() {
                           Download the loader from the link below and follow the instructions from step 1.
                         </p>
                         <Link href="https://telegra.ph/START-02-19-46" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-red-600 hover:bg-red-700 text-white">
+                          <Button className="bg-white hover:bg-zinc-200 text-black">
                             <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path
                                 strokeLinecap="round"
@@ -1663,9 +1663,9 @@ export default function GuidesPage() {
                 </div>
 
                 {/* Support Section */}
-                <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                   <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -1694,7 +1694,7 @@ export default function GuidesPage() {
                 {selectedProduct === "Fortnite" ? (
                   <>
                     {/* Fortnite Header */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                       <h2 className="text-2xl font-bold text-white mb-2">Fortnite Ultimate</h2>
                       <p className="text-zinc-400">How to download and set up FN public</p>
                     </div>
@@ -1716,9 +1716,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 1 - DirectX SDK */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           1
                         </div>
                         <div className="flex-1">
@@ -1736,7 +1736,7 @@ export default function GuidesPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                                <Button className="bg-white hover:bg-zinc-200 text-black">
                                   <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                       strokeLinecap="round"
@@ -1755,9 +1755,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 2 - Visual C++ */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           2
                         </div>
                         <div className="flex-1">
@@ -1775,7 +1775,7 @@ export default function GuidesPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                                <Button className="bg-white hover:bg-zinc-200 text-black">
                                   <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                       strokeLinecap="round"
@@ -1794,9 +1794,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 3 - Action Recorder */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           3
                         </div>
                         <div className="flex-1">
@@ -1813,7 +1813,7 @@ export default function GuidesPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                                <Button className="bg-white hover:bg-zinc-200 text-black">
                                   <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                       strokeLinecap="round"
@@ -1832,9 +1832,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 4 - Antivirus Disabler */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           4
                         </div>
                         <div className="flex-1">
@@ -1856,7 +1856,7 @@ export default function GuidesPage() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                               >
-                                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                                <Button className="bg-white hover:bg-zinc-200 text-black">
                                   <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                       strokeLinecap="round"
@@ -1891,9 +1891,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 5 - Loader Installation */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           5
                         </div>
                         <div className="flex-1">
@@ -1905,12 +1905,12 @@ export default function GuidesPage() {
                               <li>Launch the loader application</li>
                               <li>Enter your activation key</li>
                               <li>
-                                Click <span className="text-red-500 font-bold">INJECT</span> to inject the cheat
+                                Click <span className="text-white font-bold">INJECT</span> to inject the cheat
                               </li>
                             </ol>
                             <div className="mt-4">
                               <Link href="https://justaloader.xyz/" target="_blank" rel="noopener noreferrer">
-                                <Button className="bg-red-600 hover:bg-red-700 text-white">
+                                <Button className="bg-white hover:bg-zinc-200 text-black">
                                   <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path
                                       strokeLinecap="round"
@@ -1929,9 +1929,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 6 - Verification */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           6
                         </div>
                         <div className="flex-1">
@@ -1946,7 +1946,7 @@ export default function GuidesPage() {
                               <p className="text-white">Controller Configuration:</p>
                               <ul className="list-disc list-inside space-y-1 text-zinc-400 text-sm">
                                 <li>
-                                  Click <span className="text-red-500 font-bold">NO</span> if you're not using a
+                                  Click <span className="text-white font-bold">NO</span> if you're not using a
                                   controller
                                 </li>
                                 <li>
@@ -1983,9 +1983,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 7 - Final Steps */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           7
                         </div>
                         <div className="flex-1">
@@ -2005,9 +2005,9 @@ export default function GuidesPage() {
                     </div>
 
                     {/* Step 8 - Menu Controls */}
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                           8
                         </div>
                         <div className="flex-1">
@@ -2075,13 +2075,13 @@ export default function GuidesPage() {
                   </>
                 ) : selectedProduct === "Rainbow Six Siege" ? (
                   <>
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                       <h2 className="text-2xl font-bold text-white mb-2">Rainbow Six Siege</h2>
                       <p className="text-zinc-400">How to download and set up R6 Siege cheat</p>
                     </div>
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
                         <div className="flex-1">
                           <h3 className="text-2xl font-bold text-white mb-2">Follow the Full Setup Guide</h3>
                           <p className="text-zinc-400 mb-4">Complete setup instructions are available in our documentation</p>
@@ -2099,16 +2099,16 @@ export default function GuidesPage() {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
                         <div className="flex-1">
                           <h3 className="text-2xl font-bold text-white mb-2">Download Loader</h3>
                           <p className="text-zinc-400 mb-4">Get the loader after completing the setup steps</p>
                           <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
                             <p className="text-white mb-4">Download the loader after following the setup guide.</p>
                             <Link href="https://telegra.ph/START-02-19-46" target="_blank" rel="noopener noreferrer">
-                              <Button className="bg-red-600 hover:bg-red-700 text-white">
+                              <Button className="bg-white hover:bg-zinc-200 text-black">
                                 <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
@@ -2122,20 +2122,20 @@ export default function GuidesPage() {
                   </>
                 ) : selectedProduct === "Valorant" ? (
                   <>
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-6">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                       <h2 className="text-2xl font-bold text-white mb-2">Valorant</h2>
                       <p className="text-zinc-400">How to download and set up Valorant cheat</p>
                     </div>
-                    <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8">
+                    <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
                       <div className="flex items-start gap-4">
-                        <div className="bg-red-600 text-white font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
+                        <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
                         <div className="flex-1">
                           <h3 className="text-2xl font-bold text-white mb-2">Download Loader</h3>
                           <p className="text-zinc-400 mb-4">Get the Valorant loader</p>
                           <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
                             <p className="text-white mb-4">Click the button below to download the Valorant loader.</p>
                             <Link href="https://guide.sys-info.xyz/elevate" target="_blank" rel="noopener noreferrer">
-                              <Button className="bg-red-600 hover:bg-red-700 text-white">
+                              <Button className="bg-white hover:bg-zinc-200 text-black">
                                 <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
@@ -2148,7 +2148,7 @@ export default function GuidesPage() {
                     </div>
                   </>
                 ) : (
-                  <div className="bg-zinc-900 border border-red-500/20 rounded-lg p-8 text-center">
+                  <div className="bg-zinc-900 border border-white/20 rounded-lg p-8 text-center">
                     <div className="mb-6">
                       <svg className="h-16 w-16 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -2159,7 +2159,7 @@ export default function GuidesPage() {
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link href="/products" rel="noopener noreferrer">
-                        <Button className="bg-red-600 hover:bg-red-700 text-white">
+                        <Button className="bg-white hover:bg-zinc-200 text-black">
                           <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                           </svg>

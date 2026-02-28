@@ -889,8 +889,8 @@ export default function ReviewsPage() {
 
           <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 text-center">
             <div className="flex justify-center mb-3">
-              <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center">
-                <Award className="w-5 h-5 text-red-400" />
+              <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <Award className="w-5 h-5 text-white" />
               </div>
             </div>
             <div className="text-3xl font-bold text-white mb-1">{fiveStarCount}</div>
@@ -1002,10 +1002,10 @@ export default function ReviewsPage() {
           {filteredReviews.map((review, index) => (
             <div
               key={index}
-              className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 transition-all duration-300 hover:border-red-500/40 hover:shadow-lg hover:shadow-red-500/5 relative group"
+              className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 transition-all duration-300 hover:border-white/40 hover:shadow-lg hover:shadow-white/5 relative group"
             >
               {/* Quote icon */}
-              <div className="absolute top-4 right-4 text-red-500/20 text-4xl font-serif leading-none select-none">
+              <div className="absolute top-4 right-4 text-white/20 text-4xl font-serif leading-none select-none">
                 {"\"\""}
               </div>
 
@@ -1026,7 +1026,7 @@ export default function ReviewsPage() {
 
               {/* User */}
               <div className="flex items-center gap-2.5 pt-3 border-t border-zinc-800">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-sm font-bold text-white">
+                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white to-zinc-400 flex items-center justify-center text-sm font-bold text-black">
                   {review.username.charAt(1).toUpperCase()}
                 </div>
                 <div className="flex-1 min-w-0">
@@ -1063,16 +1063,16 @@ export default function ReviewsPage() {
             <div>
               <h4 className="mb-4 font-semibold text-white">Quick Links</h4>
               <div className="space-y-2">
-                <Link href="/" className="block text-sm text-zinc-400 hover:text-red-400 transition-all duration-300 hover:translate-x-1">
+                <Link href="/" className="block text-sm text-zinc-400 hover:text-white transition-all duration-300 hover:translate-x-1">
                   Home
                 </Link>
-                <Link href="/products" className="block text-sm text-zinc-400 hover:text-red-400 transition-all duration-300 hover:translate-x-1">
+                <Link href="/products" className="block text-sm text-zinc-400 hover:text-white transition-all duration-300 hover:translate-x-1">
                   Products
                 </Link>
-                <Link href="/status" className="block text-sm text-zinc-400 hover:text-red-400 transition-all duration-300 hover:translate-x-1">
+                <Link href="/status" className="block text-sm text-zinc-400 hover:text-white transition-all duration-300 hover:translate-x-1">
                   Status
                 </Link>
-                <Link href="/reviews" className="block text-sm text-zinc-400 hover:text-red-400 transition-all duration-300 hover:translate-x-1">
+                <Link href="/reviews" className="block text-sm text-zinc-400 hover:text-white transition-all duration-300 hover:translate-x-1">
                   Reviews
                 </Link>
               </div>
