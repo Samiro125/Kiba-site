@@ -128,10 +128,7 @@ export default function Home() {
               </div>
 
               {/* Heading */}
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Undetected Gaming Cheats</h2>
-
-              {/* Description */}
-              <p className="text-lg text-zinc-400 max-w-2xl">Dominate and Win every Game with our Undetected Cheats</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Extra Services</h2>
             </div>
           </div>
         </section>
