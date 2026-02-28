@@ -143,7 +143,7 @@ export function SiteHeader() {
           {/* Desktop Discord Button */}
           <div className="hidden lg:flex items-center justify-end">
             <Link
-              href="https://discord.gg/AxE897SHap"
+              href="https://discord.gg/n42mcPBP6K"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-md bg-[#5865F2] px-6 py-3 text-lg font-medium text-white transition-all duration-300 hover:bg-[#4752C4] hover:scale-105 hover:shadow-lg hover:shadow-[#5865F2]/50"
@@ -269,7 +269,7 @@ export function SiteHeader() {
                 FAQ
               </Link>
               <Link
-                href="https://discord.gg/AxE897SHap"
+                href="https://discord.gg/n42mcPBP6K"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}

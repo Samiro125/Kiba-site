@@ -837,7 +837,7 @@ export default function ReviewsPage() {
           <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-6">
             Real feedback from real customers. See why thousands trust our products.
           </p>
-          <Link href="https://discord.gg/AxE897SHap" target="_blank" rel="noopener noreferrer">
+          <Link href="https://discord.gg/n42mcPBP6K" target="_blank" rel="noopener noreferrer">
             <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold rounded-full gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
               Write a Review

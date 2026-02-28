@@ -154,7 +154,7 @@ export default function Home() {
                 </div>
               </div>
               <Link
-                href="https://discord.gg/AxE897SHap"
+                href="https://discord.gg/n42mcPBP6K"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0"
