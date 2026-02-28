@@ -11,8 +11,7 @@ export default function GuidesPage() {
   const gameProducts = [
     "Call of Duty",
     "Fortnite",
-    "Arc Raiders Delta",
-    "Arc Raiders Flo",
+    "Arc Raiders",
   ]
 
   const spooferProducts = ["Temp Spoofer", "Perm Spoofer"]
@@ -26,7 +25,7 @@ export default function GuidesPage() {
             Setup <span className="text-white">Guides</span>
           </h1>
           <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto">
-            Step-by-step instructions to get your KIBA products up and running
+            Step-by-step instructions to get your Extra products up and running
           </p>
         </div>
 
@@ -1098,13 +1097,13 @@ export default function GuidesPage() {
                   <p className="text-zinc-400">Enjoy your gaming experience!</p>
                 </div>
               </>
-            ) : selectedProduct === "Arc Raiders Delta" ? (
+            ) : selectedProduct === "Arc Raiders" ? (
               <>
-                {/* Arc Raiders Delta Guide Header */}
+                {/* Arc Raiders Guide Header */}
                 <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
                   <div className="flex items-center justify-between flex-wrap gap-4">
                     <div>
-                      <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders Delta</h2>
+                      <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders</h2>
                       <p className="text-zinc-400">Premium Safe Option - Maximum Security</p>
                     </div>
                   </div>
@@ -1116,7 +1115,7 @@ export default function GuidesPage() {
                   </svg>
                   <div>
                     <p className="text-green-400 font-semibold mb-1">Recommended Option</p>
-                    <p className="text-zinc-300 text-sm">Arc Raiders Delta provides maximum safety and premium features. Follow the full setup documentation for best results.</p>
+                    <p className="text-zinc-300 text-sm">Arc Raiders provides maximum safety and premium features. Follow the full setup documentation for best results.</p>
                   </div>
                 </div>
 
@@ -1128,7 +1127,7 @@ export default function GuidesPage() {
                       <h3 className="text-2xl font-bold text-white mb-2">Follow the Full Setup Guide</h3>
                       <p className="text-zinc-400 mb-4">Complete setup instructions are available in our documentation</p>
                       <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <p className="text-white mb-4">Click the button below to access the complete Arc Raiders Delta setup guide with all required steps.</p>
+                        <p className="text-white mb-4">Click the button below to access the complete Arc Raiders setup guide with all required steps.</p>
                         <Link href="https://telegra.ph/KIBA-FAQ-EU-02-19-2" target="_blank" rel="noopener noreferrer">
                           <Button className="bg-green-600 hover:bg-green-700 text-white">
                             <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1185,414 +1184,7 @@ export default function GuidesPage() {
                   </div>
                 </div>
               </>
-            ) : selectedProduct === "Arc Raiders Flo" ? (
-              <>
-                {/* Arc Raiders Flo Guide Header */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
-                  <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders Flo</h2>
-                  <p className="text-zinc-400">Budget Cheat Option - External Software</p>
-                </div>
-
-                {/* Warning Banner */}
-                <div className="bg-yellow-500/10 border border-yellow-500 rounded-lg p-4 flex items-start gap-3">
-                  <svg className="h-6 w-6 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <div>
-                    <p className="text-yellow-400 font-semibold mb-1">System Configuration Required</p>
-                    <p className="text-zinc-300 text-sm">This setup requires multiple system modifications including TPM, HVCI, and UAC changes. Follow all steps carefully.</p>
-                  </div>
-                </div>
-
-                {/* Step 1 - Visual C++ */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Install Visual C++ Runtimes</h3>
-                      <p className="text-zinc-400 mb-4">Download and install all Visual C++ redistributable packages</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <p className="text-white mb-4">Install the All-in-One Visual C++ Runtime Package to ensure all required dependencies are available.</p>
-                        <Link href="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-white hover:bg-zinc-200 text-black">
-                            <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Download Visual C++ All-in-One
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 2 - Defender Control */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Disable Windows Defender</h3>
-                      <p className="text-zinc-400 mb-4">Use Defender Control to permanently disable Windows Defender</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <p className="text-white mb-4">Download and use Sordum Defender Control to disable Windows Defender protection.</p>
-                        <Link href="https://www.sordum.org/9480/defender-control-v2-1/#google_vignette" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-white hover:bg-zinc-200 text-black">
-                            <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                            </svg>
-                            Download Defender Control
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 3 - OpenSSL */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      3
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Install OpenSSL</h3>
-                      <p className="text-zinc-400 mb-4">Download and install OpenSSL for Windows</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <p className="text-white mb-4">Install OpenSSL 3.6.0 for 64-bit Windows systems.</p>
-                        <Link
-                          href="https://slproweb.com/download/Win64OpenSSL-3_6_0.exe"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button className="bg-white hover:bg-zinc-200 text-black">
-                            <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                              />
-                            </svg>
-                            Download OpenSSL 3.6.0
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 4 */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      4
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Disable UAC</h3>
-                      <p className="text-zinc-400 mb-4">Turn off User Account Control</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <p className="text-white mb-2">
-                          Disable User Account Control (UAC) to prevent security prompts:
-                        </p>
-                        <ol className="list-decimal list-inside space-y-1 text-zinc-300">
-                          <li>Open Control Panel → System and Security → Security and Maintenance</li>
-                          <li>Click "Change User Account Control settings"</li>
-                          <li>Move the slider to "Never notify"</li>
-                          <li>Click OK and restart your computer</li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 5 */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      5
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Change PC Settings</h3>
-                      <p className="text-zinc-400 mb-4">Disable TPM, HVCI, and security features</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4 space-y-4">
-                        <div>
-                          <h4 className="text-white font-semibold mb-2">TPM (Trusted Platform Module)</h4>
-                          <p className="text-zinc-300 mb-2">Switch off TPM in your computer's BIOS/UEFI settings:</p>
-                          <ol className="list-decimal list-inside space-y-1 text-zinc-400 text-sm">
-                            <li>Restart your PC and enter BIOS (usually DEL, F2, or F12)</li>
-                            <li>Navigate to Security settings</li>
-                            <li>Find TPM/Security Device and disable it</li>
-                            <li>Save and exit BIOS</li>
-                          </ol>
-                        </div>
-                        <div>
-                          <h4 className="text-white font-semibold mb-2">HVCI / Core Isolation</h4>
-                          <p className="text-zinc-300 mb-2">Disable from Windows Security:</p>
-                          <ol className="list-decimal list-inside space-y-1 text-zinc-400 text-sm">
-                            <li>Open Windows Security</li>
-                            <li>Go to Device Security → Core isolation details</li>
-                            <li>Turn off Memory integrity</li>
-                            <li>Restart your computer</li>
-                          </ol>
-                        </div>
-                        <div>
-                          <h4 className="text-white font-semibold mb-2">Windows Defender</h4>
-                          <p className="text-zinc-300">Turn off Real-Time Protection and any third-party antivirus.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 6 */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      6
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Install HudSight Overlay</h3>
-                      <p className="text-zinc-400 mb-4">Download and configure HudSight for the cheat overlay</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <p className="text-white mb-4">
-                          Visit HudSight website and install the overlay software. We'll configure this more in Step 8.
-                        </p>
-                        <Link href="https://hudsight.com/" target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-white hover:bg-zinc-200 text-black">
-                            <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                              />
-                            </svg>
-                            Download HudSight
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 7 */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      7
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Download and Run Loader</h3>
-                      <p className="text-zinc-400 mb-4">Get your loader and authenticate with your license key</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4 space-y-4">
-                        <div>
-                          <p className="text-white mb-2">1. Download the loader from the link below</p>
-                          <p className="text-white mb-2">2. Enter your license key on the download page</p>
-                          <p className="text-white mb-4">3. Click Download to get the loader</p>
-                          <Link
-                            href="https://gofile.io/d/ZOBu68"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Button className="bg-white hover:bg-zinc-200 text-black">
-                              <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                                />
-                              </svg>
-                              Download Flo Loader
-                            </Button>
-                          </Link>
-                        </div>
-                        <div className="bg-zinc-950 border border-zinc-700 rounded p-3">
-                          <p className="text-white mb-2">Run the Loader:</p>
-                          <ul className="list-disc list-inside space-y-1 text-zinc-400 text-sm">
-                            <li>Right-click the loader file</li>
-                            <li>Choose "Run as Administrator"</li>
-                            <li>Enter your license key when prompted</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 8 */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                      8
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Configure HudSight Overlay</h3>
-                      <p className="text-zinc-400 mb-4">Set up the overlay for optimal performance</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <ol className="list-decimal list-inside space-y-2 text-white">
-                          <li>Open HudSight (if not already running)</li>
-                          <li>Ensure "Real Overlay" mode is ON</li>
-                          <li>Run HudSight as Administrator for best compatibility</li>
-                        </ol>
-                        <div className="mt-4 bg-zinc-950 border border-zinc-700 rounded p-3">
-                          <p className="text-sm text-zinc-400">
-                            💡 <span className="text-white">Tip:</span> Keep HudSight running in the background while
-                            using the cheat.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Troubleshooting */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                      />
-                    </svg>
-                    Common Issues
-                  </h2>
-                  <div className="space-y-4">
-                    <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                      <h3 className="text-white font-bold mb-2">ERROR 246: HWID error</h3>
-                      <p className="text-zinc-400">Open support ticket for HWID reset</p>
-                    </div>
-                    <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                      <h3 className="text-white font-bold mb-2">ERROR 2: Login error</h3>
-                      <p className="text-zinc-400">Configure DNS to 1.1.1.1 (Cloudflare) and retry</p>
-                    </div>
-                    <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                      <h3 className="text-white font-bold mb-2">Serials not changing</h3>
-                      <p className="text-zinc-400">Ensure Windows version is between 10 22H2 and 11 23H2</p>
-                    </div>
-                  </div>
-                </div>
-              </>
-            ) : selectedProduct === "Arc Raiders Flo" ? (
-              <>
-                {/* Arc Raiders Flo Guide Header */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">
-                  <h2 className="text-2xl font-bold text-white mb-2">Arc Raiders Flo</h2>
-                  <p className="text-zinc-400">Budget Cheat Option - External Software</p>
-                </div>
-
-                {/* Warning Banner */}
-                <div className="bg-yellow-500/10 border border-yellow-500 rounded-lg p-4 flex items-start gap-3">
-                  <svg className="h-6 w-6 text-yellow-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <div>
-                    <p className="text-yellow-400 font-semibold mb-1">Budget Option</p>
-                    <p className="text-zinc-300 text-sm">Arc Raiders Flo is a more affordable option. For maximum safety and features, consider Arc Raiders Delta.</p>
-                  </div>
-                </div>
-
-                {/* Step 1 - Disable Antivirus */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">1</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Disable Antivirus</h3>
-                      <p className="text-zinc-400 mb-4">Turn off Windows Defender and any third-party antivirus software</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <ol className="list-decimal list-inside space-y-2 text-white">
-                          <li>Open Windows Security</li>
-                          <li>Go to Virus & threat protection</li>
-                          <li>Click "Manage settings"</li>
-                          <li>Turn off Real-time protection</li>
-                          <li>Disable any third-party antivirus</li>
-                        </ol>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 2 - Download and Run Loader */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">2</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Download and Run Loader</h3>
-                      <p className="text-zinc-400 mb-4">Get your loader and authenticate with your license key</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4 space-y-4">
-                        <div>
-                          <p className="text-white mb-2">1. Download the loader from the link below</p>
-                          <p className="text-white mb-2">2. Extract the files to a folder</p>
-                          <p className="text-white mb-4">3. Run the loader as Administrator</p>
-                          <Link href="https://gofile.io/d/ZOBu68" target="_blank" rel="noopener noreferrer">
-                            <Button className="bg-white hover:bg-zinc-200 text-black">
-                              <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                              </svg>
-                              Download Flo Loader
-                            </Button>
-                          </Link>
-                        </div>
-                        <div className="bg-zinc-950 border border-zinc-700 rounded p-3">
-                          <p className="text-white mb-2">Run the Loader:</p>
-                          <ul className="list-disc list-inside space-y-1 text-zinc-400 text-sm">
-                            <li>Right-click the loader file</li>
-                            <li>Choose "Run as Administrator"</li>
-                            <li>Enter your license key when prompted</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Step 3 - Launch Game */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <div className="flex items-start gap-4">
-                    <div className="bg-white text-black font-bold text-xl rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">3</div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">Launch Arc Raiders</h3>
-                      <p className="text-zinc-400 mb-4">Start the game after the loader is ready</p>
-                      <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                        <ol className="list-decimal list-inside space-y-2 text-white">
-                          <li>Wait for the loader to show "Ready" or "Injected"</li>
-                          <li>Launch Arc Raiders from Steam/Epic</li>
-                          <li>Enter a match to see the cheat menu</li>
-                        </ol>
-                        <div className="mt-4 bg-zinc-950 border border-zinc-700 rounded p-3">
-                          <p className="text-sm text-zinc-400">
-                            <span className="text-white">Tip:</span> Press INSERT to open/close the cheat menu in-game.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Support Section */}
-                <div className="bg-zinc-900 border border-white/20 rounded-lg p-8">
-                  <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                    <svg className="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
-                    Need Help?
-                  </h2>
-                  <div className="bg-zinc-800 border border-zinc-700 rounded-lg p-4">
-                    <p className="text-zinc-300 mb-4">If you encounter any issues, join our Discord for support.</p>
-                    <Link href="https://discord.gg/n42mcPBP6K" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-[#5865F2] hover:bg-[#4752C4] text-white">
-                        <svg className="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-                        </svg>
-                        Join Discord Support
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </>
-            ) : selectedProduct === "Rust" ? (
+) : selectedProduct === "Rust" ? (
               <>
                 {/* Rust Guide Header */}
                 <div className="bg-zinc-900 border border-white/20 rounded-lg p-6">

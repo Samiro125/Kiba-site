@@ -7,7 +7,7 @@ import { SiteHeader } from "@/components/site-header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "KIBA CHEATS - Gaming Enhancement Software",
+  title: "EXTRA - Gaming Enhancement Software",
   description: "Empowering your gaming experience with high-quality gaming enhancements.",
     generator: 'v0.app'
 }
@@ -58,7 +58,6 @@ export default function RootLayout({
         <SiteHeader />
 
         <div className="relative z-10">{children}</div>
-        <script src="https://cdn.storrik.com/embed.js" async />
       </body>
     </html>
   )

@@ -271,58 +271,10 @@ const productIdMap: Record<string, string> = {
 export default function ProductPage({ params }: { params: { id: string } }) {
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
-  const [arcVariant, setArcVariant] = useState<"delta" | "flo" | null>(null)
-  const [showArcModal, setShowArcModal] = useState(false)
-  const [rustVariant, setRustVariant] = useState<"delta" | "flo" | null>(null)
-  const [showRustModal, setShowRustModal] = useState(false)
   const [isCryptoOpen, setIsCryptoOpen] = useState(false)
 
   const actualId = productIdMap[params.id] || params.id
   const product = products.find((p) => p.id === actualId)
-  
-  // Show Arc Raiders variant modal on first visit
-  useEffect(() => {
-    if (actualId === "arc-raiders" && arcVariant === null) {
-      setShowArcModal(true)
-    }
-    if (actualId === "rust" && rustVariant === null) {
-      setShowRustModal(true)
-    }
-  }, [actualId, arcVariant, rustVariant])
-  
-  // Arc Raiders variant pricing
-  const arcDeltaPrices = [
-    { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
-    { duration: "1 week", amount: "$27.99", originalAmount: "$44.99", popular: true },
-    { duration: "1 month", amount: "$57.99", originalAmount: "$89.99" },
-    { duration: "lifetime", amount: "$109.99", originalAmount: "$179.99", popular: true, bestValue: true },
-  ]
-  
-  const arcFloPrices = [
-    { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
-    { duration: "1 month", amount: "$23.99", originalAmount: "$39.99", popular: true },
-    { duration: "lifetime", amount: "$49.99", originalAmount: "$89.99", bestValue: true },
-  ]
-  
-  // Get the correct prices based on variant for Arc Raiders
-  const getArcPrices = () => arcVariant === "delta" || arcVariant === null ? arcDeltaPrices : arcFloPrices
-  
-  // Rust variant pricing
-  const rustDeltaPrices = [
-    { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
-    { duration: "1 week", amount: "$27.99", originalAmount: "$44.99", popular: true },
-    { duration: "1 month", amount: "$59.99", originalAmount: "$89.99" },
-    { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true },
-  ]
-  
-  const rustFloPrices = [
-    { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
-    { duration: "1 month", amount: "$23.99", originalAmount: "$39.99", popular: true },
-    { duration: "lifetime", amount: "$49.99", originalAmount: "$89.99", bestValue: true },
-  ]
-  
-  // Get the correct prices based on variant for Rust
-  const getRustPrices = () => rustVariant === "delta" || rustVariant === null ? rustDeltaPrices : rustFloPrices
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
@@ -337,98 +289,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="flex min-h-screen flex-col bg-black">
-      {/* Arc Raiders Variant Selection Modal */}
-      {showArcModal && actualId === "arc-raiders" && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-          <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border border-red-900/50 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl shadow-red-900/20">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-white mb-2">Choose Your Version</h2>
-              <p className="text-gray-400 text-sm">Select the Arc Raiders cheat version that fits your needs</p>
-            </div>
-            
-            <div className="space-y-4">
-              {/* Delta Option */}
-              <button
-                onClick={() => { setArcVariant("delta"); setShowArcModal(false); setSelectedPlan(0); }}
-                className="w-full p-6 rounded-xl border-2 border-green-500/50 bg-green-950/20 hover:bg-green-950/40 hover:border-green-500 transition-all group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xl font-bold text-white">DELTA</span>
-                  <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full">RECOMMENDED</span>
-                </div>
-                <p className="text-green-400 text-sm mb-3">More Safe & Secure</p>
-                <div className="text-left text-gray-400 text-xs space-y-1">
-                  <p>Starting from $7.99/day</p>
-                  <p>Higher security, premium features</p>
-                </div>
-              </button>
-              
-              {/* Flo Option */}
-              <button
-                onClick={() => { setArcVariant("flo"); setShowArcModal(false); setSelectedPlan(0); }}
-                className="w-full p-6 rounded-xl border-2 border-yellow-500/50 bg-yellow-950/20 hover:bg-yellow-950/40 hover:border-yellow-500 transition-all group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xl font-bold text-white">FLO</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-bold rounded-full">BUDGET</span>
-                </div>
-                <p className="text-yellow-400 text-sm mb-3">Affordable Option</p>
-                <div className="text-left text-gray-400 text-xs space-y-1">
-                  <p>Starting from $11.99/week</p>
-                  <p>Great value, essential features</p>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* Rust Variant Selection Modal */}
-      {showRustModal && actualId === "rust" && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-          <div className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border border-red-900/50 rounded-2xl p-8 max-w-md w-full mx-4 shadow-2xl shadow-red-900/20">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-white mb-2">Choose Your Version</h2>
-              <p className="text-gray-400 text-sm">Select the Rust cheat version that fits your needs</p>
-            </div>
-            
-            <div className="space-y-4">
-              {/* Delta Option */}
-              <button
-                onClick={() => { setRustVariant("delta"); setShowRustModal(false); setSelectedPlan(0); }}
-                className="w-full p-6 rounded-xl border-2 border-green-500/50 bg-green-950/20 hover:bg-green-950/40 hover:border-green-500 transition-all group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xl font-bold text-white">DELTA</span>
-                  <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full">RECOMMENDED</span>
-                </div>
-                <p className="text-green-400 text-sm mb-3">More Safe & Secure</p>
-                <div className="text-left text-gray-400 text-xs space-y-1">
-                  <p>Starting from $7.99/day</p>
-                  <p>Higher security, premium features</p>
-                </div>
-              </button>
-              
-              {/* Flo Option */}
-              <button
-                onClick={() => { setRustVariant("flo"); setShowRustModal(false); setSelectedPlan(0); }}
-                className="w-full p-6 rounded-xl border-2 border-yellow-500/50 bg-yellow-950/20 hover:bg-yellow-950/40 hover:border-yellow-500 transition-all group"
-              >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xl font-bold text-white">FLO</span>
-                  <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-bold rounded-full">BUDGET</span>
-                </div>
-                <p className="text-yellow-400 text-sm mb-3">Affordable Option</p>
-                <div className="text-left text-gray-400 text-xs space-y-1">
-                  <p>Starting from $11.99/week</p>
-                  <p>Great value, essential features</p>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-      
       <main className="flex-1 container py-12 px-6 pt-24">
         <div className="grid gap-8 lg:grid-cols-[1fr_450px]">
           {/* Left Column - Product Info */}
@@ -863,79 +723,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <div className="space-y-4">
             <Card className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border-red-900/50 sticky top-24">
               <div className="p-6 space-y-5">
-                {/* Arc Raiders Variant Selection */}
-                {actualId === "arc-raiders" && (
-                  <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <h3 className="text-white font-bold">Choose Version</h3>
-                    </div>
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      <button
-                        onClick={() => { setArcVariant("delta"); setSelectedPlan(0); }}
-                        className={`p-3 rounded-lg border transition-all ${
-                          arcVariant === "delta"
-                            ? "border-red-500 bg-red-950/30"
-                            : "border-white/10 bg-black/20 hover:border-red-500/50"
-                        }`}
-                      >
-                        <div className="text-white font-bold text-sm">DELTA</div>
-                        <div className="text-green-400 text-xs mt-1">More Safe</div>
-                      </button>
-                      <button
-                        onClick={() => { setArcVariant("flo"); setSelectedPlan(0); }}
-                        className={`p-3 rounded-lg border transition-all ${
-                          arcVariant === "flo"
-                            ? "border-red-500 bg-red-950/30"
-                            : "border-white/10 bg-black/20 hover:border-red-500/50"
-                        }`}
-                      >
-                        <div className="text-white font-bold text-sm">FLO</div>
-                        <div className="text-yellow-400 text-xs mt-1">Budget Option</div>
-                      </button>
-                    </div>
-                  </div>
-                )}
-                
-                {/* Rust Variant Selection */}
-                {actualId === "rust" && (
-                  <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <h3 className="text-white font-bold">Choose Version</h3>
-                    </div>
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      <button
-                        onClick={() => { setRustVariant("delta"); setSelectedPlan(0); }}
-                        className={`p-3 rounded-lg border transition-all ${
-                          rustVariant === "delta"
-                            ? "border-red-500 bg-red-950/30"
-                            : "border-white/10 bg-black/20 hover:border-red-500/50"
-                        }`}
-                      >
-                        <div className="text-white font-bold text-sm">DELTA</div>
-                        <div className="text-green-400 text-xs mt-1">More Safe</div>
-                      </button>
-                      <button
-                        onClick={() => { setRustVariant("flo"); setSelectedPlan(0); }}
-                        className={`p-3 rounded-lg border transition-all ${
-                          rustVariant === "flo"
-                            ? "border-red-500 bg-red-950/30"
-                            : "border-white/10 bg-black/20 hover:border-red-500/50"
-                        }`}
-                      >
-                        <div className="text-white font-bold text-sm">FLO</div>
-                        <div className="text-yellow-400 text-xs mt-1">Budget Option</div>
-                      </button>
-                    </div>
-                  </div>
-                )}
-                
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <Zap className="w-5 h-5 text-yellow-500" />
                     <h3 className="text-white font-bold">Choose Your Plan</h3>
                   </div>
                   <div className="space-y-2">
-                    {(actualId === "arc-raiders" ? getArcPrices() : actualId === "rust" ? getRustPrices() : product.prices).map((plan, index) => (
+                    {product.prices.map((plan, index) => (
                       <button
                         key={index}
                         onClick={() => setSelectedPlan(index)}
@@ -962,114 +756,30 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 {/* Buy Button */}
                 <Button
                   onClick={() => {
-                    // Products with direct Shopify checkout
-                    const shopifyProducts = [
-                      "temp-spoofer",
-                      "perm-spoofer", "fortnite", "call-of-duty", "accounts",
-
-                    ]
-                    const isArcDelta = actualId === "arc-raiders" && arcVariant === "delta"
-                    const isArcFlo = actualId === "arc-raiders" && arcVariant === "flo"
+                    // Stripe checkout URLs for each product
+                    const stripeUrls: Record<string, string[]> = {
+                      "fortnite": [
+                        "https://buy.stripe.com/3cI7sM7G7fbCb74fCP38403", // 1 day
+                        "https://buy.stripe.com/9B628sgcDfbC8YW4Yb38404", // 1 week
+                        "https://buy.stripe.com/00w3cw0dFe7yfnk62f38405", // 1 month
+                        "https://buy.stripe.com/aFa3cwf8z3sU1wu9er38406", // lifetime
+                      ],
+                      "arc-raiders": [
+                        "https://buy.stripe.com/8x26oI0dF5B2cb8fCP38407", // 1 day
+                        "https://buy.stripe.com/28EfZid0r8Ne7US4Yb38408", // 1 week
+                        "https://buy.stripe.com/dRmbJ2f8z9Ri0sq62f38409", // 1 month
+                        "https://buy.stripe.com/4gMdRaaSj2oQcb88an3840a", // lifetime
+                      ],
+                      "call-of-duty": [
+                        "https://buy.stripe.com/6oUcN6d0r4wY1wubmz3840b", // 3 day
+                        "https://buy.stripe.com/4gMeVe4tVgfG5MK76j3840c", // 1 week
+                        "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
+                        "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
+                      ],
+                    }
                     
-                    if (isArcDelta || isArcFlo || shopifyProducts.includes(actualId)) {
-                      let checkoutUrls: string[] = []
-                      
-                      if (isArcDelta) {
-                        // Arc Raiders Delta uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_c57e0d7c4683dac03f853d386aba0b1d")
-                        if (selectedPlan === 1) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_3347ba80ca5f2e762839f5e9e38e7115")
-                        if (selectedPlan === 2) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_6c2d3e1b23872878f37e4bde693ef265")
-                        if (selectedPlan === 3) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_58dba61731328474f920d3b786d2ee29")
-                        return
-                      } else if (isArcFlo) {
-                        // Arc Raiders Flo uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_e48797d3b7531a89527bb77df3403ba7", "var_a1d317bde88c5c2402be30ddc8793427")
-                        if (selectedPlan === 1) w.storrik.pay("prod_e48797d3b7531a89527bb77df3403ba7", "var_1dc0e3840d2ed8e5f1d510870176c7cf")
-                        if (selectedPlan === 2) w.storrik.pay("prod_e48797d3b7531a89527bb77df3403ba7", "var_5c083736c33630e7896dc194c0d5bcb7")
-                        return
-                      } else if (actualId === "temp-spoofer") {
-                        // Temp Spoofer uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_b227a6f466ae1c9564ec723f68252d28", "var_0b40ad7bf50999b7567bc5179a4e55ea")
-                        if (selectedPlan === 1) w.storrik.pay("prod_b227a6f466ae1c9564ec723f68252d28", "var_f39e70f481cacfd1f694c8b61c655b89")
-                        if (selectedPlan === 2) w.storrik.pay("prod_b227a6f466ae1c9564ec723f68252d28", "var_8533d1c4028ef382b4307b8fcfde41a0")
-                        if (selectedPlan === 3) w.storrik.pay("prod_b227a6f466ae1c9564ec723f68252d28", "var_7ee6e856d6afe19c20c93bfc99b9973e")
-                        return
-                      } else if (actualId === "apex") {
-                        // Apex uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_98758f3b05994e595b016777d9b9c767", "var_c32efd19a0498942cee52863230a9ee5")
-                        if (selectedPlan === 1) w.storrik.pay("prod_98758f3b05994e595b016777d9b9c767", "var_51635894854e992dfcbb73fe284ba260")
-                        if (selectedPlan === 2) w.storrik.pay("prod_98758f3b05994e595b016777d9b9c767", "var_bc6e02603108894afcab34600cf54485")
-                        if (selectedPlan === 3) w.storrik.pay("prod_98758f3b05994e595b016777d9b9c767", "var_03021f3b324facd274965407fdd0dfc5")
-                        return
-                      } else if (actualId === "rust") {
-                        // Rust uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_0e7cdf3b6c1b01801a5b1ef64c36d944", "var_3c46b1f775e4ac78ccbd237feea171e4")
-                        if (selectedPlan === 1) w.storrik.pay("prod_0e7cdf3b6c1b01801a5b1ef64c36d944", "var_9f5f807009a021f3b8c02de123fbfa53")
-                        if (selectedPlan === 2) w.storrik.pay("prod_0e7cdf3b6c1b01801a5b1ef64c36d944", "var_82dfbf2813792b0c45a4ce3d2e7290c9")
-                        if (selectedPlan === 3) w.storrik.pay("prod_0e7cdf3b6c1b01801a5b1ef64c36d944", "var_56013fcdf9b3cc0ca307428c11c87399")
-                        return
-                      } else if (actualId === "perm-spoofer") {
-                        // Perm Spoofer uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_71957086c73711b92de4d8409a6e2d09", "var_cafac9c0a64d0df628436b29eda27036")
-                        if (selectedPlan === 1) w.storrik.pay("prod_71957086c73711b92de4d8409a6e2d09", "var_26c3abd69f4484ff0e0aded8a28c5876")
-                        return
-                      } else if (actualId === "fortnite") {
-                        // Fortnite uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_52aa133cde67d1f0386bfb20fdd49d0d", "var_e6a2f9bb6a662830eab3b00fd231b7ff")
-                        if (selectedPlan === 1) w.storrik.pay("prod_52aa133cde67d1f0386bfb20fdd49d0d", "var_a8a2c5e20e15f85e406c09afc879de0e")
-                        if (selectedPlan === 2) w.storrik.pay("prod_52aa133cde67d1f0386bfb20fdd49d0d", "var_1b5a2a79f29dbbf97aa4d22f4a36f707")
-                        if (selectedPlan === 3) w.storrik.pay("prod_52aa133cde67d1f0386bfb20fdd49d0d", "var_4257dcd182bf7955f6b8f6b0dfbbe692")
-                        return
-                      } else if (actualId === "call-of-duty") {
-                        // COD uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", "var_3fa6a55487e809776b7f10197ed46159")
-                        if (selectedPlan === 1) w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", "var_38c382c3e578052d9d4f2b34ddaca3c2")
-                        if (selectedPlan === 2) w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", "var_08434791164095d7342ba18fd77c4532")
-                        if (selectedPlan === 3) w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", "var_66d621d60649b603b9218a5a2ba31225")
-                        return
-                      } else if (actualId === "r6") {
-                        // R6 Siege uses Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_3c8023b2736168e46aa67d18fe0e00d4")
-                        if (selectedPlan === 1) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_d5f0b2c9d1ac5abead44a4f3fe952f4f")
-                        if (selectedPlan === 2) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_d5f0b2c9d1ac5abead44a4f3fe952f4f")
-                        if (selectedPlan === 3) w.storrik.pay("prod_9d29f756990fdcf7a8e2d84340990ac4", "var_0d25afe42f6e5b063580c9f0cb819011")
-                        return
-                      } else if (actualId === "accounts") {
-                        // Accounts use Storrik checkout modal
-                        const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
-                        if (!w.storrik) return
-                        w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        w.storrik.pay("prod_a02c802a3befba3bc65120190ae89b73", "var_f62ece1b638348d90afa293c3100cc5d")
-                        return
-                      }
-                      
+                    const checkoutUrls = stripeUrls[actualId]
+                    if (checkoutUrls && checkoutUrls[selectedPlan]) {
                       window.open(checkoutUrls[selectedPlan], "_blank")
                     } else {
                       setIsCheckoutOpen(true)
@@ -1095,8 +805,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <CryptoPaymentModal
                   isOpen={isCryptoOpen}
                   onClose={() => setIsCryptoOpen(false)}
-                  amount={(actualId === "arc-raiders" ? getArcPrices() : actualId === "rust" ? getRustPrices() : product.prices)[selectedPlan]?.amount || "$0"}
-                  planName={`${product.name} - ${(actualId === "arc-raiders" ? getArcPrices() : actualId === "rust" ? getRustPrices() : product.prices)[selectedPlan]?.duration || ""}`}
+                  amount={product.prices[selectedPlan]?.amount || "$0"}
+                  planName={`${product.name} - ${product.prices[selectedPlan]?.duration || ""}`}
                 />
 
                 {/* Secure Payment Badge */}
