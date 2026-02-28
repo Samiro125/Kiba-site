@@ -23,7 +23,7 @@ const products: Product[] = [
   { id: "cod", name: "Call of Duty", image: "/images/cod-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
 
   { id: "fortnite", name: "Fortnite", image: "/images/fortnite-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
-  { id: "fivem", name: "FiveM", image: "/images/fivem.png", status: "undetected", updatedAt: "Feb 14, 2026 07:50 PM", href: "/products/fivem" },
+  
 
 
   { id: "temp-spoofer", name: "Temp Spoofer", image: "/images/temp-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/temp-spoofer" },
