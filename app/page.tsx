@@ -127,8 +127,7 @@ export default function Home() {
                 <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
               </div>
 
-              {/* Heading */}
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Extra Services</h2>
+              
             </div>
           </div>
         </section>
