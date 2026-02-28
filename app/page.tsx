@@ -219,7 +219,6 @@ export default function Home() {
                         <span className="text-xl font-bold text-white transition-all duration-300 group-hover:text-zinc-300 group-hover:scale-110 origin-left">
                           {product.price}
                         </span>
-                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">Extra Services</span>
                       </div>
                     </CardContent>
                   </Card>
