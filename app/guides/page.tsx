@@ -14,7 +14,7 @@ export default function GuidesPage() {
     "Arc Raiders",
   ]
 
-  const spooferProducts = ["Temp Spoofer", "Perm Spoofer"]
+  const spooferProducts = ["HWID Spoofer"]
 
   return (
     <div className="min-h-screen text-foreground">
