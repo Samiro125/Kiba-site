@@ -186,9 +186,9 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1 min-h-screen relative z-10">
         {/* Hero Section with Background Image and Centered Content */}
-        <section className="relative min-h-[400px] h-[400px] md:h-auto md:min-h-[400px] flex items-center justify-center overflow-hidden border-b border-zinc-800">
+        <section className="relative flex items-center justify-center overflow-hidden border-b border-zinc-800" style={{ minHeight: '400px' }}>
           {/* Background Image */}
-          <div className="absolute inset-0 z-0" style={{ minHeight: '400px' }}>
+          <div className="absolute inset-0 z-0 overflow-hidden" style={{ height: '100%', minHeight: '400px' }}>
             <Image
               src="/dark-tactical-soldiers-gaming-combat-scene.jpg"
               alt="Hero Background"
