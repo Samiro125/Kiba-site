@@ -197,9 +197,9 @@ const products = [
     id: "arc-raiders",
     name: "ARC RAIDERS CHEAT",
     game: "Arc Raiders",
-    image: "/images/arc-raiders-new.png",
+    image: "/images/arc-raiders-product.png",
     prices: [
-      { duration: "1 day", amount: "$7.99", originalAmount: "$14.99" },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$17.99", checkoutLink: "https://checkout.komerza.com/checkout/d7006f94-a86f-4758-8ab6-88d5816892ab" },
       { duration: "1 week", amount: "$23.99", originalAmount: "$39.99", popular: true },
       { duration: "1 month", amount: "$43.99", originalAmount: "$69.99" },
       { duration: "lifetime", amount: "$109.99", originalAmount: "$179.99", popular: true, bestValue: true },
