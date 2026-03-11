@@ -297,7 +297,7 @@ export function CryptoPaymentModal({ isOpen, onClose, amount, planName }: Crypto
 
             {/* Create Ticket on Discord */}
             <a
-              href="https://discord.gg/ChfqrzByAP"
+              href="https://discord.gg/AxE897SHap"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-3.5 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold transition-all flex items-center justify-center gap-2 mb-3"

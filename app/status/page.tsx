@@ -17,24 +17,27 @@ interface Product {
 }
 
 const products: Product[] = [
-
-  { id: "arc-raiders", name: "Arc Raiders", image: "/images/arc-raiders-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:35 PM", href: "/products/arc-raiders" },
-
-  { id: "cod", name: "Call of Duty", image: "/images/cod-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
-
-  { id: "fortnite", name: "Fortnite", image: "/images/fortnite-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
-  
-
-
-  { id: "temp-spoofer", name: "Temp Spoofer", image: "/images/temp-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/temp-spoofer" },
-  { id: "perm-spoofer", name: "Perm Spoofer", image: "/images/perm-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:40 PM", href: "/products/perm-spoofer" },
-
+  { id: "apex", name: "Apex Legends", image: "/images/apex-20-282-29.png", status: "undetected", updatedAt: "Feb 14, 2026 09:42 PM", href: "/products/apex" },
+  { id: "arc-raiders", name: "Arc Raiders", image: "/images/arc-20raiders.png", status: "undetected", updatedAt: "Feb 14, 2026 09:35 PM", href: "/products/arc-raiders" },
+  { id: "battlefield", name: "Battlefield 6", image: "/images/bf6-20main.png", status: "undetected", updatedAt: "Feb 14, 2026 08:26 PM", href: "/products/battlefield" },
+  { id: "cod", name: "Call of Duty", image: "/images/cod.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
+  { id: "csgo", name: "CS2", image: "/images/cs2-main.png", status: "undetected", updatedAt: "Feb 14, 2026 08:15 PM", href: "/products/csgo" },
+  { id: "fortnite", name: "Fortnite", image: "/images/fortnitee.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
+  { id: "fivem", name: "FiveM", image: "/images/fivem.png", status: "undetected", updatedAt: "Feb 14, 2026 07:50 PM", href: "/products/fivem" },
+  { id: "marvel-rivals", name: "Marvel Rivals", image: "/images/marvel-rivals-vmx.webp", status: "undetected", updatedAt: "Feb 14, 2026 09:10 PM", href: "/products/marvel-rivals" },
+  { id: "minecraft", name: "Minecraft", image: "/images/minecraft-vmx.webp", status: "undetected", updatedAt: "Feb 14, 2026 06:30 PM", href: "/products/minecraft" },
+  { id: "r6", name: "Rainbow Six Siege", image: "/images/r6666.png", status: "undetected", updatedAt: "Feb 14, 2026 09:20 PM", href: "/products/r6-siege" },
+  { id: "rust", name: "Rust", image: "/images/rustt.png", status: "undetected", updatedAt: "Feb 14, 2026 09:55 PM", href: "/products/rust" },
+  { id: "valorant", name: "Valorant", image: "/images/kiba-cheats-banner-20valo.webp", status: "undetected", updatedAt: "Feb 14, 2026 10:05 PM", href: "/products/valorant" },
+  { id: "temp-spoofer", name: "Temp Spoofer", image: "/images/temp.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/temp-spoofer" },
+  { id: "perm-spoofer", name: "Perm Spoofer", image: "/images/perm.webp", status: "undetected", updatedAt: "Feb 14, 2026 08:40 PM", href: "/products/perm-spoofer" },
+  { id: "dbd", name: "Dead by Daylight", image: "/images/dbd-vmx.webp", status: "undetected", updatedAt: "Feb 14, 2026 07:15 PM", href: "/products/dbd" },
 ]
 
 const statusConfig = {
   undetected: { label: "UNDETECTED (WORKING)", color: "text-green-400", bg: "bg-green-500/10", border: "border-green-500/30", dot: "bg-green-400", icon: CheckCircle2 },
   updating: { label: "UPDATING (NOT WORKING)", color: "text-yellow-400", bg: "bg-yellow-500/10", border: "border-yellow-500/30", dot: "bg-yellow-400", icon: AlertTriangle },
-  detected: { label: "DETECTED (NOT WORKING)", color: "text-red-400", bg: "bg-white/10", border: "border-red-500/30", dot: "bg-red-400", icon: XCircle },
+  detected: { label: "DETECTED (NOT WORKING)", color: "text-red-400", bg: "bg-red-500/10", border: "border-red-500/30", dot: "bg-red-400", icon: XCircle },
 }
 
 export default function StatusPage() {
@@ -76,17 +79,25 @@ export default function StatusPage() {
   }, {})
 
   return (
-    <div className="min-h-screen text-foreground">
-      <main className="flex-1 pt-24">
+    <div className="flex min-h-screen flex-col bg-black">
+      {/* Background */}
+      <div className="fixed inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-red-950/40 via-black to-black" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/15 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-red-500/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-red-700/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+      </div>
+
+      <main className="flex-1 pt-24 relative z-10">
         <div className="container px-6 max-w-5xl mx-auto">
 
           {/* Header */}
           <div className={`text-center mb-12 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 bg-white/5 text-white text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/5 text-red-400 text-sm font-medium mb-6">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-white opacity-75 animate-ping" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
+                <span className="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75 animate-ping" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-red-400" />
               </span>
               Live Status Monitor
             </div>
@@ -94,7 +105,7 @@ export default function StatusPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-3 text-balance">
               Status Updates{" "}
               <br className="hidden md:block" />
-              For our <span className="text-white">Cheats</span>
+              For our <span className="text-red-500">Cheats</span>
             </h1>
             <p className="text-gray-400 max-w-md mx-auto mb-6 text-sm leading-relaxed">
               Stay informed on the status of our cheats and hacks, with real-time updates to keep you in the loop.
@@ -104,7 +115,7 @@ export default function StatusPage() {
             <div className="flex items-center justify-center gap-3">
               <button
                 onClick={handleRefresh}
-                className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-white hover:bg-zinc-200 text-black text-sm font-semibold transition-all"
+                className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white text-sm font-semibold transition-all"
               >
                 <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spin" : ""}`} />
                 Refresh Status
@@ -124,7 +135,7 @@ export default function StatusPage() {
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center transition-all duration-300 group-hover/s1:bg-white/10 group-hover/s1:scale-110">
                   <Shield className="w-4.5 h-4.5 text-gray-400 transition-colors duration-300 group-hover/s1:text-white" />
                 </div>
-                <TrendingUp className="w-4 h-4 text-gray-600 transition-all duration-300 group-hover/s1:text-white group-hover/s1:scale-110" />
+                <TrendingUp className="w-4 h-4 text-gray-600 transition-all duration-300 group-hover/s1:text-red-400 group-hover/s1:scale-110" />
               </div>
               <div className="text-3xl font-bold text-white mb-0.5 transition-all duration-300 group-hover/s1:scale-110 origin-left">{totalProducts}</div>
               <div className="text-xs text-gray-500 transition-colors duration-300 group-hover/s1:text-gray-300">Total Products</div>
@@ -194,7 +205,7 @@ export default function StatusPage() {
                 {/* Category Header */}
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-1 h-5 rounded-full bg-white" />
+                    <div className="w-1 h-5 rounded-full bg-red-500" />
                     <h3 className="text-sm font-bold text-white tracking-wider">{category}</h3>
                   </div>
                   <span className="text-xs text-gray-600">{items.length} product{items.length > 1 ? "s" : ""}</span>
@@ -208,11 +219,11 @@ export default function StatusPage() {
                     return (
                       <div
                         key={product.id}
-                        className="rounded-xl border border-white/5 bg-white/[0.02] backdrop-blur p-4 flex items-center justify-between gap-4 hover:border-white/15 hover:bg-white/[0.04] hover:-translate-y-1 hover:shadow-lg hover:shadow-white/5 transition-all duration-500 group"
+                        className="rounded-xl border border-white/5 bg-white/[0.02] backdrop-blur p-4 flex items-center justify-between gap-4 hover:border-white/15 hover:bg-white/[0.04] hover:-translate-y-1 hover:shadow-lg hover:shadow-red-500/5 transition-all duration-500 group"
                       >
                         {/* Left: Icon + Name */}
                         <div className="flex items-center gap-3 min-w-0">
-                          <div className="w-10 h-10 rounded-lg overflow-hidden border border-white/10 flex-shrink-0 bg-black transition-all duration-300 group-hover:border-white/30 group-hover:scale-110">
+                          <div className="w-10 h-10 rounded-lg overflow-hidden border border-white/10 flex-shrink-0 bg-black transition-all duration-300 group-hover:border-red-500/30 group-hover:scale-110">
                             <Image
                               src={product.image}
                               alt={product.name}
@@ -222,7 +233,7 @@ export default function StatusPage() {
                             />
                           </div>
                           <div className="min-w-0">
-                            <div className="text-sm font-semibold text-white truncate transition-colors duration-300 group-hover:text-zinc-300">{product.name}</div>
+                            <div className="text-sm font-semibold text-white truncate transition-colors duration-300 group-hover:text-red-400">{product.name}</div>
                             <div className="flex items-center gap-1 text-xs text-gray-500">
                               <Clock className="w-3 h-3" />
                               Updated {product.updatedAt}
@@ -242,7 +253,7 @@ export default function StatusPage() {
                           </div>
                           <Link
                             href={product.href}
-                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-zinc-200 text-black text-xs font-semibold transition-all group-hover:shadow-lg group-hover:shadow-white/20"
+                            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-red-600 hover:bg-red-700 text-white text-xs font-semibold transition-all group-hover:shadow-lg group-hover:shadow-red-500/20"
                           >
                             Purchase Now
                             <ArrowRight className="w-3 h-3" />
@@ -272,10 +283,10 @@ export default function StatusPage() {
             <div>
               <h4 className="mb-4 text-sm font-semibold text-white">Quick Links</h4>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Home</Link></li>
-                <li><Link href="/products" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Products</Link></li>
-                <li><Link href="/status" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Status</Link></li>
-                <li><Link href="/reviews" className="hover:text-white transition-all duration-300 hover:translate-x-1 inline-block">Reviews</Link></li>
+                <li><Link href="/" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">Home</Link></li>
+                <li><Link href="/products" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">Products</Link></li>
+                <li><Link href="/status" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">Status</Link></li>
+                <li><Link href="/reviews" className="hover:text-red-400 transition-all duration-300 hover:translate-x-1 inline-block">Reviews</Link></li>
               </ul>
             </div>
             <div>

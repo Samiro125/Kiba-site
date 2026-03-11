@@ -46,26 +46,35 @@ export default function Home() {
       id: "fortnite",
       title: "FORTNITE",
       game: "Fortnite",
-      image: "/images/fortnite-extra.png",
-      price: "$10.99",
+      image: "/images/fortnitee.png",
+      price: "$13.99",
       rating: 5,
-      color: "from-zinc-500/20 to-zinc-900/20",
+      color: "from-red-500/20 to-red-900/20",
     },
     {
       id: "temp-spoofer",
       title: "TEMP SPOOFER",
       game: "Spoofer",
-      image: "/images/temp-spoofer-extra.jpg",
+      image: "/images/temp-spoofer-green.jpg",
       price: "$7.99",
       rating: 5,
       color: "from-green-500/20 to-green-900/20",
     },
     {
+      id: "rust",
+      title: "RUST",
+      game: "Rust",
+      image: "/images/rustt.png",
+      price: "$13.99",
+      rating: 5,
+      color: "from-red-500/20 to-orange-900/20",
+    },
+    {
       id: "arc-raiders",
       title: "ARC RAIDERS",
       game: "Arc Raiders",
-      image: "/images/arc-raiders-extra.png",
-      price: "$10.99",
+      image: "/images/arc-raiders-new.png",
+      price: "$13.99",
       rating: 5,
       color: "from-green-500/20 to-green-900/20",
     },
@@ -73,19 +82,91 @@ export default function Home() {
       id: "perm-spoofer",
       title: "PERM SPOOFER",
       game: "Universal Spoofer",
-      image: "/images/perm-spoofer-extra.jpg",
-      price: "$24.99",
+      image: "/images/perm-spoofer-red.jpg",
+      price: "$13.99",
       rating: 5,
-      color: "from-zinc-500/20 to-zinc-900/20",
+      color: "from-red-500/20 to-red-900/20",
+    },
+    {
+      id: "apex",
+      title: "APEX LEGENDS",
+      game: "Apex",
+      image: "/images/apex-new.png",
+      price: "$13.99",
+      rating: 5,
+      color: "from-cyan-500/20 to-cyan-900/20",
     },
     {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       game: "Call of Duty",
-      image: "/images/cod-extra.png",
-      price: "$11.99",
+      image: "/images/cod.png",
+      price: "$13.99",
       rating: 5,
-      color: "from-zinc-500/20 to-zinc-900/20",
+      color: "from-red-500/20 to-red-900/20",
+    },
+    {
+      id: "r6-siege",
+      title: "RAINBOW SIX SIEGE",
+      game: "R6 Siege",
+      image: "/images/r6666.png",
+      price: "$13.99",
+      rating: 5,
+      color: "from-red-500/20 to-red-900/20",
+    },
+    {
+      id: "valorant",
+      title: "VALORANT",
+      game: "Valorant",
+      image: "/images/kiba-cheats-banner-20valo.webp",
+      price: "$13.99",
+      rating: 5,
+      color: "from-red-500/20 to-red-900/20",
+    },
+    {
+      id: "csgo",
+      title: "CS:GO",
+      game: "Counter-Strike",
+      image: "/images/cs2-main.png",
+      price: "$13.99",
+      rating: 5,
+      color: "from-yellow-500/20 to-yellow-900/20",
+    },
+    {
+      id: "minecraft",
+      title: "MINECRAFT",
+      game: "Minecraft",
+      image: "/images/minecraft-vmx.webp",
+      price: "$13.99",
+      rating: 5,
+      color: "from-orange-500/20 to-orange-900/20",
+    },
+    {
+      id: "marvel-rivals",
+      title: "MARVEL RIVALS",
+      game: "Marvel Rivals",
+      image: "/images/marvel-rivals-vmx.webp",
+      price: "$13.99",
+      rating: 5,
+      color: "from-red-500/20 to-red-900/20",
+    },
+    {
+      id: "dead-by-daylight",
+      title: "DEAD BY DAYLIGHT",
+      game: "Dead by Daylight",
+      image: "/images/dbd-vmx.webp",
+      price: "$13.99",
+      rating: 5,
+      color: "from-yellow-500/20 to-yellow-900/20",
+    },
+    {
+      id: "battlefield",
+      title: "BATTLEFIELD 6",
+      game: "Battlefield",
+      image: "/images/bf6-20main.png",
+      price: "$13.99",
+      rating: 5,
+      color: "from-green-500/20 to-green-900/20",
     },
     {
       id: "accounts",
@@ -105,13 +186,14 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1 min-h-screen relative z-10">
         {/* Hero Section with Background Image and Centered Content */}
-        <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden border-b border-zinc-800">
+        <section className="relative min-h-[400px] h-[400px] md:h-auto md:min-h-[400px] flex items-center justify-center overflow-hidden border-b border-zinc-800">
           {/* Background Image */}
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0" style={{ minHeight: '400px' }}>
             <Image
               src="/dark-tactical-soldiers-gaming-combat-scene.jpg"
               alt="Hero Background"
               fill
+              sizes="100vw"
               className="object-cover opacity-40"
               priority
             />
@@ -123,11 +205,15 @@ export default function Home() {
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-12">
               {/* Logo */}
               <div className="mb-4">
-                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
-                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
+                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">KIBA</h1>
+                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">CHEATS</div>
               </div>
 
-              
+              {/* Heading */}
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Undetected Gaming Cheats</h2>
+
+              {/* Description */}
+              <p className="text-lg text-zinc-400 max-w-2xl">Dominate and Win every Game with our Undetected Cheats</p>
             </div>
           </div>
         </section>
@@ -135,7 +221,7 @@ export default function Home() {
         {/* PayPal Banner */}
         <div className="bg-black border-y border-zinc-800">
           <div className="container mx-auto max-w-5xl px-4 py-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-xl bg-black p-6 border border-zinc-800 hover:border-white/30 transition-all duration-500 hover:shadow-lg hover:shadow-white/10 group/paypal">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 rounded-xl bg-black p-6 border border-zinc-800 hover:border-red-500/30 transition-all duration-500 hover:shadow-lg hover:shadow-red-500/10 group/paypal">
               <div className="flex items-center gap-5">
                 <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/20 border border-blue-500/30 transition-all duration-500 group-hover/paypal:scale-110 group-hover/paypal:shadow-lg group-hover/paypal:shadow-blue-500/30">
                   <svg viewBox="0 0 24 24" className="h-7 w-7" fill="#00A4E4">
@@ -150,12 +236,12 @@ export default function Home() {
                 </div>
               </div>
               <Link
-                href="https://discord.gg/ChfqrzByAP"
+                href="https://discord.gg/AxE897SHap"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="shrink-0"
               >
-                <button className="bg-white hover:bg-zinc-200 text-black font-bold px-8 py-3 rounded-lg shadow-lg shadow-white/30 hover:shadow-white/50 transition-all duration-300 whitespace-nowrap">
+                <button className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold px-8 py-3 rounded-lg shadow-lg shadow-red-600/30 hover:shadow-red-600/50 transition-all duration-300 whitespace-nowrap">
                   Join Discord
                 </button>
               </Link>
@@ -168,7 +254,7 @@ export default function Home() {
             <div className="mb-12 text-center">
               <div className="mb-4">
                 <h2 className="text-3xl font-bold text-white sm:text-4xl">Featured Products</h2>
-                <Separator className="mt-4 w-16 bg-white" />
+                <Separator className="mt-4 w-16 bg-red-500" />
               </div>
             </div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -179,7 +265,7 @@ export default function Home() {
                   className="animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
                 >
-                  <Card className="overflow-hidden bg-card border-border hover:border-white/50 transition-all duration-500 cursor-pointer group hover-lift hover-border-glow hover:shadow-2xl hover:shadow-white/20">
+                  <Card className="overflow-hidden bg-card border-border hover:border-red-500/50 transition-all duration-500 cursor-pointer group hover-lift hover-border-glow hover:shadow-2xl hover:shadow-red-500/20">
                     <div className="relative overflow-hidden">
                       <Image
                         src={product.image || "/placeholder.svg"}
@@ -191,14 +277,14 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer transition-opacity duration-300" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-black bg-white/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-white bg-red-600/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
                           View Product
                           <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                         </span>
                       </div>
                     </div>
                     <CardContent className="p-6">
-                      <h3 className="mb-2 text-xl font-bold transition-all duration-300 group-hover:text-zinc-300 group-hover:translate-x-1 hover-text-glow">
+                      <h3 className="mb-2 text-xl font-bold transition-all duration-300 group-hover:text-red-500 group-hover:translate-x-1 hover-text-glow">
                         {product.title}
                       </h3>
                       <p className="mb-4 text-sm text-muted-foreground transition-all duration-300 group-hover:text-zinc-300">{product.game}</p>
@@ -215,9 +301,10 @@ export default function Home() {
                         ))}
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-xl font-bold text-white transition-all duration-300 group-hover:text-zinc-300 group-hover:scale-110 origin-left">
+                        <span className="text-xl font-bold text-red-400 transition-all duration-300 group-hover:text-red-300 group-hover:scale-110 origin-left">
                           {product.price}
                         </span>
+                        <span className="text-xs text-muted-foreground transition-all duration-300 group-hover:text-zinc-400">KIBA Cheats</span>
                       </div>
                     </CardContent>
                   </Card>
@@ -241,10 +328,10 @@ export default function Home() {
               {/* Infinite scrolling container */}
               <div className="flex gap-6 animate-scroll-left">
                 {/* First set of reviews */}
-                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-white/50 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-2 transition-all duration-500 group/card">
+                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-2 transition-all duration-500 group/card">
                   <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-5 w-5 fill-white transition-transform duration-300 group-hover/card:scale-110" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
+                      <svg key={i} className="h-5 w-5 fill-red-500 transition-transform duration-300 group-hover/card:scale-110" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
@@ -254,67 +341,67 @@ export default function Home() {
                     is top-notch too."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black font-bold transition-all duration-300 group-hover/card:scale-110 group-hover/card:shadow-lg group-hover/card:shadow-white/50">
+                    <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold transition-all duration-300 group-hover/card:scale-110 group-hover/card:shadow-lg group-hover/card:shadow-red-500/50">
                       M
                     </div>
                     <div>
                       <p className="font-semibold text-white">Marcus_Pro</p>
-                      <p className="text-xs text-zinc-400 transition-colors duration-300 group-hover/card:text-white">Valorant User</p>
+                      <p className="text-xs text-zinc-400 transition-colors duration-300 group-hover/card:text-red-400">Valorant User</p>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-white/50 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-2 transition-all duration-500 group/card2">
+                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-2 transition-all duration-500 group/card2">
                   <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-5 w-5 fill-white transition-transform duration-300 group-hover/card2:scale-110" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
+                      <svg key={i} className="h-5 w-5 fill-red-500 transition-transform duration-300 group-hover/card2:scale-110" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card2:text-white">
-                    "The spoofer saved my account! Got banned before but with Extra's temp spoofer I'm back in the game
+                    "The spoofer saved my account! Got banned before but with KIBA's temp spoofer I'm back in the game
                     with zero issues."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black font-bold transition-all duration-300 group-hover/card2:scale-110 group-hover/card2:shadow-lg group-hover/card2:shadow-white/50">
+                    <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold transition-all duration-300 group-hover/card2:scale-110 group-hover/card2:shadow-lg group-hover/card2:shadow-red-500/50">
                       S
                     </div>
                     <div>
                       <p className="font-semibold text-white">Shadow_X</p>
-                      <p className="text-xs text-zinc-400 transition-colors duration-300 group-hover/card2:text-white">Spoofer User</p>
+                      <p className="text-xs text-zinc-400 transition-colors duration-300 group-hover/card2:text-red-400">Spoofer User</p>
                     </div>
                   </div>
                 </Card>
 
-                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-white/50 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-2 transition-all duration-500 group/card3">
+                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-2 transition-all duration-500 group/card3">
                   <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-5 w-5 fill-white transition-transform duration-300 group-hover/card3:scale-110" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
+                      <svg key={i} className="h-5 w-5 fill-red-500 transition-transform duration-300 group-hover/card3:scale-110" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4 transition-colors duration-300 group-hover/card3:text-white">
-                    "Been using Extra Services for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using KIBA for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black font-bold transition-all duration-300 group-hover/card3:scale-110 group-hover/card3:shadow-lg group-hover/card3:shadow-white/50">
+                    <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold transition-all duration-300 group-hover/card3:scale-110 group-hover/card3:shadow-lg group-hover/card3:shadow-red-500/50">
                       A
                     </div>
                     <div>
                       <p className="font-semibold text-white">Apex_King</p>
-                      <p className="text-xs text-zinc-400 transition-colors duration-300 group-hover/card3:text-white">Long-time User</p>
+                      <p className="text-xs text-zinc-400 transition-colors duration-300 group-hover/card3:text-red-400">Long-time User</p>
                     </div>
                   </div>
                 </Card>
 
                 {/* Duplicate set for seamless loop */}
-                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-white/50 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-2 transition-all duration-500">
+                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-2 transition-all duration-500">
                   <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                      <svg key={i} className="h-5 w-5 fill-red-500" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
@@ -324,7 +411,7 @@ export default function Home() {
                     is top-notch too."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black font-bold">
+                    <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">
                       M
                     </div>
                     <div>
@@ -334,20 +421,20 @@ export default function Home() {
                   </div>
                 </Card>
 
-                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-white/50 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-2 transition-all duration-500">
+                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-2 transition-all duration-500">
                   <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                      <svg key={i} className="h-5 w-5 fill-red-500" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "The spoofer saved my account! Got banned before but with Extra's temp spoofer I'm back in the game
+                    "The spoofer saved my account! Got banned before but with KIBA's temp spoofer I'm back in the game
                     with zero issues."
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black font-bold">
+                    <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">
                       S
                     </div>
                     <div>
@@ -357,20 +444,20 @@ export default function Home() {
                   </div>
                 </Card>
 
-                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-white/50 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-2 transition-all duration-500">
+                <Card className="bg-black border-zinc-800 p-6 min-w-[350px] flex-shrink-0 hover:border-red-500/50 hover:shadow-xl hover:shadow-red-500/10 hover:-translate-y-2 transition-all duration-500">
                   <div className="mb-4 flex items-center gap-1">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="h-5 w-5 fill-white" viewBox="0 0 20 20">
+                      <svg key={i} className="h-5 w-5 fill-red-500" viewBox="0 0 20 20">
                         <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                       </svg>
                     ))}
                   </div>
                   <p className="text-zinc-300 mb-4">
-                    "Been using Extra Services for 6+ months across multiple games. Never been detected, constantly updated, and
+                    "Been using KIBA for 6+ months across multiple games. Never been detected, constantly updated, and
                     the community is amazing!"
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black font-bold">
+                    <div className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white font-bold">
                       A
                     </div>
                     <div>
@@ -384,7 +471,7 @@ export default function Home() {
 
             <div className="text-center mt-10">
               <Link href="/reviews">
-                <Button size="lg" className="bg-white hover:bg-zinc-200 text-black">
+                <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white">
                   View All Reviews
                 </Button>
               </Link>
@@ -417,7 +504,7 @@ export default function Home() {
                       <div>
                         <h3 className="text-lg font-bold mb-2">{tier.duration}</h3>
                         <div className="flex items-baseline gap-2">
-                          <span className="text-3xl font-bold text-white">{tier.price}</span>
+                          <span className="text-3xl font-bold text-red-400">{tier.price}</span>
                           <span className="text-lg text-zinc-500 line-through">{tier.originalPrice}</span>
                         </div>
                       </div>
@@ -439,7 +526,7 @@ export default function Home() {
           <div className="container">
             <div className="grid gap-8 md:grid-cols-4">
               <div className="text-center group/f1 hover-float cursor-default">
-                <div className="rounded-full bg-white/10 p-3 mb-4 inline-flex border border-white/20 transition-all duration-500 group-hover/f1:bg-white/20 group-hover/f1:border-white/40 group-hover/f1:shadow-lg group-hover/f1:shadow-white/20 group-hover/f1:scale-110">
+                <div className="rounded-full bg-red-600/10 p-3 mb-4 inline-flex border border-red-600/20 transition-all duration-500 group-hover/f1:bg-red-600/20 group-hover/f1:border-red-500/40 group-hover/f1:shadow-lg group-hover/f1:shadow-red-500/20 group-hover/f1:scale-110">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -450,19 +537,19 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-white transition-transform duration-300 group-hover/f1:rotate-12"
+                    className="text-red-500 transition-transform duration-300 group-hover/f1:rotate-12"
                   >
                     <path d="M12 2a10 10 0 0 1 7.07 17.07l-1.41-1.41A8 8 0 1 0 12 20v2a10 10 0 0 1 0-20z" />
                     <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f1:text-white">Secure & Undetected</h3>
+                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f1:text-red-400">Secure & Undetected</h3>
                 <p className="text-sm text-zinc-400">
                   Our software is designed to be undetectable by anti-cheat systems.
                 </p>
               </div>
               <div className="text-center group/f2 hover-float cursor-default">
-                <div className="rounded-full bg-white/10 p-3 mb-4 inline-flex border border-white/20 transition-all duration-500 group-hover/f2:bg-white/20 group-hover/f2:border-white/40 group-hover/f2:shadow-lg group-hover/f2:shadow-white/20 group-hover/f2:scale-110">
+                <div className="rounded-full bg-red-600/10 p-3 mb-4 inline-flex border border-red-600/20 transition-all duration-500 group-hover/f2:bg-red-600/20 group-hover/f2:border-red-500/40 group-hover/f2:shadow-lg group-hover/f2:shadow-red-500/20 group-hover/f2:scale-110">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -473,18 +560,18 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-white transition-transform duration-300 group-hover/f2:rotate-180"
+                    className="text-red-500 transition-transform duration-300 group-hover/f2:rotate-180"
                   >
                     <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f2:text-white">Regular Updates</h3>
+                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f2:text-red-400">Regular Updates</h3>
                 <p className="text-sm text-zinc-400">
                   We constantly update our products to ensure compatibility with game updates.
                 </p>
               </div>
               <div className="text-center group/f3 hover-float cursor-default">
-                <div className="rounded-full bg-white/10 p-3 mb-4 inline-flex border border-white/20 transition-all duration-500 group-hover/f3:bg-white/20 group-hover/f3:border-white/40 group-hover/f3:shadow-lg group-hover/f3:shadow-white/20 group-hover/f3:scale-110">
+                <div className="rounded-full bg-red-600/10 p-3 mb-4 inline-flex border border-red-600/20 transition-all duration-500 group-hover/f3:bg-red-600/20 group-hover/f3:border-red-500/40 group-hover/f3:shadow-lg group-hover/f3:shadow-red-500/20 group-hover/f3:scale-110">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -495,18 +582,18 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-white transition-transform duration-300 group-hover/f3:scale-125"
+                    className="text-red-500 transition-transform duration-300 group-hover/f3:scale-125"
                   >
                     <path d="M15 11c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f3:text-white">Global Support</h3>
+                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f3:text-red-400">Global Support</h3>
                 <p className="text-sm text-zinc-400">
                   Our support team is available 24/7 to assist customers worldwide.
                 </p>
               </div>
               <div className="text-center group/f4 hover-float cursor-default">
-                <div className="rounded-full bg-white/10 p-3 mb-4 inline-flex border border-white/20 transition-all duration-500 group-hover/f4:bg-white/20 group-hover/f4:border-white/40 group-hover/f4:shadow-lg group-hover/f4:shadow-white/20 group-hover/f4:scale-110">
+                <div className="rounded-full bg-red-600/10 p-3 mb-4 inline-flex border border-red-600/20 transition-all duration-500 group-hover/f4:bg-red-600/20 group-hover/f4:border-red-500/40 group-hover/f4:shadow-lg group-hover/f4:shadow-red-500/20 group-hover/f4:scale-110">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -517,7 +604,7 @@ export default function Home() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-white transition-transform duration-300 group-hover/f4:rotate-12"
+                    className="text-red-500 transition-transform duration-300 group-hover/f4:rotate-12"
                   >
                     <path d="M16 16h.01" />
                     <path d="M11 15h.01" />
@@ -526,7 +613,7 @@ export default function Home() {
                     <path d="M5.71 17.11 17.2 11.7" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f4:text-white">Customer Satisfaction</h3>
+                <h3 className="text-lg font-semibold mb-2 text-white transition-colors duration-300 group-hover/f4:text-red-400">Customer Satisfaction</h3>
                 <p className="text-sm text-zinc-400">
                   We prioritize customer satisfaction with high-quality products and support.
                 </p>
@@ -541,19 +628,18 @@ export default function Home() {
             <div>
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Image
-                  src="/images/extra-cheats-logo.png"
-                  alt="Extra Services"
-                  width={40}
+                  src="/logo-no-background.png"
+                  alt="Kiba Cheats"
+                  width={160}
                   height={40}
                   className="h-10 w-auto"
                 />
-                <span className="text-lg font-bold text-white">Extra Services</span>
               </Link>
               <p className="text-sm text-muted-foreground mb-4 md:mb-0">
                 Providing high-quality gaming enhancements since 2018. Our mission is to improve your gaming experience.
               </p>
               <div className="flex gap-4">
-                <Link href="#" className="text-muted-foreground hover:text-white transition-all duration-300 hover:scale-125 hover:-translate-y-1">
+                <Link href="#" className="text-muted-foreground hover:text-red-500 transition-all duration-300 hover:scale-125 hover:-translate-y-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -569,7 +655,7 @@ export default function Home() {
                   </svg>
                   <span className="sr-only">Facebook</span>
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-white transition-all duration-300 hover:scale-125 hover:-translate-y-1">
+                <Link href="#" className="text-muted-foreground hover:text-red-500 transition-all duration-300 hover:scale-125 hover:-translate-y-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -587,7 +673,7 @@ export default function Home() {
                   </svg>
                   <span className="sr-only">Instagram</span>
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-white transition-all duration-300 hover:scale-125 hover:-translate-y-1">
+                <Link href="#" className="text-muted-foreground hover:text-red-500 transition-all duration-300 hover:scale-125 hover:-translate-y-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -603,7 +689,7 @@ export default function Home() {
                   </svg>
                   <span className="sr-only">Twitter</span>
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-white transition-all duration-300 hover:scale-125 hover:-translate-y-1">
+                <Link href="#" className="text-muted-foreground hover:text-red-500 transition-all duration-300 hover:scale-125 hover:-translate-y-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -627,17 +713,17 @@ export default function Home() {
               <h3 className="text-lg font-medium mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/" className="text-muted-foreground hover:text-white transition-all duration-300 animated-underline hover:translate-x-1 inline-block">
+                  <Link href="/" className="text-muted-foreground hover:text-red-400 transition-all duration-300 animated-underline hover:translate-x-1 inline-block">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/status" className="text-muted-foreground hover:text-white transition-all duration-300 animated-underline hover:translate-x-1 inline-block">
+                  <Link href="/status" className="text-muted-foreground hover:text-red-400 transition-all duration-300 animated-underline hover:translate-x-1 inline-block">
                     Status
                   </Link>
                 </li>
                 <li>
-                  <Link href="/faq" className="text-muted-foreground hover:text-white transition-all duration-300 animated-underline hover:translate-x-1 inline-block">
+                  <Link href="/faq" className="text-muted-foreground hover:text-red-400 transition-all duration-300 animated-underline hover:translate-x-1 inline-block">
                     FAQ
                   </Link>
                 </li>
@@ -804,7 +890,7 @@ export default function Home() {
                     <path d="m2 16 20 6-6-20L2 16Z" />
                     <path d="M5.71 17.11 17.2 11.7" />
                   </svg>
-                  <span className="text-sm text-muted-foreground">support at extraservices dot com</span>
+                  <span className="text-sm text-muted-foreground">support at kibacheats dot com</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg
@@ -831,7 +917,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-8 border-t pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Extra Services. All rights reserved.</p>
+            <p className="text-sm text-muted-foreground mb-4 md:mb-0">Copyright 2023 Kiba. All rights reserved.</p>
             <div className="flex gap-4">
               <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Terms of Service

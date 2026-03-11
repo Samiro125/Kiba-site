@@ -192,8 +192,8 @@
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
-/* Smooth transitions for all interactive elements */
-* {
+/* Smooth transitions for interactive elements (excluding layout-critical elements like images) */
+*:not(img):not([data-nextjs-scroll-focus-boundary]):not(picture):not(source) {
   transition-property: color, background-color, border-color, transform, opacity, box-shadow, filter;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
