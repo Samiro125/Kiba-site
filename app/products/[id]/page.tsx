@@ -544,7 +544,7 @@ const relatedProducts = [
     id: "arc-raiders",
     title: "Arc Raiders Cheats",
     game: "Arc Raiders",
-    image: "/images/arc-raiders-new.png",
+    image: "/images/arc-raiders-product.png",
     price: "$7.99",
     badge: "Undetected",
   },
@@ -579,7 +579,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   
   // Arc Raiders variant pricing
   const arcDeltaPrices = [
-    { duration: "1 day", amount: "$9.99", originalAmount: "$17.99" },
+    { duration: "1 day", amount: "$9.99", originalAmount: "$17.99", checkoutLink: "https://checkout.komerza.com/checkout/d7006f94-a86f-4758-8ab6-88d5816892ab" },
     { duration: "1 week", amount: "$27.99", originalAmount: "$44.99", popular: true },
     { duration: "1 month", amount: "$57.99", originalAmount: "$89.99" },
     { duration: "lifetime", amount: "$109.99", originalAmount: "$179.99", popular: true, bestValue: true },
@@ -1271,11 +1271,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         if (selectedPlan === 3) w.storrik.pay("prod_38208c3d47cf3e4655261be6ce8d1be1", "var_ca1f255023952eeffd219aaa96fd03ae")
                         return
                       } else if (isArcDelta) {
-                        // Arc Raiders Delta uses Storrik checkout modal
+                        // Arc Raiders Delta: 1 day uses Komerza, rest use Storrik
+                        if (selectedPlan === 0) {
+                          window.open("https://checkout.komerza.com/checkout/d7006f94-a86f-4758-8ab6-88d5816892ab", "_blank")
+                          return
+                        }
                         const w = window as unknown as { storrik?: { configure: (opts: { pk: string }) => void; pay: (productId: string, variantId: string) => void } }
                         if (!w.storrik) return
                         w.storrik.configure({ pk: "pk_live_iapU6j_nnzlD5yMbhNVpSCr3lHXSQZuM8naau4wmLzM" })
-                        if (selectedPlan === 0) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_c57e0d7c4683dac03f853d386aba0b1d")
                         if (selectedPlan === 1) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_3347ba80ca5f2e762839f5e9e38e7115")
                         if (selectedPlan === 2) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_6c2d3e1b23872878f37e4bde693ef265")
                         if (selectedPlan === 3) w.storrik.pay("prod_d43ef1f959c63f993844b17116f30924", "var_58dba61731328474f920d3b786d2ee29")
