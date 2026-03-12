@@ -213,9 +213,10 @@ export default function ProductsPage() {
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
-                      width={1050}
-                      height={1050}
+                      fill
+                      sizes="(sm: 100vw, md: 50vw, lg: 33vw)"
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      priority={false}
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer transition-opacity duration-300" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
