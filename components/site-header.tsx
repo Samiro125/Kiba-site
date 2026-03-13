@@ -16,16 +16,15 @@ export function SiteHeader() {
         <div className="flex h-24 items-center justify-between lg:grid lg:grid-cols-[260px_1fr_auto] lg:gap-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center transition-all hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(239,68,68,0.3)] duration-300">
+            <Link href="/" className="transition-all hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(239,68,68,0.3)] duration-300">
               <Image
                 src="/images/extra-cheats-logo.png"
-                alt="Extra Services"
+                alt="Kiba Cheats"
                 width={65}
                 height={65}
                 className="h-16 w-auto"
                 priority
               />
-              <span className="ml-2 text-xl font-bold text-white tracking-wide">Extra Services</span>
             </Link>
           </div>
 

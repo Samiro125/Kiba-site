@@ -151,48 +151,46 @@ const products = [
     ],
   },
   {
-    id: "perm-spoofer",
-    name: "PERM SPOOFER",
+    id: "hwid-spoofer",
+    name: "HWID SPOOFER",
     game: "Universal",
-    image: "/images/perm-spoofer-extra.jpg",
-    prices: [
-      { duration: "one-time", amount: "$24.99", originalAmount: "$39.99" },
-      { duration: "lifetime", amount: "$79.99", originalAmount: "$129.99" },
+    image: "/images/hwid-spoofer.png",
+    hasVariants: true,
+    variants: [
+      {
+        id: "perm",
+        name: "PERM",
+        tagline: "Permanent Solution",
+        tag: "RECOMMENDED",
+        tagColor: "bg-green-500",
+        description: "Permanent HWID changes that persist after reboot",
+        startingPrice: "$24.99",
+        prices: [
+          { duration: "one-time", amount: "$24.99", originalAmount: "$39.99" },
+          { duration: "lifetime", amount: "$79.99", originalAmount: "$129.99" },
+        ],
+      },
+      {
+        id: "temp",
+        name: "TEMP",
+        tagline: "Temporary Solution",
+        tag: "BUDGET",
+        tagColor: "bg-zinc-500",
+        description: "Session-based spoofing, resets on reboot",
+        startingPrice: "$7.99",
+        prices: [
+          { duration: "3 day", amount: "$7.99", originalAmount: "$12.99" },
+          { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
+          { duration: "1 month", amount: "$19.99", originalAmount: "$29.99" },
+          { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99" },
+        ],
+      },
     ],
-    rating: 5.0,
-    totalReviews: 2134,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Compatibility", value: "UNIVERSAL" },
-      { label: "Last Updated", value: "28/12/2024" },
-      { label: "Hardware Support", value: "ALL DEVICES" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "HWID permanent spoofing",
-      "MAC address changer",
-      "Disk serial number spoofing",
-      "System UUID modification",
-      "Network adapter spoofing",
-      "Registry cleaning",
-      "Unban from hardware bans",
-      "One-click spoofing",
-      "Instant delivery and support",
-    ],
-  },
-  {
-    id: "temp-spoofer",
-    name: "TEMP SPOOFER",
-    game: "Universal",
-    image: "/images/temp-spoofer-extra.jpg",
     prices: [
       { duration: "3 day", amount: "$7.99", originalAmount: "$12.99" },
-      { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
-      { duration: "1 month", amount: "$19.99", originalAmount: "$29.99" },
-      { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99" },
     ],
     rating: 5.0,
-    totalReviews: 1876,
+    totalReviews: 4010,
     color: "from-green-600 to-green-900",
     specifications: [
       { label: "Compatibility", value: "UNIVERSAL" },
@@ -201,14 +199,15 @@ const products = [
       { label: "Windows 10/11", value: "SUPPORTED" },
     ],
     features: [
-      "Temporary HWID spoofing",
-      "MAC address modification",
-      "Quick ban bypass",
-      "Registry cleaner included",
-      "Easy-to-use interface",
-      "Session-based spoofing",
-      "Instant activation",
-      "24/7 customer support",
+      "HWID spoofing (permanent or temporary)",
+      "MAC address changer",
+      "Disk serial number spoofing",
+      "System UUID modification",
+      "Network adapter spoofing",
+      "Registry cleaning",
+      "Unban from hardware bans",
+      "One-click spoofing",
+      "Instant delivery and support",
     ],
   },
   {
@@ -272,6 +271,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [isCryptoOpen, setIsCryptoOpen] = useState(false)
+  const [showVariantModal, setShowVariantModal] = useState(false)
+  const [selectedVariant, setSelectedVariant] = useState<string | null>(null)
 
   const actualId = productIdMap[params.id] || params.id
   const product = products.find((p) => p.id === actualId)
@@ -280,11 +281,23 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
   const [activeTab, setActiveTab] = useState<"features" | "requirements" | "faq">("features")
 
+  // Show variant modal on mount for products with variants
+  useEffect(() => {
+    if (product?.hasVariants && !selectedVariant) {
+      setShowVariantModal(true)
+    }
+  }, [product, selectedVariant])
+
   if (!product) {
     notFound()
   }
 
-  const currentPlan = product.prices[selectedPlan]
+  // Get current prices based on selected variant
+  const currentPrices = product.hasVariants && selectedVariant
+    ? product.variants?.find(v => v.id === selectedVariant)?.prices || product.prices
+    : product.prices
+  
+  const currentPlan = currentPrices[selectedPlan] || currentPrices[0]
   const totalPrice = Number.parseFloat(currentPlan.amount.replace("$", "")).toFixed(2)
 
   return (
@@ -728,8 +741,20 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     <Zap className="w-5 h-5 text-yellow-500" />
                     <h3 className="text-white font-bold">Choose Your Plan</h3>
                   </div>
+                  {/* Variant selector button for HWID spoofer */}
+                  {product.hasVariants && (
+                    <button
+                      onClick={() => setShowVariantModal(true)}
+                      className="w-full flex items-center justify-between p-3 mb-3 rounded-lg border border-green-500/50 bg-green-950/20 hover:bg-green-950/30 transition-all"
+                    >
+                      <span className="text-green-400 font-medium">
+                        {selectedVariant ? `${selectedVariant.toUpperCase()} Spoofer` : "Select Version"}
+                      </span>
+                      <span className="text-zinc-400 text-sm">Change</span>
+                    </button>
+                  )}
                   <div className="space-y-2">
-                    {product.prices.map((plan, index) => (
+                    {currentPrices.map((plan, index) => (
                       <button
                         key={index}
                         onClick={() => setSelectedPlan(index)}
@@ -776,11 +801,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
                         "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
                       ],
-                      "perm-spoofer": [
+                      "hwid-spoofer-perm": [
                         "https://buy.stripe.com/14A3cwgcD3sU2AyduH3840f", // onetime
                         "https://buy.stripe.com/aFabJ24tV1kM0sqfCP3840g", // lifetime
                       ],
-                      "temp-spoofer": [
+                      "hwid-spoofer-temp": [
                         "https://buy.stripe.com/cNi4gA2lNgfG5MK1LZ3840h", // 3 day
                         "https://buy.stripe.com/9B6bJ26C3aVm2Ay2Q33840i", // 1 week
                         "https://buy.stripe.com/7sYbJ28KbfbCa30fCP3840j", // 1 month
@@ -788,9 +813,17 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       ],
                     }
                     
-                    const checkoutUrls = stripeUrls[actualId]
+                    // Handle HWID spoofer with variants
+                    let checkoutKey = actualId
+                    if (actualId === "hwid-spoofer" && selectedVariant) {
+                      checkoutKey = `hwid-spoofer-${selectedVariant}`
+                    }
+                    
+                    const checkoutUrls = stripeUrls[checkoutKey]
                     if (checkoutUrls && checkoutUrls[selectedPlan]) {
                       window.open(checkoutUrls[selectedPlan], "_blank")
+                    } else if (actualId === "hwid-spoofer" && !selectedVariant) {
+                      setShowVariantModal(true)
                     } else {
                       setIsCheckoutOpen(true)
                     }
@@ -815,8 +848,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <CryptoPaymentModal
                   isOpen={isCryptoOpen}
                   onClose={() => setIsCryptoOpen(false)}
-                  amount={product.prices[selectedPlan]?.amount || "$0"}
-                  planName={`${product.name} - ${product.prices[selectedPlan]?.duration || ""}`}
+                  amount={currentPrices[selectedPlan]?.amount || "$0"}
+                  planName={`${product.name}${selectedVariant ? ` (${selectedVariant.toUpperCase()})` : ""} - ${currentPrices[selectedPlan]?.duration || ""}`}
                 />
 
                 {/* Secure Payment Badge */}
@@ -942,12 +975,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                                   "https://www.fanbasis.com/agency-checkout/antweaks/lx29J", // 1 month
                                   "https://www.fanbasis.com/agency-checkout/antweaks/mOY9A", // lifetime
                                 ][selectedPlan]
-                              : actualId === "perm-spoofer"
+                              : actualId === "hwid-spoofer" && selectedVariant === "perm"
                               ? [
                                   "https://www.fanbasis.com/agency-checkout/antweaks/6RNwV", // one-time
                                   "https://www.fanbasis.com/agency-checkout/antweaks/7L0xy", // lifetime
                                 ][selectedPlan]
-                              : actualId === "temp-spoofer"
+                              : actualId === "hwid-spoofer" && selectedVariant === "temp"
                                 ? [
                                     "https://www.fanbasis.com/agency-checkout/antweaks/mQjn3", // 3 day
                                     "https://www.fanbasis.com/agency-checkout/antweaks/oQl0L", // 1 week
@@ -964,6 +997,57 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                                     ][selectedPlan]
         }
       />
+
+      {/* Variant Selector Modal for HWID Spoofer */}
+      {showVariantModal && product.hasVariants && product.variants && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-gradient-to-br from-zinc-900 to-black border border-zinc-800 rounded-xl max-w-md w-full p-6 relative">
+            <button
+              onClick={() => {
+                if (selectedVariant) {
+                  setShowVariantModal(false)
+                }
+              }}
+              className="absolute top-4 right-4 text-zinc-400 hover:text-white transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <h2 className="text-2xl font-bold text-white text-center mb-2">Choose Your Version</h2>
+            <p className="text-zinc-400 text-center mb-6">Select the HWID Spoofer version that fits your needs</p>
+
+            <div className="space-y-3">
+              {product.variants.map((variant) => (
+                <button
+                  key={variant.id}
+                  onClick={() => {
+                    setSelectedVariant(variant.id)
+                    setSelectedPlan(0)
+                    setShowVariantModal(false)
+                  }}
+                  className={`w-full text-left p-4 rounded-lg border transition-all ${
+                    selectedVariant === variant.id
+                      ? "border-green-500 bg-green-950/30"
+                      : "border-zinc-700 bg-zinc-900/50 hover:border-green-500/50"
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xl font-bold text-white">{variant.name}</span>
+                    <span className={`px-2 py-1 rounded text-xs font-bold ${variant.tagColor} text-white`}>
+                      {variant.tag}
+                    </span>
+                  </div>
+                  <p className="text-green-400 font-medium mb-1">{variant.tagline}</p>
+                  <p className="text-sm text-zinc-400 mb-2">Starting from {variant.startingPrice}</p>
+                  <p className="text-xs text-zinc-500">{variant.description}</p>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -26,8 +26,7 @@ const products: Product[] = [
   
 
 
-  { id: "temp-spoofer", name: "Temp Spoofer", image: "/images/temp-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/temp-spoofer" },
-  { id: "perm-spoofer", name: "Perm Spoofer", image: "/images/perm-spoofer-extra.jpg", status: "undetected", updatedAt: "Feb 14, 2026 08:40 PM", href: "/products/perm-spoofer" },
+  { id: "hwid-spoofer", name: "HWID Spoofer", image: "/images/hwid-spoofer.png", status: "undetected", updatedAt: "Feb 14, 2026 08:45 PM", href: "/products/hwid-spoofer" },
 
 ]
 

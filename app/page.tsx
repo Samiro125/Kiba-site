@@ -52,10 +52,10 @@ export default function Home() {
       color: "from-zinc-500/20 to-zinc-900/20",
     },
     {
-      id: "temp-spoofer",
-      title: "TEMP SPOOFER",
-      game: "Spoofer",
-      image: "/images/temp-spoofer-extra.jpg",
+      id: "hwid-spoofer",
+      title: "HWID SPOOFER",
+      game: "Universal Spoofer",
+      image: "/images/hwid-spoofer.png",
       price: "$7.99",
       rating: 5,
       color: "from-green-500/20 to-green-900/20",
@@ -68,15 +68,6 @@ export default function Home() {
       price: "$10.99",
       rating: 5,
       color: "from-green-500/20 to-green-900/20",
-    },
-    {
-      id: "perm-spoofer",
-      title: "PERM SPOOFER",
-      game: "Universal Spoofer",
-      image: "/images/perm-spoofer-extra.jpg",
-      price: "$24.99",
-      rating: 5,
-      color: "from-zinc-500/20 to-zinc-900/20",
     },
     {
       id: "call-of-duty",
@@ -104,30 +95,42 @@ export default function Home() {
     <div className="flex min-h-screen flex-col bg-black">
       {/* Main Content */}
       <main className="flex-1 min-h-screen relative z-10">
-        {/* Hero Section with Background Image and Centered Content */}
-        <section className="relative min-h-[400px] flex items-center justify-center overflow-hidden border-b border-zinc-800">
+        {/* Hero Section */}
+        <section className="relative min-h-[420px] flex items-center overflow-hidden border-b border-zinc-800">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
               src="/dark-tactical-soldiers-gaming-combat-scene.jpg"
               alt="Hero Background"
               fill
-              className="object-cover opacity-40"
+              className="object-cover opacity-50"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
           </div>
 
           {/* Content */}
-          <div className="container relative z-10 px-4">
-            <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-12">
-              {/* Logo */}
-              <div className="mb-4">
-                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
-                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
+          <div className="container relative z-10 px-6 md:px-12 py-16">
+            <div className="flex flex-col items-start max-w-2xl">
+              {/* Badge */}
+              <div className="mb-6 flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
+                <svg className="h-3.5 w-3.5 fill-white" viewBox="0 0 20 20">
+                  <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+                </svg>
+                <span className="text-xs font-semibold tracking-widest text-white uppercase">KIBACHEATS — #1 Provider</span>
               </div>
 
-              
+              {/* Heading */}
+              <h1 className="mb-4 text-balance">
+                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">Fastest Safest</span>
+                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400">Gaming Experience</span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-base md:text-lg text-zinc-400 max-w-lg leading-relaxed">
+                Top Provider of Undetected Premium Game Cheats – Instant Delivery &amp; 24/7 Support
+              </p>
             </div>
           </div>
         </section>
