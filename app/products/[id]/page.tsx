@@ -11,7 +11,6 @@ import { Star, Zap } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckoutModal } from "@/components/checkout-modal"
-import { CryptoPaymentModal } from "@/components/crypto-payment-modal"
 
 const products = [
   {
@@ -270,7 +269,6 @@ const productIdMap: Record<string, string> = {
 export default function ProductPage({ params }: { params: { id: string } }) {
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
-  const [isCryptoOpen, setIsCryptoOpen] = useState(false)
   const [showVariantModal, setShowVariantModal] = useState(false)
   const [selectedVariant, setSelectedVariant] = useState<string | null>(null)
 
@@ -784,32 +782,32 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     // Stripe checkout URLs for each product
                     const stripeUrls: Record<string, string[]> = {
                       "fortnite": [
-                        "https://buy.stripe.com/3cI7sM7G7fbCb74fCP38403", // 1 day
-                        "https://buy.stripe.com/9B628sgcDfbC8YW4Yb38404", // 1 week
-                        "https://buy.stripe.com/00w3cw0dFe7yfnk62f38405", // 1 month
-                        "https://buy.stripe.com/aFa3cwf8z3sU1wu9er38406", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 week
+                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 month
+                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // lifetime
                       ],
                       "arc-raiders": [
-                        "https://buy.stripe.com/8x26oI0dF5B2cb8fCP38407", // 1 day
-                        "https://buy.stripe.com/28EfZid0r8Ne7US4Yb38408", // 1 week
-                        "https://buy.stripe.com/dRmbJ2f8z9Ri0sq62f38409", // 1 month
-                        "https://buy.stripe.com/4gMdRaaSj2oQcb88an3840a", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 week
+                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 month
+                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // lifetime
                       ],
                       "call-of-duty": [
-                        "https://buy.stripe.com/6oUcN6d0r4wY1wubmz3840b", // 3 day
-                        "https://buy.stripe.com/4gMeVe4tVgfG5MK76j3840c", // 1 week
-                        "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
-                        "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=cod", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=cod", // 1 week
+                        "https://kibacheats.mykomerza.com/product?id=cod", // 1 month
+                        "https://kibacheats.mykomerza.com/product?id=cod", // lifetime
                       ],
                       "hwid-spoofer-perm": [
-                        "https://buy.stripe.com/14A3cwgcD3sU2AyduH3840f", // onetime
-                        "https://buy.stripe.com/aFabJ24tV1kM0sqfCP3840g", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=perm", // onetime
+                        "https://kibacheats.mykomerza.com/product?id=perm", // lifetime
                       ],
                       "hwid-spoofer-temp": [
-                        "https://buy.stripe.com/cNi4gA2lNgfG5MK1LZ3840h", // 3 day
-                        "https://buy.stripe.com/9B6bJ26C3aVm2Ay2Q33840i", // 1 week
-                        "https://buy.stripe.com/7sYbJ28KbfbCa30fCP3840j", // 1 month
-                        "https://buy.stripe.com/5kQ9AUaSj3sUgroaiv3840k", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 week
+                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 month
+                        "https://kibacheats.mykomerza.com/product?id=temp", // lifetime
                       ],
                     }
                     
@@ -832,25 +830,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 >
                   Buy Here
                 </Button>
-
-                {/* Pay with Crypto */}
-                <Button
-                  onClick={() => setIsCryptoOpen(true)}
-                  variant="outline"
-                  className="w-full border-white/10 bg-transparent hover:bg-white/5 text-white font-bold py-6 text-lg"
-                >
-                  <svg className="w-5 h-5 mr-2 text-[#F7931A]" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z" />
-                  </svg>
-                  Pay with Crypto
-                </Button>
-
-                <CryptoPaymentModal
-                  isOpen={isCryptoOpen}
-                  onClose={() => setIsCryptoOpen(false)}
-                  amount={currentPrices[selectedPlan]?.amount || "$0"}
-                  planName={`${product.name}${selectedVariant ? ` (${selectedVariant.toUpperCase()})` : ""} - ${currentPrices[selectedPlan]?.duration || ""}`}
-                />
 
                 {/* Secure Payment Badge */}
                 <div className="bg-black/40 rounded-lg p-4 border border-white/10">
@@ -949,52 +928,24 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         price={product.prices[selectedPlan].amount}
         checkoutUrl={
           actualId === "fortnite"
-            ? [
-                "https://buy.stripe.com/3cI7sM7G7fbCb74fCP38403", // 1 day
-                "https://buy.stripe.com/9B628sgcDfbC8YW4Yb38404", // 1 week
-                "https://buy.stripe.com/00w3cw0dFe7yfnk62f38405", // 1 month
-                "https://buy.stripe.com/aFa3cwf8z3sU1wu9er38406", // lifetime
-              ][selectedPlan]
+            ? "https://kibacheats.mykomerza.com/product?id=fortnitech"
             : actualId === "arc-raiders"
+              ? "https://kibacheats.mykomerza.com/product?id=arc-raiders"
+              : actualId === "call-of-duty"
+                ? "https://kibacheats.mykomerza.com/product?id=cod"
+                : actualId === "fivem"
                   ? [
-                        "https://buy.stripe.com/8x26oI0dF5B2cb8fCP38407", // 1 day
-                        "https://buy.stripe.com/28EfZid0r8Ne7US4Yb38408", // 1 week
-                        "https://buy.stripe.com/dRmbJ2f8z9Ri0sq62f38409", // 1 month
-                        "https://buy.stripe.com/4gMdRaaSj2oQcb88an3840a", // lifetime
-                      ][selectedPlan]
-                  : actualId === "call-of-duty"
-                    ? [
-                        "https://buy.stripe.com/6oUcN6d0r4wY1wubmz3840b", // 3 day
-                        "https://buy.stripe.com/4gMeVe4tVgfG5MK76j3840c", // 1 week
-                        "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
-                        "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
-                      ][selectedPlan]
-                    : actualId === "fivem"
-                              ? [
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/jZ09z", // 1 week
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/lx29J", // 1 month
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/mOY9A", // lifetime
-                                ][selectedPlan]
-                              : actualId === "hwid-spoofer" && selectedVariant === "perm"
-                              ? [
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/6RNwV", // one-time
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/7L0xy", // lifetime
-                                ][selectedPlan]
-                              : actualId === "hwid-spoofer" && selectedVariant === "temp"
-                                ? [
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/mQjn3", // 3 day
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/oQl0L", // 1 week
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/jqKky", // 1 month
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/l5gmj", // lifetime
-                                  ][selectedPlan]
-                                : actualId === "accounts"
-                                  ? "https://storrik.com" // Accounts use Storrik modal
-                                  : [
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                    ][selectedPlan]
+                      "https://www.fanbasis.com/agency-checkout/antweaks/jZ09z", // 1 week
+                      "https://www.fanbasis.com/agency-checkout/antweaks/lx29J", // 1 month
+                      "https://www.fanbasis.com/agency-checkout/antweaks/mOY9A", // lifetime
+                    ][selectedPlan]
+                  : actualId === "hwid-spoofer" && selectedVariant === "perm"
+                    ? "https://kibacheats.mykomerza.com/product?id=perm"
+                    : actualId === "hwid-spoofer" && selectedVariant === "temp"
+                      ? "https://kibacheats.mykomerza.com/product?id=temp"
+                      : actualId === "accounts"
+                        ? "https://storrik.com" // Accounts use Storrik modal
+                        : "https://kibacheats.mykomerza.com"
         }
       />
 
