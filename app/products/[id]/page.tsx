@@ -923,8 +923,8 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
         isOpen={isCheckoutOpen}
         onClose={() => setIsCheckoutOpen(false)}
         productName={product.name}
-        planName={product.prices[selectedPlan].duration}
-        price={product.prices[selectedPlan].amount}
+        planName={currentPrices[selectedPlan]?.duration || ""}
+        price={currentPrices[selectedPlan]?.amount || "$0"}
         checkoutUrl={
           actualId === "fortnite"
             ? "https://kibacheats.mykomerza.com/product?id=fortnitech"
