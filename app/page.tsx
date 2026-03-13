@@ -112,12 +112,6 @@ export default function Home() {
           {/* Content */}
           <div className="container relative z-10 px-4">
             <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-12">
-              {/* Logo */}
-              <div className="mb-4">
-                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
-                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
-              </div>
-
               
             </div>
           </div>
