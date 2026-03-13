@@ -1,8 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
-
-import { useState } from "react"
+import { useEffect, useState, use } from "react"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -49,10 +47,10 @@ const products = [
     game: "Arc Raiders",
     image: "/images/arc-raiders-extra.png",
     prices: [
-      { duration: "1 day", amount: "$10.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$21.99", originalAmount: "$39.99", popular: true },
-      { duration: "1 month", amount: "$39.99", originalAmount: "$69.99" },
-      { duration: "lifetime", amount: "$249.99", originalAmount: "$399.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99" },
+      { duration: "1 week", amount: "$27.99", originalAmount: "$39.99", popular: true },
+      { duration: "1 month", amount: "$57.99", originalAmount: "$69.99" },
+      { duration: "lifetime", amount: "$109.00", originalAmount: "$399.99", popular: true, bestValue: true },
     ],
     rating: 5.0,
     totalReviews: 723,
@@ -266,13 +264,14 @@ const relatedProducts = [
 const productIdMap: Record<string, string> = {
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
   const [showVariantModal, setShowVariantModal] = useState(false)
   const [selectedVariant, setSelectedVariant] = useState<string | null>(null)
 
-  const actualId = productIdMap[params.id] || params.id
+  const actualId = productIdMap[id] || id
   const product = products.find((p) => p.id === actualId)
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -924,8 +923,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         isOpen={isCheckoutOpen}
         onClose={() => setIsCheckoutOpen(false)}
         productName={product.name}
-        planName={product.prices[selectedPlan].duration}
-        price={product.prices[selectedPlan].amount}
+        planName={currentPrices[selectedPlan]?.duration || ""}
+        price={currentPrices[selectedPlan]?.amount || "$0"}
         checkoutUrl={
           actualId === "fortnite"
             ? "https://kibacheats.mykomerza.com/product?id=fortnitech"
