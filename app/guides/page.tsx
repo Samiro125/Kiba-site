@@ -9,9 +9,10 @@ export default function GuidesPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const gameProducts = [
+    "Apex Legends",
+    "Arc Raiders",
     "Call of Duty",
     "Fortnite",
-    "Arc Raiders",
   ]
 
   const spooferProducts = ["HWID Spoofer"]
