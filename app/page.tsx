@@ -70,6 +70,15 @@ export default function Home() {
       color: "from-green-500/20 to-green-900/20",
     },
     {
+      id: "apex-legends",
+      title: "APEX LEGENDS",
+      game: "Apex Legends",
+      image: "/images/apex-legends.png",
+      price: "$8.99",
+      rating: 5,
+      color: "from-teal-500/20 to-teal-900/20",
+    },
+    {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       game: "Call of Duty",
