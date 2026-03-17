@@ -13,6 +13,22 @@ export default function ReviewsPage() {
 
   const reviews = [
     {
+      username: "@apexpredator99",
+      verified: true,
+      date: "2026-03-15 14:22:10",
+      product: "Apex Legends Cheat",
+      rating: 5,
+      text: "+rep Kiba Apex cheat is insane. Aimbot locks on perfectly and ESP shows everything. Hit Predator rank easily now.",
+    },
+    {
+      username: "@wraith_main_ttv",
+      verified: true,
+      date: "2026-03-14 18:45:33",
+      product: "Apex Legends Cheat",
+      rating: 5,
+      text: "+rep Best Apex cheat on the market. No recoil works flawlessly, been using for 2 weeks with zero bans.",
+    },
+    {
       username: "@giuseppe419",
       verified: true,
       date: "2025-10-19 15:46:22",

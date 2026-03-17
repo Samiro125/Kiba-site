@@ -119,6 +119,37 @@ const products = [
     ],
   },
   {
+    id: "apex-legends",
+    name: "APEX LEGENDS CHEAT",
+    game: "Apex Legends",
+    image: "/images/apex-legends.png",
+    prices: [
+      { duration: "1 day", amount: "$8.99", originalAmount: "$14.99" },
+      { duration: "3 day", amount: "$14.99", originalAmount: "$24.99", popular: true },
+      { duration: "7 day", amount: "$19.99", originalAmount: "$34.99" },
+      { duration: "30 day", amount: "$24.99", originalAmount: "$44.99" },
+      { duration: "lifetime", amount: "$49.99", originalAmount: "$99.99", bestValue: true },
+    ],
+    rating: 5.0,
+    totalReviews: 842,
+    color: "from-teal-600 to-teal-900",
+    specifications: [
+      { label: "Gameplay Modes", value: "AVAILABLE" },
+      { label: "Anti-Cheat System", value: "EAC" },
+      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with customizable FOV and smoothing",
+      "ESP for players, loot and distances",
+      "No recoil and no spread",
+      "Radar with enemy positions",
+      "Visibility check",
+      "Customizable hotkeys",
+      "Instant delivery and 24/7 support",
+    ],
+  },
+  {
     id: "fivem",
     name: "FIVEM CHEAT",
     game: "FiveM / GTA V",
@@ -780,6 +811,13 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                   onClick={() => {
                     // Stripe checkout URLs for each product
                     const stripeUrls: Record<string, string[]> = {
+                      "apex-legends": [
+                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 3 day
+                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 7 day
+                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 30 day
+                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // lifetime
+                      ],
                       "fortnite": [
                         "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 day
                         "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 week
@@ -932,6 +970,8 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
               ? "https://kibacheats.mykomerza.com/product?id=arc-raiders"
               : actualId === "call-of-duty"
                 ? "https://kibacheats.mykomerza.com/product?id=cod"
+                : actualId === "apex-legends"
+                  ? "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d"
                 : actualId === "fivem"
                   ? [
                       "https://www.fanbasis.com/agency-checkout/antweaks/jZ09z", // 1 week

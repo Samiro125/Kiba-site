@@ -18,6 +18,8 @@ interface Product {
 
 const products: Product[] = [
 
+  { id: "apex-legends", name: "Apex Legends", image: "/images/apex-legends.png", status: "undetected", updatedAt: "Mar 17, 2026 10:15 AM", href: "/products/apex-legends" },
+
   { id: "arc-raiders", name: "Arc Raiders", image: "/images/arc-raiders-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:35 PM", href: "/products/arc-raiders" },
 
   { id: "cod", name: "Call of Duty", image: "/images/cod-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
