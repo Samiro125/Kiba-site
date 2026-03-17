@@ -55,6 +55,15 @@ const products = [
     category: "Game Cheat",
   },
   {
+    id: "apex-legends",
+    title: "APEX LEGENDS",
+    game: "Apex Legends",
+    image: "/images/apex-legends.png",
+    price: "$8.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
     id: "fivem",
     title: "FIVEM",
     game: "FiveM / GTA V",
