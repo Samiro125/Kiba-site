@@ -307,6 +307,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
+  const [shopifyUrl, setShopifyUrl] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<"features" | "requirements" | "faq">("features")
 
   // Show variant modal on mount for products with variants
@@ -825,7 +826,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                         "https://kibacheats.mykomerza.com/product?id=fortnitech", // lifetime
                       ],
                       "arc-raiders": [
-                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 day
+                        "https://9z17ha-aq.myshopify.com/products/arc-rd-kiba-copy?variant=54000657334612", // 1 day (shopify)
                         "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 week
                         "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 month
                         "https://kibacheats.mykomerza.com/product?id=arc-raiders", // lifetime
@@ -856,7 +857,12 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                     
                     const checkoutUrls = stripeUrls[checkoutKey]
                     if (checkoutUrls && checkoutUrls[selectedPlan]) {
-                      window.open(checkoutUrls[selectedPlan], "_blank")
+                      const url = checkoutUrls[selectedPlan]
+                      if (url.includes("myshopify.com")) {
+                        setShopifyUrl(url)
+                      } else {
+                        window.open(url, "_blank")
+                      }
                     } else if (actualId === "hwid-spoofer" && !selectedVariant) {
                       setShowVariantModal(true)
                     } else {
@@ -1035,6 +1041,29 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Shopify Checkout Modal */}
+      {shopifyUrl && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setShopifyUrl(null)} />
+          <div className="relative w-full max-w-2xl mx-4 bg-zinc-900 rounded-xl shadow-2xl border border-zinc-800 overflow-hidden" style={{ height: "80vh" }}>
+            <div className="flex items-center justify-between px-5 py-4 border-b border-zinc-800">
+              <h2 className="text-lg font-bold text-white">Secure Checkout</h2>
+              <button onClick={() => setShopifyUrl(null)} className="text-zinc-400 hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <iframe
+              src={shopifyUrl}
+              className="w-full h-full"
+              style={{ height: "calc(80vh - 61px)" }}
+              title="Shopify Checkout"
+            />
           </div>
         </div>
       )}
