@@ -25,6 +25,8 @@ const products: Product[] = [
   { id: "cod", name: "Call of Duty", image: "/images/cod-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 09:40 PM", href: "/products/cod" },
 
   { id: "fortnite", name: "Fortnite", image: "/images/fortnite-extra.png", status: "undetected", updatedAt: "Feb 14, 2026 10:00 PM", href: "/products/fortnite" },
+
+  { id: "rainbow-six-siege", name: "Rainbow Six Siege", image: "/images/rainbow-six-siege.webp", status: "undetected", updatedAt: "Mar 27, 2026 11:00 AM", href: "/products/rainbow-six-siege" },
   
 
 
