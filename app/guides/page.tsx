@@ -13,6 +13,7 @@ export default function GuidesPage() {
     "Arc Raiders",
     "Call of Duty",
     "Fortnite",
+    "Rainbow Six Siege",
   ]
 
   const spooferProducts = ["HWID Spoofer"]

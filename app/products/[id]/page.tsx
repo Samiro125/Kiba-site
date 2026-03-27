@@ -89,6 +89,36 @@ const products = [
     ],
   },
   {
+    id: "rainbow-six-siege",
+    name: "RAINBOW SIX SIEGE CHEAT",
+    game: "Rainbow Six Siege",
+    image: "/images/rainbow-six-siege.webp",
+    prices: [
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99" },
+      { duration: "1 week", amount: "$29.99", originalAmount: "$49.99", popular: true },
+      { duration: "1 month", amount: "$59.99", originalAmount: "$99.99" },
+      { duration: "lifetime", amount: "$89.99", originalAmount: "$149.99", bestValue: true },
+    ],
+    rating: 5.0,
+    totalReviews: 654,
+    color: "from-orange-600 to-orange-900",
+    specifications: [
+      { label: "Gameplay Modes", value: "AVAILABLE" },
+      { label: "Anti-Cheat System", value: "BattlEye" },
+      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with customizable FOV and smoothing",
+      "ESP for players, gadgets and drones",
+      "No recoil and no spread",
+      "Radar with enemy positions",
+      "Visibility check",
+      "Customizable hotkeys",
+      "Instant delivery and 24/7 support",
+    ],
+  },
+  {
     id: "call-of-duty",
     name: "CALL OF DUTY CHEAT",
     game: "Call of Duty",
@@ -836,6 +866,12 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                         "https://kibacheats.mykomerza.com/product?id=cod", // 1 week
                         "https://kibacheats.mykomerza.com/product?id=cod", // 1 month
                         "https://kibacheats.mykomerza.com/product?id=cod", // lifetime
+                      ],
+                      "rainbow-six-siege": [
+                        "https://kibacheats.mykomerza.com/product?id=r6s", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=r6s", // 1 week
+                        "https://kibacheats.mykomerza.com/product?id=r6s", // 1 month
+                        "https://kibacheats.mykomerza.com/product?id=r6s", // lifetime
                       ],
                       "hwid-spoofer-perm": [
                         "https://kibacheats.mykomerza.com/product?id=perm", // onetime

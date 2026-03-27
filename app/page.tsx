@@ -79,6 +79,15 @@ export default function Home() {
       color: "from-teal-500/20 to-teal-900/20",
     },
     {
+      id: "rainbow-six-siege",
+      title: "RAINBOW SIX SIEGE",
+      game: "Rainbow Six Siege",
+      image: "/images/rainbow-six-siege.webp",
+      price: "$9.99",
+      rating: 5,
+      color: "from-orange-500/20 to-orange-900/20",
+    },
+    {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       game: "Call of Duty",
