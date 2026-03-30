@@ -850,14 +850,28 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                         "f08b1b6a-2cb2-425c-bdd2-9e06e902d9fa", // 30 day
                         "40453698-ed85-452a-a0c2-2f47de8112a3", // lifetime
                       ]
+                      
+                      const productId = "db2a39b2-bad1-45d6-b6c1-b46247a40689"
+                      const variantId = fortniteVariantIds[selectedPlan]
+                      
+                      console.log("[v0] Komerza checkout attempt:", { productId, variantId, selectedPlan })
+                      console.log("[v0] window.Komerza available:", typeof window !== "undefined" && !!(window as any).Komerza)
+                      
                       // @ts-ignore - Komerza is loaded via external script
-                      if (typeof window !== "undefined" && window.Komerza) {
-                        // @ts-ignore
-                        window.Komerza.open({
-                          productId: "db2a39b2-bad1-45d6-b6c1-b46247a40689",
-                          variantId: fortniteVariantIds[selectedPlan],
-                          theme: "dark",
-                        })
+                      if (typeof window !== "undefined" && (window as any).Komerza) {
+                        try {
+                          console.log("[v0] Calling Komerza.open with:", { productId, variantId, theme: "dark" })
+                          // @ts-ignore
+                          ;(window as any).Komerza.open({
+                            productId,
+                            variantId,
+                            theme: "dark",
+                          })
+                        } catch (err) {
+                          console.error("[v0] Komerza.open error:", err)
+                        }
+                      } else {
+                        console.error("[v0] Komerza not loaded - script may not have loaded yet")
                       }
                       return
                     }
