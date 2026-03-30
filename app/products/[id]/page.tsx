@@ -18,8 +18,9 @@ const products = [
     image: "/images/fortnite-extra.png",
     prices: [
       { duration: "1 day", amount: "$10.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$27.99", originalAmount: "$49.99", popular: true },
-      { duration: "1 month", amount: "$59.99", originalAmount: "$99.99" },
+      { duration: "3 day", amount: "$17.99", originalAmount: "$29.99" },
+      { duration: "7 day", amount: "$27.99", originalAmount: "$49.99", popular: true },
+      { duration: "30 day", amount: "$59.99", originalAmount: "$99.99" },
       { duration: "lifetime", amount: "$249.99", originalAmount: "$399.99", popular: true, bestValue: true },
     ],
     rating: 5,
@@ -840,6 +841,27 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 {/* Buy Button */}
                 <Button
                   onClick={() => {
+                    // Komerza checkout for Fortnite
+                    if (actualId === "fortnite") {
+                      const fortniteVariantIds = [
+                        "7e190992-46cd-46ac-9f1b-24dae4b336db", // 1 day
+                        "eb93e757-7de5-4ff3-93fe-5e7eeaf79237", // 3 day
+                        "da5547c4-3c94-4eb8-a3ac-f759eebc5446", // 7 day
+                        "f08b1b6a-2cb2-425c-bdd2-9e06e902d9fa", // 30 day
+                        "40453698-ed85-452a-a0c2-2f47de8112a3", // lifetime
+                      ]
+                      // @ts-ignore - Komerza is loaded via external script
+                      if (typeof window !== "undefined" && window.Komerza) {
+                        // @ts-ignore
+                        window.Komerza.open({
+                          productId: "db2a39b2-bad1-45d6-b6c1-b46247a40689",
+                          variantId: fortniteVariantIds[selectedPlan],
+                          theme: "dark",
+                        })
+                      }
+                      return
+                    }
+                    
                     // Stripe checkout URLs for each product
                     const stripeUrls: Record<string, string[]> = {
                       "apex-legends": [
@@ -848,12 +870,6 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                         "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 7 day
                         "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 30 day
                         "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // lifetime
-                      ],
-                      "fortnite": [
-                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 day
-                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 week
-                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // 1 month
-                        "https://kibacheats.mykomerza.com/product?id=fortnitech", // lifetime
                       ],
                       "arc-raiders": [
                         "https://9z17ha-aq.myshopify.com/products/arc-rd-kiba-copy?variant=54000657334612", // 1 day (shopify)
