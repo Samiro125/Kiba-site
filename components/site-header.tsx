@@ -18,7 +18,7 @@ export function SiteHeader() {
           <div className="flex items-center">
             <Link href="/" className="transition-all hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(239,68,68,0.3)] duration-300">
               <Image
-                src="/images/extra-cheats-logo.png"
+                src="/images/kiba-logo.png"
                 alt="Kiba Cheats"
                 width={65}
                 height={65}

@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { SiteHeader } from "@/components/site-header"
 
@@ -60,7 +61,7 @@ export default function RootLayout({
         <div className="relative z-10">{children}</div>
         
         {/* Komerza Checkout Embed Script */}
-        <script src="https://checkout.komerza.com/embed/embed.iife.js"></script>
+        <Script src="https://checkout.komerza.com/embed/embed.iife.js" strategy="afterInteractive" />
       </body>
     </html>
   )
