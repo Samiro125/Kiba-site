@@ -45,16 +45,10 @@ export default function Home() {
       image: "/images/category-fortnite.webp",
     },
     {
-      id: "arc-raiders",
-      title: "ARC RAIDERS",
-      subtitle: "Premium Cheats",
-      image: "/images/category-arc-raiders.webp",
-    },
-    {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       subtitle: "Premium Cheats",
-      image: "/images/category-cod.webp",
+      image: "/images/category-arc-raiders.webp",
     },
     {
       id: "hwid-spoofer",
@@ -69,8 +63,8 @@ export default function Home() {
       image: "/images/category-r6.webp",
     },
     {
-      id: "warframe",
-      title: "WARFRAME",
+      id: "valorant",
+      title: "VALORANT",
       subtitle: "Premium Cheats",
       image: "/images/category-warframe.webp",
     },
@@ -81,8 +75,8 @@ export default function Home() {
       image: "/images/category-apex.webp",
     },
     {
-      id: "cs2",
-      title: "CS2",
+      id: "rust",
+      title: "RUST",
       subtitle: "Premium Cheats",
       image: "/images/category-cs2.webp",
     },
