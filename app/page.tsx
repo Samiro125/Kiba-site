@@ -527,8 +527,8 @@ export default function Home() {
             <div>
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <Image
-                  src="/images/extra-cheats-logo.png"
-                  alt="Extra Services"
+                  src="/images/kiba-logo.png"
+                  alt="Kiba Cheats"
                   width={40}
                   height={40}
                   className="h-10 w-auto"
