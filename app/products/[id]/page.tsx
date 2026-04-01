@@ -238,7 +238,7 @@ const products = [
     id: "rainbow-six",
     name: "RAINBOW SIX",
     game: "Rainbow Six Siege",
-    image: "/images/r6-product.png",
+    image: "/images/rainbow-six-product.png",
     prices: [
       { duration: "1 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNi5kF5D90Wv1b9duzcs80p" },
       { duration: "1 week", amount: "$24.99", originalAmount: "$44.99", popular: true, checkoutUrl: "https://buy.stripe.com/4gM4gBe9F48HaLJeyDcs80q" },

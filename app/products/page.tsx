@@ -49,7 +49,7 @@ const products = [
     id: "rainbow-six",
     title: "RAINBOW SIX",
     game: "Rainbow Six Siege",
-    image: "/images/r6-product.png",
+    image: "/images/rainbow-six-product.png",
     price: "$12.99",
     rating: 5,
     category: "Game Cheat",
