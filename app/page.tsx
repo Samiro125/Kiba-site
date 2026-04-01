@@ -48,7 +48,13 @@ export default function Home() {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       subtitle: "Premium Cheats",
-      image: "/images/category-arc-raiders.webp",
+      image: "/images/category-cod.webp",
+    },
+    {
+      id: "arc-raiders",
+      title: "ARC RAIDERS",
+      subtitle: "Premium Cheats",
+      image: "/images/category-arc-raiders-new.webp",
     },
     {
       id: "hwid-spoofer",
@@ -117,7 +123,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold italic mb-4">
                 <span className="text-white">Fastest Safest</span>
                 <br />
-                <span className="text-red-500">Gaming Experience</span>
+                <span className="text-blue-500">Gaming Experience</span>
               </h1>
 
               {/* Subtitle */}
