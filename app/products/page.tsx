@@ -59,11 +59,11 @@ export default function ProductsPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-black">
-      {/* Red Gradient Background */}
+      {/* Background */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/50 via-black to-black" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl" />
       </div>
       
       {/* Main Content */}
@@ -106,41 +106,42 @@ export default function ProductsPage() {
           </div>
 
           {/* Products Grid */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {filteredProducts.map((product) => (
               <Link key={product.id} href={`/products/${product.id}`} className="animate-fade-in" style={{ animationDelay: `${products.indexOf(product) * 0.05}s`, animationFillMode: "both" }}>
-                <Card className="group overflow-hidden border-zinc-800 bg-zinc-900/50 backdrop-blur transition-all duration-500 hover:border-white/50 hover:shadow-xl hover:shadow-white/15 hover:-translate-y-2 cursor-pointer hover-border-glow">
+                <Card className="group overflow-hidden border-zinc-800 bg-black backdrop-blur transition-all duration-500 hover:border-blue-500/50 hover:shadow-xl hover:shadow-blue-500/20 hover:-translate-y-2 cursor-pointer">
                   <div className="relative aspect-square overflow-hidden">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
-                      width={1050}
-                      height={1050}
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      width={600}
+                      height={600}
+                      className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer transition-opacity duration-300" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <span className="inline-flex items-center gap-1 text-sm font-semibold text-black bg-white/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                        View Product
-                        <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="mb-2 font-bold text-white group-hover:text-zinc-300 transition-all duration-300 group-hover:translate-x-1">
-                      {product.title}
-                    </h3>
-                    <div className="mb-2 flex items-center gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <svg key={i} className="h-4 w-4 fill-yellow-400 transition-all duration-300 group-hover:scale-110 group-hover:fill-yellow-300" style={{ transitionDelay: `${i * 60}ms` }} viewBox="0 0 20 20">
-                          <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                        </svg>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-green-500 transition-all duration-300 group-hover:text-green-400 group-hover:scale-110 origin-left">{product.price}</span>
-                      <span className="text-xs text-gray-400 transition-colors duration-300 group-hover:text-zinc-300">{product.category}</span>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                    <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <h3 className="text-xl font-bold text-white mb-1 transition-all duration-300 group-hover:text-blue-400">
+                        {product.title}
+                      </h3>
+                      <p className="text-sm text-zinc-400 mb-2">{product.game}</p>
+                      <div className="flex items-center gap-1 mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <svg key={i} className="h-3 w-3 fill-yellow-400" viewBox="0 0 20 20">
+                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                          </svg>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-bold text-green-400">{product.price}</span>
+                        <span className="text-xs text-zinc-500">{product.category}</span>
+                      </div>
+                      <div className="mt-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-white">
+                          View Product
+                          <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </Card>

@@ -157,7 +157,7 @@ export default function Home() {
               {categories.map((category, index) => (
                 <Link
                   key={category.id}
-                  href={`/products/${category.id}`}
+                  href="/products"
                   className="animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
                 >
@@ -179,7 +179,7 @@ export default function Home() {
                         <p className="text-sm text-zinc-400 transition-all duration-300 group-hover:text-zinc-300">{category.subtitle}</p>
                         <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
                           <span className="inline-flex items-center gap-1 text-sm font-semibold text-white">
-                            View Products
+                            View Product
                             <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
                           </span>
                         </div>
