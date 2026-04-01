@@ -45,6 +45,42 @@ const products = [
     rating: 5,
     category: "Spoofer",
   },
+  {
+    id: "rainbow-six",
+    title: "RAINBOW SIX",
+    game: "Rainbow Six Siege",
+    image: "/images/category-r6.webp",
+    price: "$12.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "warframe",
+    title: "WARFRAME",
+    game: "Warframe",
+    image: "/images/category-warframe.webp",
+    price: "$9.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "apex-legends",
+    title: "APEX LEGENDS",
+    game: "Apex Legends",
+    image: "/images/category-apex.webp",
+    price: "$14.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
+  {
+    id: "cs2",
+    title: "CS2",
+    game: "Counter-Strike 2",
+    image: "/images/category-cs2.webp",
+    price: "$13.99",
+    rating: 5,
+    category: "Game Cheat",
+  },
 ]
 
 export default function ProductsPage() {

@@ -43,28 +43,48 @@ export default function Home() {
       title: "FORTNITE",
       subtitle: "Premium Cheats",
       image: "/images/category-fortnite.webp",
-      productCount: 1,
     },
     {
       id: "arc-raiders",
       title: "ARC RAIDERS",
       subtitle: "Premium Cheats",
       image: "/images/category-arc-raiders.webp",
-      productCount: 1,
     },
     {
       id: "call-of-duty",
       title: "CALL OF DUTY",
       subtitle: "Premium Cheats",
       image: "/images/category-cod.webp",
-      productCount: 1,
     },
     {
       id: "hwid-spoofer",
       title: "HWID SPOOFER",
       subtitle: "Universal Spoofer",
       image: "/images/category-spoofer.webp",
-      productCount: 1,
+    },
+    {
+      id: "rainbow-six",
+      title: "RAINBOW SIX",
+      subtitle: "Premium Cheats",
+      image: "/images/category-r6.webp",
+    },
+    {
+      id: "warframe",
+      title: "WARFRAME",
+      subtitle: "Premium Cheats",
+      image: "/images/category-warframe.webp",
+    },
+    {
+      id: "apex-legends",
+      title: "APEX LEGENDS",
+      subtitle: "Premium Cheats",
+      image: "/images/category-apex.webp",
+    },
+    {
+      id: "cs2",
+      title: "CS2",
+      subtitle: "Premium Cheats",
+      image: "/images/category-cs2.webp",
     },
   ]
 
@@ -153,24 +173,24 @@ export default function Home() {
                 <Separator className="mt-4 w-16 bg-white mx-auto" />
               </div>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {categories.map((category, index) => (
                 <Link
                   key={category.id}
-                  href="/products"
+                  href={`/products/${category.id}`}
                   className="animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
                 >
-                  <Card className="overflow-hidden bg-black border-zinc-800 hover:border-blue-500/50 transition-all duration-500 cursor-pointer group hover:shadow-2xl hover:shadow-blue-500/20">
-                    <div className="relative overflow-hidden aspect-square">
+                  <Card className="overflow-hidden bg-black border-zinc-800 hover:border-blue-500/50 transition-all duration-500 cursor-pointer group hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
+                    <div className="relative overflow-hidden aspect-[3/4]">
                       <Image
                         src={category.image || "/placeholder.svg"}
                         alt={`${category.title} category`}
-                        width={600}
-                        height={600}
+                        width={800}
+                        height={1000}
                         className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
                       <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h3 className="text-2xl font-bold text-white mb-1 transition-all duration-300 group-hover:text-blue-400">
