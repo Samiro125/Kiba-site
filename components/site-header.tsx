@@ -45,13 +45,34 @@ export function SiteHeader() {
                   stroke="currentColor"
                   strokeWidth="2"
                 >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                Home
+                <span
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"}`}
+                />
+              </Link>
+              <Link
+                href="/products"
+                className={`flex items-center justify-center gap-2 text-lg font-medium transition-all duration-300 w-[100px] relative group ${
+                  pathname === "/products" || pathname.startsWith("/products/") ? "text-white" : "text-white/80 hover:text-white"
+                }`}
+              >
+                <svg
+                  className="h-6 w-6 flex-shrink-0 transition-transform group-hover:scale-110"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
                   <line x1="3" y1="6" x2="21" y2="6" />
                   <path d="M16 10a4 4 0 0 1-8 0" />
                 </svg>
-                Store
+                Products
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/" ? "w-full" : "w-0 group-hover:w-full"}`}
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-white transition-all duration-300 ${pathname === "/products" || pathname.startsWith("/products/") ? "w-full" : "w-0 group-hover:w-full"}`}
                 />
               </Link>
               <Link
@@ -187,11 +208,30 @@ export function SiteHeader() {
                   stroke="currentColor"
                   strokeWidth="2"
                 >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                Home
+              </Link>
+              <Link
+                href="/products"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`flex items-center gap-3 px-4 py-2 rounded-md transition-colors ${
+                  pathname === "/products" || pathname.startsWith("/products/") ? "bg-white text-black" : "text-white/80 hover:bg-zinc-800"
+                }`}
+              >
+                <svg
+                  className="h-6 w-6 flex-shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
                   <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
                   <line x1="3" y1="6" x2="21" y2="6" />
                   <path d="M16 10a4 4 0 0 1-8 0" />
                 </svg>
-                Store
+                Products
               </Link>
               <Link
                 href="/guides"
