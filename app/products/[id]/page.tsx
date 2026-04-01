@@ -449,6 +449,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   
   const currentPlan = currentPrices[selectedPlan] || currentPrices[0]
   const totalPrice = Number.parseFloat(currentPlan.amount.replace("$", "")).toFixed(2)
+  
+  // Debug logging
+  console.log("[v0] Product ID:", id, "Actual ID:", actualId, "Product Name:", product.name)
+  console.log("[v0] Selected Plan:", selectedPlan, "Current Plan:", currentPlan)
+  console.log("[v0] Checkout URL:", (currentPlan as { checkoutUrl?: string })?.checkoutUrl)
 
   return (
     <div className="flex min-h-screen flex-col bg-black">
