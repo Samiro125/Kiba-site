@@ -50,10 +50,10 @@ const products = [
     game: "Call of Duty",
     image: "/images/cod-extra.png",
     prices: [
-      { duration: "1 day", amount: "$11.99", originalAmount: "$21.99" },
-      { duration: "1 week", amount: "$17.99", originalAmount: "$31.99", popular: true },
-      { duration: "1 month", amount: "$34.99", originalAmount: "$59.99" },
-      { duration: "lifetime", amount: "$149.99", originalAmount: "$249.99" },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/8x200lghN5cLg63duzcs80h" },
+      { duration: "1 week", amount: "$17.99", originalAmount: "$31.99", popular: true, checkoutUrl: "https://buy.stripe.com/7sY8wR9TpfRp7zxduzcs80i" },
+      { duration: "1 month", amount: "$34.99", originalAmount: "$59.99", checkoutUrl: "https://buy.stripe.com/9B69AV7LhcFd5rpfCHcs80j" },
+      { duration: "lifetime", amount: "$149.99", originalAmount: "$249.99", bestValue: true, checkoutUrl: "https://buy.stripe.com/9B6dRb3v134D2fd9ejcs80k" },
     ],
     rating: 4.8,
     totalReviews: 1156,
@@ -80,10 +80,10 @@ const products = [
     game: "Arc Raiders",
     image: "/images/category-arc-raiders-new.webp",
     prices: [
-      { duration: "1 day", amount: "$10.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$21.99", originalAmount: "$39.99", popular: true },
-      { duration: "1 month", amount: "$39.99", originalAmount: "$69.99" },
-      { duration: "lifetime", amount: "$249.99", originalAmount: "$399.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/7sY6oJd5B9t17zx8afcs80a" },
+      { duration: "1 week", amount: "$21.99", originalAmount: "$39.99", popular: true, checkoutUrl: "https://buy.stripe.com/cNi6oJ2qX5cLg63bmrcs80m" },
+      { duration: "1 month", amount: "$57.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/aFa14pghN48H5rp627cs80B" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/eVqeVfghNcFd4nl0HNcs80o" },
     ],
     rating: 5.0,
     totalReviews: 723,
@@ -241,10 +241,10 @@ const products = [
     game: "Rainbow Six Siege",
     image: "/images/category-r6.webp",
     prices: [
-      { duration: "1 day", amount: "$12.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$24.99", originalAmount: "$39.99", popular: true },
-      { duration: "1 month", amount: "$49.99", originalAmount: "$79.99" },
-      { duration: "lifetime", amount: "$149.99", originalAmount: "$249.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNi5kF5D90Wv1b9duzcs80p" },
+      { duration: "1 week", amount: "$24.99", originalAmount: "$44.99", popular: true, checkoutUrl: "https://buy.stripe.com/4gM4gBe9F48HaLJeyDcs80q" },
+      { duration: "1 month", amount: "$49.99", originalAmount: "$89.99", checkoutUrl: "https://buy.stripe.com/00wfZj7Lh9t19HF2PVcs80r" },
+      { duration: "lifetime", amount: "$129.99", originalAmount: "$249.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/4gM9AV8Pl0Wv6vt3TZcs80s" },
     ],
     rating: 5.0,
     totalReviews: 892,
@@ -272,10 +272,11 @@ const products = [
     game: "Valorant",
     image: "/images/category-warframe.webp",
     prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$14.99" },
-      { duration: "1 week", amount: "$19.99", originalAmount: "$29.99", popular: true },
-      { duration: "1 month", amount: "$39.99", originalAmount: "$59.99" },
-      { duration: "lifetime", amount: "$99.99", originalAmount: "$149.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/5kQcN78Pl6gP075aincs80t" },
+      { duration: "3 day", amount: "$14.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNibJ39Tp48HbPNduzcs80C" },
+      { duration: "1 week", amount: "$19.99", originalAmount: "$34.99", popular: true, checkoutUrl: "https://buy.stripe.com/14A28t0iPbB94nlgGLcs80u" },
+      { duration: "1 month", amount: "$39.99", originalAmount: "$69.99", checkoutUrl: "https://buy.stripe.com/bJe5kF9Tp0Wvg63eyDcs80v" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/7sY8wR7Lh5cL4nl1LRcs80w" },
     ],
     rating: 5.0,
     totalReviews: 1892,
@@ -303,10 +304,11 @@ const products = [
     game: "Apex Legends",
     image: "/images/category-apex.webp",
     prices: [
-      { duration: "1 day", amount: "$14.99", originalAmount: "$24.99" },
-      { duration: "1 week", amount: "$29.99", originalAmount: "$49.99", popular: true },
-      { duration: "1 month", amount: "$59.99", originalAmount: "$99.99" },
-      { duration: "lifetime", amount: "$199.99", originalAmount: "$299.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$8.99", originalAmount: "$17.99", checkoutUrl: "https://buy.stripe.com/eVqcN7c1xcFd5rp2PVcs804" },
+      { duration: "3 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/14A00l1mTfRpcTR2PVcs805" },
+      { duration: "1 week", amount: "$17.99", originalAmount: "$34.99", popular: true, checkoutUrl: "https://buy.stripe.com/9B67sN1mT0Wv2fdduzcs807" },
+      { duration: "1 month", amount: "$22.99", originalAmount: "$44.99", checkoutUrl: "https://buy.stripe.com/dRm14p0iPfRp7zx2PVcs808" },
+      { duration: "lifetime", amount: "$47.99", originalAmount: "$99.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/5kQcN7fdJ9t17zx1LRcs809" },
     ],
     rating: 5.0,
     totalReviews: 1543,
@@ -334,10 +336,10 @@ const products = [
     game: "Rust",
     image: "/images/category-cs2.webp",
     prices: [
-      { duration: "1 day", amount: "$13.99", originalAmount: "$21.99" },
-      { duration: "1 week", amount: "$27.99", originalAmount: "$44.99", popular: true },
-      { duration: "1 month", amount: "$54.99", originalAmount: "$89.99" },
-      { duration: "lifetime", amount: "$179.99", originalAmount: "$279.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/cNidRbd5B8oXg63bmrcs80x" },
+      { duration: "1 week", amount: "$27.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://buy.stripe.com/5kQ6oJd5BgVt8DBaincs80y" },
+      { duration: "1 month", amount: "$54.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/cNifZjc1x8oXg630HNcs80z" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/bJe8wR2qX34D9HF9ejcs80A" },
     ],
     rating: 5.0,
     totalReviews: 1654,
@@ -897,26 +899,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 {/* Buy Button */}
                 <Button
                   onClick={() => {
-                    // Stripe checkout URLs for each product
+                    // Stripe checkout URLs for HWID spoofer variants only
                     const stripeUrls: Record<string, string[]> = {
-                      "fortnite": [
-                        "https://buy.stripe.com/3cI7sM7G7fbCb74fCP38403", // 1 day
-                        "https://buy.stripe.com/9B628sgcDfbC8YW4Yb38404", // 1 week
-                        "https://buy.stripe.com/00w3cw0dFe7yfnk62f38405", // 1 month
-                        "https://buy.stripe.com/aFa3cwf8z3sU1wu9er38406", // lifetime
-                      ],
-                      "arc-raiders": [
-                        "https://buy.stripe.com/8x26oI0dF5B2cb8fCP38407", // 1 day
-                        "https://buy.stripe.com/28EfZid0r8Ne7US4Yb38408", // 1 week
-                        "https://buy.stripe.com/dRmbJ2f8z9Ri0sq62f38409", // 1 month
-                        "https://buy.stripe.com/4gMdRaaSj2oQcb88an3840a", // lifetime
-                      ],
-                      "call-of-duty": [
-                        "https://buy.stripe.com/6oUcN6d0r4wY1wubmz3840b", // 3 day
-                        "https://buy.stripe.com/4gMeVe4tVgfG5MK76j3840c", // 1 week
-                        "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
-                        "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
-                      ],
                       "hwid-spoofer-perm": [
                         "https://buy.stripe.com/14A3cwgcD3sU2AyduH3840f", // onetime
                         "https://buy.stripe.com/aFabJ24tV1kM0sqfCP3840g", // lifetime
@@ -929,20 +913,30 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       ],
                     }
                     
-                    // Handle HWID spoofer with variants
-                    let checkoutKey = actualId
-                    if (actualId === "hwid-spoofer" && selectedVariant) {
-                      checkoutKey = `hwid-spoofer-${selectedVariant}`
+                    // First check if product price has checkoutUrl
+                    const selectedPrice = product.prices[selectedPlan] as { checkoutUrl?: string }
+                    if (selectedPrice?.checkoutUrl) {
+                      window.open(selectedPrice.checkoutUrl, "_blank")
+                      return
                     }
                     
-                    const checkoutUrls = stripeUrls[checkoutKey]
-                    if (checkoutUrls && checkoutUrls[selectedPlan]) {
-                      window.open(checkoutUrls[selectedPlan], "_blank")
-                    } else if (actualId === "hwid-spoofer" && !selectedVariant) {
+                    // Handle HWID spoofer with variants
+                    if (actualId === "hwid-spoofer" && !selectedVariant) {
                       setShowVariantModal(true)
-                    } else {
-                      setIsCheckoutOpen(true)
+                      return
                     }
+                    
+                    if (actualId === "hwid-spoofer" && selectedVariant) {
+                      const checkoutKey = `hwid-spoofer-${selectedVariant}`
+                      const checkoutUrls = stripeUrls[checkoutKey]
+                      if (checkoutUrls && checkoutUrls[selectedPlan]) {
+                        window.open(checkoutUrls[selectedPlan], "_blank")
+                        return
+                      }
+                    }
+                    
+                    // Fallback to checkout modal
+                    setIsCheckoutOpen(true)
                   }}
                   className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold py-6 text-lg"
                 >
