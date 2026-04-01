@@ -58,6 +58,9 @@ export default function RootLayout({
         <SiteHeader />
 
         <div className="relative z-10">{children}</div>
+        
+        {/* Komerza Checkout Embed Script */}
+        <script src="https://checkout.komerza.com/embed/embed.iife.js"></script>
       </body>
     </html>
   )

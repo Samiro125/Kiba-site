@@ -13,12 +13,28 @@ export default function ReviewsPage() {
 
   const reviews = [
     {
+      username: "@apexpredator99",
+      verified: true,
+      date: "2026-03-15 14:22:10",
+      product: "Apex Legends Cheat",
+      rating: 5,
+      text: "+rep Kiba Apex cheat is insane. Aimbot locks on perfectly and ESP shows everything. Hit Predator rank easily now.",
+    },
+    {
+      username: "@wraith_main_ttv",
+      verified: true,
+      date: "2026-03-14 18:45:33",
+      product: "Apex Legends Cheat",
+      rating: 5,
+      text: "+rep Best Apex cheat on the market. No recoil works flawlessly, been using for 2 weeks with zero bans.",
+    },
+    {
       username: "@giuseppe419",
       verified: true,
       date: "2025-10-19 15:46:22",
       product: "Fortnite Cheat",
       rating: 5,
-      text: "+rep Extra Services easy to use i cant lie i might have to buy lifetime",
+      text: "+rep Kiba Services easy to use i cant lie i might have to buy lifetime",
     },
     {
       username: "@fs4e",
@@ -26,7 +42,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 14:32:11",
       product: "Warzone Cheat",
       rating: 5,
-      text: "+rep Extra Services this shit is insane, smooth and everything works, easy to setup too",
+      text: "+rep Kiba Services this shit is insane, smooth and everything works, easy to setup too",
     },
     {
       username: "@byte.lol",
@@ -34,7 +50,7 @@ export default function ReviewsPage() {
       date: "2025-10-18 10:22:45",
       product: "R6 Cheat",
       rating: 5,
-      text: "+rep Extra Services I just subscribed for a 1 month after testing the day pass. Doesn't disappoint. Thanks for the continuous support. I've been playing ranked and haven't been banned.",
+      text: "+rep Kiba Services I just subscribed for a 1 month after testing the day pass. Doesn't disappoint. Thanks for the continuous support. I've been playing ranked and haven't been banned.",
     },
     {
       username: "@ilteo.",
@@ -50,7 +66,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 09:15:20",
       product: "Fortnite Cheat",
       rating: 5,
-      text: "+rep Extra Services i was skeptical at first until i started dropping bodies.",
+      text: "+rep Kiba Services i was skeptical at first until i started dropping bodies.",
     },
     {
       username: "@sous_arrestation",
@@ -66,7 +82,7 @@ export default function ReviewsPage() {
       date: "2025-10-16 14:28:55",
       product: "R6 Cheat",
       rating: 5,
-      text: "First time using Extra Services works really good thanks for the support. Easy to set up best cheat in the market.",
+      text: "First time using Kiba Services works really good thanks for the support. Easy to set up best cheat in the market.",
     },
     {
       username: "@giovanni9876",
@@ -74,7 +90,7 @@ export default function ReviewsPage() {
       date: "2025-10-13 16:45:12",
       product: "Fortnite Cheat",
       rating: 5,
-      text: "Bought Extra Services and it was so good i ended up buying 2 lifetime. Fantastic product and the help is next to none. I would highly recommend anyone give it a try you definitely won't be disappointed.",
+      text: "Bought Kiba Services and it was so good i ended up buying 2 lifetime. Fantastic product and the help is next to none. I would highly recommend anyone give it a try you definitely won't be disappointed.",
     },
     {
       username: "@ofc.spinzz_90821",
@@ -82,7 +98,7 @@ export default function ReviewsPage() {
       date: "2025-10-18 13:20:40",
       product: "HWID Spoofer",
       rating: 5,
-      text: "+Rep Extra Services this is the best and smoothest cheat ive ever used. It uses 0 percent cpu and GPU usage its insane.",
+      text: "+Rep Kiba Services this is the best and smoothest cheat ive ever used. It uses 0 percent cpu and GPU usage its insane.",
     },
     {
       username: "@k0ldside",
@@ -90,7 +106,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 10:15:30",
       product: "Warzone Cheat",
       rating: 5,
-      text: "+rep Extra Services the real deal.",
+      text: "+rep Kiba Services the real deal.",
     },
     {
       username: "@venomous.og",
@@ -98,7 +114,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 15:30:25",
       product: "R6 Cheat",
       rating: 4,
-      text: "Big win for Extra Services. Very well made software.",
+      text: "Big win for Kiba Services. Very well made software.",
     },
     {
       username: "@rzenco",
@@ -106,7 +122,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 14:55:18",
       product: "Fortnite Cheat",
       rating: 5,
-      text: "+rep Extra Services very good and undetected. I highly recommend.",
+      text: "+rep Kiba Services very good and undetected. I highly recommend.",
     },
     {
       username: "@biggerego",
@@ -130,7 +146,7 @@ export default function ReviewsPage() {
       date: "2025-10-13 12:15:22",
       product: "R6 Cheat",
       rating: 5,
-      text: "Bought Extra Services and it was so good i ended up buying 2 lifetime. Absolutely fantastic product and the help is next to none. I would highly recommend anyone give it a try.",
+      text: "Bought Kiba Services and it was so good i ended up buying 2 lifetime. Absolutely fantastic product and the help is next to none. I would highly recommend anyone give it a try.",
     },
     {
       username: "@hamood_515",
@@ -170,7 +186,7 @@ export default function ReviewsPage() {
       date: "2025-10-16 11:45:15",
       product: "R6 Cheat",
       rating: 4,
-      text: "First time using Extra Services works really good thanks for the support. Easy to set up best cheat in the market.",
+      text: "First time using Kiba Services works really good thanks for the support. Easy to set up best cheat in the market.",
     },
     {
       username: "@rustking_420",
@@ -178,7 +194,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:20:30",
       product: "RUST",
       rating: 5,
-      text: "+rep Extra Rust cheat is insane, ESP works perfectly, can see all loot and players through walls. Never getting raided again.",
+      text: "+rep Kiba Rust cheat is insane, ESP works perfectly, can see all loot and players through walls. Never getting raided again.",
     },
     {
       username: "@nakedzerg",
@@ -194,7 +210,7 @@ export default function ReviewsPage() {
       date: "2025-10-18 14:30:40",
       product: "RUST",
       rating: 5,
-      text: "+rep Extra Rust ESP shows everything - barrels, crates, players, animals. Farming is so much easier now.",
+      text: "+rep Kiba Rust ESP shows everything - barrels, crates, players, animals. Farming is so much easier now.",
     },
     {
       username: "@ak_spray_god",
@@ -210,7 +226,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:30:45",
       product: "Apex Legends Cheat",
       rating: 5,
-      text: "+rep Extra Apex cheat is insane. Aimbot locks on perfectly, ESP shows everything. Hitting pred rank easy now.",
+      text: "+rep Kiba Apex cheat is insane. Aimbot locks on perfectly, ESP shows everything. Hitting pred rank easy now.",
     },
     {
       username: "@wraith_main_420",
@@ -226,7 +242,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:40:30",
       product: "Battlefield Cheat",
       rating: 5,
-      text: "+rep Extra Battlefield cheat is incredible. Aimbot with bullet drop compensation is perfect. Sniping is too easy.",
+      text: "+rep Kiba Battlefield cheat is incredible. Aimbot with bullet drop compensation is perfect. Sniping is too easy.",
     },
     {
       username: "@recon_scout",
@@ -234,7 +250,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 14:30:20",
       product: "Battlefield Cheat",
       rating: 5,
-      text: "+rep Extra Battlefield cheat is undetected and smooth. Minimap radar enhancement is so helpful.",
+      text: "+rep Kiba Battlefield cheat is undetected and smooth. Minimap radar enhancement is so helpful.",
     },
     {
       username: "@support_gunner",
@@ -282,7 +298,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 13:30:10",
       product: "Battlefield Cheat",
       rating: 5,
-      text: "+rep Extra Battlefield is the best. Regular updates keep it undetected. 24/7 support is amazing.",
+      text: "+rep Kiba Battlefield is the best. Regular updates keep it undetected. 24/7 support is amazing.",
     },
     {
       username: "@grenade_launcher",
@@ -306,7 +322,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:50:45",
       product: "Valorant Cheat",
       rating: 5,
-      text: "+rep Extra Valorant cheat bypasses Vanguard perfectly. Aimbot is smooth, hitting radiant rank easy now.",
+      text: "+rep Kiba Valorant cheat bypasses Vanguard perfectly. Aimbot is smooth, hitting radiant rank easy now.",
     },
     {
       username: "@jett_dasher",
@@ -354,7 +370,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 14:40:35",
       product: "Valorant Cheat",
       rating: 5,
-      text: "+rep Extra Valorant is undetected and smooth. Aimbot FOV is customizable, looks totally legit.",
+      text: "+rep Kiba Valorant is undetected and smooth. Aimbot FOV is customizable, looks totally legit.",
     },
     {
       username: "@killjoy_tech",
@@ -386,7 +402,7 @@ export default function ReviewsPage() {
       date: "2025-10-16 10:35:45",
       product: "Valorant Cheat",
       rating: 5,
-      text: "+rep Extra Valorant is the best. Spread control is perfect, every shot lands. Super safe and undetected.",
+      text: "+rep Kiba Valorant is the best. Spread control is perfect, every shot lands. Super safe and undetected.",
     },
     {
       username: "@breach_flasher",
@@ -402,7 +418,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 13:45:25",
       product: "Valorant Cheat",
       rating: 5,
-      text: "+rep Aimbot smoothness is adjustable. Set it to look legit and still dominate. Highly recommend Extra.",
+      text: "+rep Aimbot smoothness is adjustable. Set it to look legit and still dominate. Highly recommend Kiba.",
     },
     {
       username: "@skye_aussie",
@@ -418,7 +434,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 13:25:10",
       product: "Valorant Cheat",
       rating: 5,
-      text: "+rep Extra Valorant cheat is undetected. Been using for 3 months, zero bans. Hitting immortal rank easy.",
+      text: "+rep Kiba Valorant cheat is undetected. Been using for 3 months, zero bans. Hitting immortal rank easy.",
     },
     {
       username: "@cs2_global_elite",
@@ -426,7 +442,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:15:30",
       product: "Counter-Strike 2 Cheat",
       rating: 5,
-      text: "+rep Extra CS2 cheat is insane. Aimbot is smooth, ESP is detailed. Hitting global elite easy now.",
+      text: "+rep Kiba CS2 cheat is insane. Aimbot is smooth, ESP is detailed. Hitting global elite easy now.",
     },
     {
       username: "@awp_sniper_god",
@@ -474,7 +490,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 14:50:20",
       product: "Counter-Strike 2 Cheat",
       rating: 5,
-      text: "+rep Extra CS2 is undetected and smooth. Aimbot FOV is customizable, looks totally legit.",
+      text: "+rep Kiba CS2 is undetected and smooth. Aimbot FOV is customizable, looks totally legit.",
     },
     {
       username: "@smoke_criminal",
@@ -506,7 +522,7 @@ export default function ReviewsPage() {
       date: "2025-10-16 10:45:40",
       product: "Counter-Strike 2 Cheat",
       rating: 5,
-      text: "+rep Extra CS2 is the best. Spread control is perfect, every bullet lands. Super safe and undetected.",
+      text: "+rep Kiba CS2 is the best. Spread control is perfect, every bullet lands. Super safe and undetected.",
     },
     {
       username: "@igl_strat_caller",
@@ -522,7 +538,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 13:55:10",
       product: "Counter-Strike 2 Cheat",
       rating: 5,
-      text: "+rep Aimbot smoothness is adjustable. Set it to look legit and still dominate. Highly recommend Extra.",
+      text: "+rep Aimbot smoothness is adjustable. Set it to look legit and still dominate. Highly recommend Kiba.",
     },
     {
       username: "@flash_assist_king",
@@ -538,7 +554,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 13:35:45",
       product: "Counter-Strike 2 Cheat",
       rating: 5,
-      text: "+rep Extra CS2 cheat is undetected. Been using for 4 months, zero bans. Hitting faceit level 10 easy.",
+      text: "+rep Kiba CS2 cheat is undetected. Been using for 4 months, zero bans. Hitting faceit level 10 easy.",
     },
     {
       username: "@hwid_master",
@@ -546,7 +562,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:25:40",
       product: "Permanent Spoofer",
       rating: 5,
-      text: "+rep Extra Permanent Spoofer is the best. One-click operation, works on all games. Never getting banned again.",
+      text: "+rep Kiba Permanent Spoofer is the best. One-click operation, works on all games. Never getting banned again.",
     },
     {
       username: "@ban_evader_pro",
@@ -594,7 +610,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 14:15:35",
       product: "Permanent Spoofer",
       rating: 5,
-      text: "+rep Extra Permanent Spoofer is undetected. One-click and I'm unbanned. Support is amazing too.",
+      text: "+rep Kiba Permanent Spoofer is undetected. One-click and I'm unbanned. Support is amazing too.",
     },
     {
       username: "@mac_address_pro",
@@ -618,7 +634,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 12:25:10",
       product: "Permanent Spoofer",
       rating: 5,
-      text: "+rep Automatic backup system is a lifesaver. Restored my system once, worked perfectly. Highly recommend Extra.",
+      text: "+rep Automatic backup system is a lifesaver. Restored my system once, worked perfectly. Highly recommend Kiba.",
     },
     {
       username: "@lifetime_updates_fan",
@@ -634,7 +650,7 @@ export default function ReviewsPage() {
       date: "2025-10-13 14:35:15",
       product: "Permanent Spoofer",
       rating: 5,
-      text: "+rep Registry modifier is thorough. Removed all ban traces. Got back into my favorite games. Thank you Extra!",
+      text: "+rep Registry modifier is thorough. Removed all ban traces. Got back into my favorite games. Thank you Kiba!",
     },
     {
       username: "@secure_boot_disabled",
@@ -658,7 +674,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 13:45:50",
       product: "Permanent Spoofer",
       rating: 5,
-      text: "+rep Extra Permanent Spoofer is undetected. Been using for 8 months, works on every game. Highly recommend.",
+      text: "+rep Kiba Permanent Spoofer is undetected. Been using for 8 months, works on every game. Highly recommend.",
     },
     {
       username: "@temp_spoof_master",
@@ -666,7 +682,7 @@ export default function ReviewsPage() {
       date: "2025-10-19 15:35:25",
       product: "Temp Spoofer",
       rating: 5,
-      text: "+rep Extra Temp Spoofer is perfect for testing. Quick activation, no permanent changes. Works great.",
+      text: "+rep Kiba Temp Spoofer is perfect for testing. Quick activation, no permanent changes. Works great.",
     },
     {
       username: "@quick_unban_pro",
@@ -778,7 +794,7 @@ export default function ReviewsPage() {
       date: "2025-10-17 13:15:25",
       product: "Temp Spoofer",
       rating: 5,
-      text: "+rep Extra Temp Spoofer is undetected. Perfect temporary solution. Will upgrade to permanent soon.",
+      text: "+rep Kiba Temp Spoofer is undetected. Perfect temporary solution. Will upgrade to permanent soon.",
     },
   ]
 
@@ -837,7 +853,7 @@ export default function ReviewsPage() {
           <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-6">
             Real feedback from real customers. See why thousands trust our products.
           </p>
-          <Link href="https://discord.gg/ChfqrzByAP" target="_blank" rel="noopener noreferrer">
+          <Link href="https://discord.com/invite/AadcxjnkAR" target="_blank" rel="noopener noreferrer">
             <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 text-base font-semibold rounded-full gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg>
               Write a Review

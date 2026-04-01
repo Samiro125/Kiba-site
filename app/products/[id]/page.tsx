@@ -1,8 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
-
-import { useState } from "react"
+import { useEffect, useState, use } from "react"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -21,8 +19,9 @@ const products = [
     image: "/images/fortnite-extra.png",
     prices: [
       { duration: "1 day", amount: "$10.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$27.99", originalAmount: "$49.99", popular: true },
-      { duration: "1 month", amount: "$59.99", originalAmount: "$99.99" },
+      { duration: "3 day", amount: "$17.99", originalAmount: "$29.99" },
+      { duration: "7 day", amount: "$27.99", originalAmount: "$49.99", popular: true },
+      { duration: "30 day", amount: "$59.99", originalAmount: "$99.99" },
       { duration: "lifetime", amount: "$249.99", originalAmount: "$399.99", popular: true, bestValue: true },
     ],
     rating: 5,
@@ -111,6 +110,37 @@ const products = [
       "Instant delivery",
       "Auto update (no re-download)",
       "Fully streamproof",
+    ],
+  },
+  {
+    id: "apex-legends",
+    name: "APEX LEGENDS CHEAT",
+    game: "Apex Legends",
+    image: "/images/apex-legends.png",
+    prices: [
+      { duration: "1 day", amount: "$8.99", originalAmount: "$14.99" },
+      { duration: "3 day", amount: "$14.99", originalAmount: "$24.99", popular: true },
+      { duration: "7 day", amount: "$19.99", originalAmount: "$34.99" },
+      { duration: "30 day", amount: "$24.99", originalAmount: "$44.99" },
+      { duration: "lifetime", amount: "$49.99", originalAmount: "$99.99", bestValue: true },
+    ],
+    rating: 5.0,
+    totalReviews: 842,
+    color: "from-teal-600 to-teal-900",
+    specifications: [
+      { label: "Gameplay Modes", value: "AVAILABLE" },
+      { label: "Anti-Cheat System", value: "EAC" },
+      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with customizable FOV and smoothing",
+      "ESP for players, loot and distances",
+      "No recoil and no spread",
+      "Radar with enemy positions",
+      "Visibility check",
+      "Customizable hotkeys",
+      "Instant delivery and 24/7 support",
     ],
   },
   {
@@ -385,18 +415,20 @@ const relatedProducts = [
 const productIdMap: Record<string, string> = {
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
   
   const [showVariantModal, setShowVariantModal] = useState(false)
   const [selectedVariant, setSelectedVariant] = useState<string | null>(null)
 
-  const actualId = productIdMap[params.id] || params.id
+  const actualId = productIdMap[id] || id
   const product = products.find((p) => p.id === actualId)
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false)
+  const [shopifyUrl, setShopifyUrl] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState<"features" | "requirements" | "faq">("features")
 
   // Show variant modal on mount for products with variants
@@ -902,14 +934,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     // Stripe checkout URLs for HWID spoofer variants only
                     const stripeUrls: Record<string, string[]> = {
                       "hwid-spoofer-perm": [
-                        "https://buy.stripe.com/14A3cwgcD3sU2AyduH3840f", // onetime
-                        "https://buy.stripe.com/aFabJ24tV1kM0sqfCP3840g", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=perm", // onetime
+                        "https://kibacheats.mykomerza.com/product?id=perm", // lifetime
                       ],
                       "hwid-spoofer-temp": [
-                        "https://buy.stripe.com/cNi4gA2lNgfG5MK1LZ3840h", // 3 day
-                        "https://buy.stripe.com/9B6bJ26C3aVm2Ay2Q33840i", // 1 week
-                        "https://buy.stripe.com/7sYbJ28KbfbCa30fCP3840j", // 1 month
-                        "https://buy.stripe.com/5kQ9AUaSj3sUgroaiv3840k", // lifetime
+                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 day
+                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 week
+                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 month
+                        "https://kibacheats.mykomerza.com/product?id=temp", // lifetime
                       ],
                     }
                     
@@ -1048,56 +1080,30 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         isOpen={isCheckoutOpen}
         onClose={() => setIsCheckoutOpen(false)}
         productName={product.name}
-        planName={product.prices[selectedPlan].duration}
-        price={product.prices[selectedPlan].amount}
+        planName={currentPrices[selectedPlan]?.duration || ""}
+        price={currentPrices[selectedPlan]?.amount || "$0"}
         checkoutUrl={
           actualId === "fortnite"
-            ? [
-                "https://buy.stripe.com/3cI7sM7G7fbCb74fCP38403", // 1 day
-                "https://buy.stripe.com/9B628sgcDfbC8YW4Yb38404", // 1 week
-                "https://buy.stripe.com/00w3cw0dFe7yfnk62f38405", // 1 month
-                "https://buy.stripe.com/aFa3cwf8z3sU1wu9er38406", // lifetime
-              ][selectedPlan]
+            ? "https://kibacheats.mykomerza.com/product?id=fortnitech"
             : actualId === "arc-raiders"
+              ? "https://kibacheats.mykomerza.com/product?id=arc-raiders"
+              : actualId === "call-of-duty"
+                ? "https://kibacheats.mykomerza.com/product?id=cod"
+                : actualId === "apex-legends"
+                  ? "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d"
+                : actualId === "fivem"
                   ? [
-                        "https://buy.stripe.com/8x26oI0dF5B2cb8fCP38407", // 1 day
-                        "https://buy.stripe.com/28EfZid0r8Ne7US4Yb38408", // 1 week
-                        "https://buy.stripe.com/dRmbJ2f8z9Ri0sq62f38409", // 1 month
-                        "https://buy.stripe.com/4gMdRaaSj2oQcb88an3840a", // lifetime
-                      ][selectedPlan]
-                  : actualId === "call-of-duty"
-                    ? [
-                        "https://buy.stripe.com/6oUcN6d0r4wY1wubmz3840b", // 3 day
-                        "https://buy.stripe.com/4gMeVe4tVgfG5MK76j3840c", // 1 week
-                        "https://buy.stripe.com/aFa7sMgcDbZq0sqduH3840d", // 1 month
-                        "https://buy.stripe.com/7sYdRae4v8Ne7USgGT3840e", // lifetime
-                      ][selectedPlan]
-                    : actualId === "fivem"
-                              ? [
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/jZ09z", // 1 week
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/lx29J", // 1 month
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/mOY9A", // lifetime
-                                ][selectedPlan]
-                              : actualId === "hwid-spoofer" && selectedVariant === "perm"
-                              ? [
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/6RNwV", // one-time
-                                  "https://www.fanbasis.com/agency-checkout/antweaks/7L0xy", // lifetime
-                                ][selectedPlan]
-                              : actualId === "hwid-spoofer" && selectedVariant === "temp"
-                                ? [
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/mQjn3", // 3 day
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/oQl0L", // 1 week
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/jqKky", // 1 month
-                                    "https://www.fanbasis.com/agency-checkout/antweaks/l5gmj", // lifetime
-                                  ][selectedPlan]
-                                : actualId === "accounts"
-                                  ? "https://storrik.com" // Accounts use Storrik modal
-                                  : [
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                      "https://fanbasis.com/agency-checkout/antweaks",
-                                    ][selectedPlan]
+                      "https://www.fanbasis.com/agency-checkout/antweaks/jZ09z", // 1 week
+                      "https://www.fanbasis.com/agency-checkout/antweaks/lx29J", // 1 month
+                      "https://www.fanbasis.com/agency-checkout/antweaks/mOY9A", // lifetime
+                    ][selectedPlan]
+                  : actualId === "hwid-spoofer" && selectedVariant === "perm"
+                    ? "https://kibacheats.mykomerza.com/product?id=perm"
+                    : actualId === "hwid-spoofer" && selectedVariant === "temp"
+                      ? "https://kibacheats.mykomerza.com/product?id=temp"
+                      : actualId === "accounts"
+                        ? "https://storrik.com" // Accounts use Storrik modal
+                        : "https://kibacheats.mykomerza.com"
         }
       />
 
@@ -1148,6 +1154,29 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Shopify Checkout Modal */}
+      {shopifyUrl && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setShopifyUrl(null)} />
+          <div className="relative w-full max-w-2xl mx-4 bg-zinc-900 rounded-xl shadow-2xl border border-zinc-800 overflow-hidden" style={{ height: "80vh" }}>
+            <div className="flex items-center justify-between px-5 py-4 border-b border-zinc-800">
+              <h2 className="text-lg font-bold text-white">Secure Checkout</h2>
+              <button onClick={() => setShopifyUrl(null)} className="text-zinc-400 hover:text-white transition-colors">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <iframe
+              src={shopifyUrl}
+              className="w-full h-full"
+              style={{ height: "calc(80vh - 61px)" }}
+              title="Shopify Checkout"
+            />
           </div>
         </div>
       )}
