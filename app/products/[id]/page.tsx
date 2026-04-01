@@ -16,7 +16,7 @@ const products = [
     id: "fortnite",
     name: "FORTNITE CHEAT",
     game: "Fortnite",
-    image: "/images/fortnite-extra.png",
+    image: "/images/fortnite-product.png",
     prices: [
       { duration: "1 day", amount: "$10.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/8x27sN3v1fRpg633TZcs80D" },
       { duration: "3 day", amount: "$17.99", originalAmount: "$29.99", checkoutUrl: "https://buy.stripe.com/fZu14p2qX9t1075duzcs80E" },
@@ -47,7 +47,7 @@ const products = [
     id: "call-of-duty",
     name: "CALL OF DUTY CHEAT",
     game: "Call of Duty",
-    image: "/images/cod-extra.png",
+    image: "/images/cod-product.png",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/8x200lghN5cLg63duzcs80h" },
       { duration: "1 week", amount: "$17.99", originalAmount: "$31.99", popular: true, checkoutUrl: "https://buy.stripe.com/7sY8wR9TpfRp7zxduzcs80i" },
@@ -77,7 +77,7 @@ const products = [
     id: "arc-raiders",
     name: "ARC RAIDERS CHEAT",
     game: "Arc Raiders",
-    image: "/images/category-arc-raiders-new.webp",
+    image: "/images/arc-raiders-product.png",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/7sY6oJd5B9t17zx8afcs80a" },
       { duration: "1 week", amount: "$21.99", originalAmount: "$39.99", popular: true, checkoutUrl: "https://buy.stripe.com/cNi6oJ2qX5cLg63bmrcs80m" },
@@ -176,7 +176,7 @@ const products = [
     id: "hwid-spoofer",
     name: "HWID SPOOFER",
     game: "Universal",
-    image: "/images/hwid-spoofer.png",
+    image: "/images/hwid-product.png",
     hasVariants: true,
     variants: [
       {
@@ -269,7 +269,7 @@ const products = [
     id: "rainbow-six",
     name: "RAINBOW SIX",
     game: "Rainbow Six Siege",
-    image: "/images/category-r6.webp",
+    image: "/images/r6-product.png",
     prices: [
       { duration: "1 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNi5kF5D90Wv1b9duzcs80p" },
       { duration: "1 week", amount: "$24.99", originalAmount: "$44.99", popular: true, checkoutUrl: "https://buy.stripe.com/4gM4gBe9F48HaLJeyDcs80q" },
@@ -332,7 +332,7 @@ const products = [
     id: "apex-legends",
     name: "APEX LEGENDS",
     game: "Apex Legends",
-    image: "/images/category-apex.webp",
+    image: "/images/apex-product.png",
     prices: [
       { duration: "1 day", amount: "$8.99", originalAmount: "$17.99", checkoutUrl: "https://buy.stripe.com/eVqcN7c1xcFd5rp2PVcs804" },
       { duration: "3 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/14A00l1mTfRpcTR2PVcs805" },
