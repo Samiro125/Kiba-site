@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckoutModal } from "@/components/checkout-modal"
 
+
 const products = [
   {
     id: "fortnite",
@@ -43,92 +44,15 @@ const products = [
     ],
   },
   {
-    id: "arc-raiders",
-    name: "ARC RAIDERS CHEAT",
-    game: "Arc Raiders",
-    image: "/images/arc-raiders-extra.png",
-    prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$27.99", originalAmount: "$39.99", popular: true },
-      { duration: "1 month", amount: "$57.99", originalAmount: "$69.99" },
-      { duration: "lifetime", amount: "$109.00", originalAmount: "$399.99", popular: true, bestValue: true },
-    ],
-    rating: 5.0,
-    totalReviews: 723,
-    color: "from-red-600 to-red-900",
-    specifications: [
-      { label: "Windows 10 & 11 (25H2 Supported)", value: "YES" },
-      { label: "External Client", value: "YES" },
-      { label: "USB Flash Drive Recommended", value: "YES" },
-      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
-    ],
-    features: [
-      "Customizable hotkey",
-      "Customizable FOV",
-      "Customizable smoothing",
-      "Humanized trajectories",
-      "Smoothing threshold",
-      "Aim prediction",
-      "Ignore bots",
-      "Maximum distance",
-      "Player ESP",
-      "Show team",
-      "Show bots",
-      "Visibility check",
-      "Customizable boxes",
-      "Snapline",
-      "Distance",
-      "Maximum distance",
-      "2D radar",
-      "Customizable size",
-      "Instant delivery",
-      "Auto update (no re-download)",
-      "Fully streamproof",
-      "Screenshots protection",
-      "Disableable watermark",
-      "Customizable colors",
-    ],
-  },
-  {
-    id: "rainbow-six-siege",
-    name: "RAINBOW SIX SIEGE CHEAT",
-    game: "Rainbow Six Siege",
-    image: "/images/rainbow-six-siege.webp",
-    prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99" },
-      { duration: "1 week", amount: "$29.99", originalAmount: "$49.99", popular: true },
-      { duration: "1 month", amount: "$59.99", originalAmount: "$99.99" },
-      { duration: "lifetime", amount: "$89.99", originalAmount: "$149.99", bestValue: true },
-    ],
-    rating: 5.0,
-    totalReviews: 654,
-    color: "from-orange-600 to-orange-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Anti-Cheat System", value: "BattlEye" },
-      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Aimbot with customizable FOV and smoothing",
-      "ESP for players, gadgets and drones",
-      "No recoil and no spread",
-      "Radar with enemy positions",
-      "Visibility check",
-      "Customizable hotkeys",
-      "Instant delivery and 24/7 support",
-    ],
-  },
-  {
     id: "call-of-duty",
     name: "CALL OF DUTY CHEAT",
     game: "Call of Duty",
     image: "/images/cod-extra.png",
     prices: [
-      { duration: "1 day", amount: "$11.99", originalAmount: "$21.99" },
-      { duration: "1 week", amount: "$17.99", originalAmount: "$31.99", popular: true },
-      { duration: "1 month", amount: "$34.99", originalAmount: "$59.99" },
-      { duration: "lifetime", amount: "$149.99", originalAmount: "$249.99" },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/8x200lghN5cLg63duzcs80h" },
+      { duration: "1 week", amount: "$17.99", originalAmount: "$31.99", popular: true, checkoutUrl: "https://buy.stripe.com/7sY8wR9TpfRp7zxduzcs80i" },
+      { duration: "1 month", amount: "$34.99", originalAmount: "$59.99", checkoutUrl: "https://buy.stripe.com/9B69AV7LhcFd5rpfCHcs80j" },
+      { duration: "lifetime", amount: "$149.99", originalAmount: "$249.99", bestValue: true, checkoutUrl: "https://buy.stripe.com/9B6dRb3v134D2fd9ejcs80k" },
     ],
     rating: 4.8,
     totalReviews: 1156,
@@ -147,6 +71,45 @@ const products = [
       "UAV jammer detection",
       "Customizable crosshair",
       "Instant delivery and 24/7 support",
+    ],
+  },
+  {
+    id: "arc-raiders",
+    name: "ARC RAIDERS CHEAT",
+    game: "Arc Raiders",
+    image: "/images/category-arc-raiders-new.webp",
+    prices: [
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/7sY6oJd5B9t17zx8afcs80a" },
+      { duration: "1 week", amount: "$21.99", originalAmount: "$39.99", popular: true, checkoutUrl: "https://buy.stripe.com/cNi6oJ2qX5cLg63bmrcs80m" },
+      { duration: "1 month", amount: "$57.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/aFa14pghN48H5rp627cs80B" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/eVqeVfghNcFd4nl0HNcs80o" },
+    ],
+    rating: 5.0,
+    totalReviews: 723,
+    color: "from-blue-600 to-blue-900",
+    specifications: [
+      { label: "Windows 10 & 11 (25H2 Supported)", value: "YES" },
+      { label: "External Client", value: "YES" },
+      { label: "USB Flash Drive Recommended", value: "YES" },
+      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
+    ],
+    features: [
+      "Customizable hotkey",
+      "Customizable FOV",
+      "Customizable smoothing",
+      "Humanized trajectories",
+      "Smoothing threshold",
+      "Aim prediction",
+      "Ignore bots",
+      "Player ESP",
+      "Show team",
+      "Visibility check",
+      "Customizable boxes",
+      "Snapline",
+      "2D radar",
+      "Instant delivery",
+      "Auto update (no re-download)",
+      "Fully streamproof",
     ],
   },
   {
@@ -302,6 +265,132 @@ const products = [
       "Video showcase guide included",
     ],
   },
+  {
+    id: "rainbow-six",
+    name: "RAINBOW SIX",
+    game: "Rainbow Six Siege",
+    image: "/images/category-r6.webp",
+    prices: [
+      { duration: "1 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNi5kF5D90Wv1b9duzcs80p" },
+      { duration: "1 week", amount: "$24.99", originalAmount: "$44.99", popular: true, checkoutUrl: "https://buy.stripe.com/4gM4gBe9F48HaLJeyDcs80q" },
+      { duration: "1 month", amount: "$49.99", originalAmount: "$89.99", checkoutUrl: "https://buy.stripe.com/00wfZj7Lh9t19HF2PVcs80r" },
+      { duration: "lifetime", amount: "$129.99", originalAmount: "$249.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/4gM9AV8Pl0Wv6vt3TZcs80s" },
+    ],
+    rating: 5.0,
+    totalReviews: 892,
+    color: "from-blue-600 to-blue-900",
+    specifications: [
+      { label: "Compatibility", value: "PC" },
+      { label: "Last Updated", value: "28/12/2024" },
+      { label: "Status", value: "UNDETECTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with adjustable FOV",
+      "ESP & Wallhack",
+      "No recoil & no spread",
+      "Triggerbot",
+      "Radar hack",
+      "Instant delivery",
+      "24/7 support",
+      "Regular updates",
+    ],
+  },
+  {
+    id: "valorant",
+    name: "VALORANT",
+    game: "Valorant",
+    image: "/images/category-warframe.webp",
+    prices: [
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/5kQcN78Pl6gP075aincs80t" },
+      { duration: "3 day", amount: "$14.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNibJ39Tp48HbPNduzcs80C" },
+      { duration: "1 week", amount: "$19.99", originalAmount: "$34.99", popular: true, checkoutUrl: "https://buy.stripe.com/14A28t0iPbB94nlgGLcs80u" },
+      { duration: "1 month", amount: "$39.99", originalAmount: "$69.99", checkoutUrl: "https://buy.stripe.com/bJe5kF9Tp0Wvg63eyDcs80v" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/7sY8wR7Lh5cL4nl1LRcs80w" },
+    ],
+    rating: 5.0,
+    totalReviews: 1892,
+    color: "from-red-600 to-red-900",
+    specifications: [
+      { label: "Compatibility", value: "PC" },
+      { label: "Last Updated", value: "28/12/2024" },
+      { label: "Status", value: "UNDETECTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with smooth aim",
+      "ESP & Wallhack",
+      "No recoil",
+      "Triggerbot",
+      "Radar hack",
+      "Agent ESP",
+      "Instant delivery",
+      "24/7 support",
+    ],
+  },
+  {
+    id: "apex-legends",
+    name: "APEX LEGENDS",
+    game: "Apex Legends",
+    image: "/images/category-apex.webp",
+    prices: [
+      { duration: "1 day", amount: "$8.99", originalAmount: "$17.99", checkoutUrl: "https://buy.stripe.com/eVqcN7c1xcFd5rp2PVcs804" },
+      { duration: "3 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/14A00l1mTfRpcTR2PVcs805" },
+      { duration: "1 week", amount: "$17.99", originalAmount: "$34.99", popular: true, checkoutUrl: "https://buy.stripe.com/9B67sN1mT0Wv2fdduzcs807" },
+      { duration: "1 month", amount: "$22.99", originalAmount: "$44.99", checkoutUrl: "https://buy.stripe.com/dRm14p0iPfRp7zx2PVcs808" },
+      { duration: "lifetime", amount: "$47.99", originalAmount: "$99.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/5kQcN7fdJ9t17zx1LRcs809" },
+    ],
+    rating: 5.0,
+    totalReviews: 1543,
+    color: "from-red-600 to-orange-900",
+    specifications: [
+      { label: "Compatibility", value: "PC" },
+      { label: "Last Updated", value: "28/12/2024" },
+      { label: "Status", value: "UNDETECTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with smooth aim",
+      "ESP & Wallhack",
+      "No recoil",
+      "Triggerbot",
+      "Item ESP",
+      "Radar hack",
+      "Instant delivery",
+      "24/7 support",
+    ],
+  },
+  {
+    id: "rust",
+    name: "RUST",
+    game: "Rust",
+    image: "/images/category-cs2.webp",
+    prices: [
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/cNidRbd5B8oXg63bmrcs80x" },
+      { duration: "1 week", amount: "$27.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://buy.stripe.com/5kQ6oJd5BgVt8DBaincs80y" },
+      { duration: "1 month", amount: "$54.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/cNifZjc1x8oXg630HNcs80z" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$199.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/bJe8wR2qX34D9HF9ejcs80A" },
+    ],
+    rating: 5.0,
+    totalReviews: 1654,
+    color: "from-orange-600 to-orange-900",
+    specifications: [
+      { label: "Compatibility", value: "PC" },
+      { label: "Last Updated", value: "28/12/2024" },
+      { label: "Status", value: "UNDETECTED" },
+      { label: "Windows 10/11", value: "SUPPORTED" },
+    ],
+    features: [
+      "Aimbot with prediction",
+      "ESP & Wallhack",
+      "No recoil",
+      "Player ESP with health",
+      "Item ESP",
+      "Radar hack",
+      "Instant delivery",
+      "24/7 support",
+    ],
+  },
 ]
 
 const relatedProducts = [
@@ -309,16 +398,16 @@ const relatedProducts = [
     id: "fortnite",
     title: "Fortnite Cheats",
     game: "Fortnite",
-    image: "/images/fortnite-extra.png",
+    image: "/images/category-fortnite.webp",
     price: "$7.99",
     badge: "Undetected",
   },
   {
-    id: "arc-raiders",
-    title: "Arc Raiders Cheats",
-    game: "Arc Raiders",
-    image: "/images/arc-raiders-extra.png",
-    price: "$7.99",
+    id: "call-of-duty",
+    title: "Call of Duty Cheats",
+    game: "Call of Duty",
+    image: "/images/category-arc-raiders.webp",
+    price: "$11.99",
     badge: "Undetected",
   },
 ]
@@ -330,6 +419,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
   const { id } = use(params)
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
+  
   const [showVariantModal, setShowVariantModal] = useState(false)
   const [selectedVariant, setSelectedVariant] = useState<string | null>(null)
 
@@ -841,68 +931,8 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 {/* Buy Button */}
                 <Button
                   onClick={() => {
-                    // Komerza checkout for Fortnite
-                    if (actualId === "fortnite") {
-                      const fortniteVariantIds = [
-                        "7e190992-46cd-46ac-9f1b-24dae4b336db", // 1 day
-                        "eb93e757-7de5-4ff3-93fe-5e7eeaf79237", // 3 day
-                        "da5547c4-3c94-4eb8-a3ac-f759eebc5446", // 7 day
-                        "f08b1b6a-2cb2-425c-bdd2-9e06e902d9fa", // 30 day
-                        "40453698-ed85-452a-a0c2-2f47de8112a3", // lifetime
-                      ]
-                      
-                      const productId = "db2a39b2-bad1-45d6-b6c1-b46247a40689"
-                      const variantId = fortniteVariantIds[selectedPlan]
-                      
-                      console.log("[v0] Komerza checkout attempt:", { productId, variantId, selectedPlan })
-                      console.log("[v0] window.Komerza available:", typeof window !== "undefined" && !!(window as any).Komerza)
-                      
-                      // @ts-ignore - Komerza is loaded via external script
-                      if (typeof window !== "undefined" && (window as any).Komerza) {
-                        try {
-                          console.log("[v0] Calling Komerza.open with:", { productId, variantId, theme: "dark" })
-                          // @ts-ignore
-                          ;(window as any).Komerza.open({
-                            productId,
-                            variantId,
-                            theme: "dark",
-                          })
-                        } catch (err) {
-                          console.error("[v0] Komerza.open error:", err)
-                        }
-                      } else {
-                        console.error("[v0] Komerza not loaded - script may not have loaded yet")
-                      }
-                      return
-                    }
-                    
-                    // Stripe checkout URLs for each product
+                    // Stripe checkout URLs for HWID spoofer variants only
                     const stripeUrls: Record<string, string[]> = {
-                      "apex-legends": [
-                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 1 day
-                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 3 day
-                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 7 day
-                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // 30 day
-                        "https://kibacheats.mykomerza.com/product?id=21ccd3fa-5d24-46c7-a6ed-c85f67baf47d", // lifetime
-                      ],
-                      "arc-raiders": [
-                        "https://9z17ha-aq.myshopify.com/products/arc-rd-kiba-copy?variant=54000657334612", // 1 day (shopify)
-                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 week
-                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // 1 month
-                        "https://kibacheats.mykomerza.com/product?id=arc-raiders", // lifetime
-                      ],
-                      "call-of-duty": [
-                        "https://kibacheats.mykomerza.com/product?id=cod", // 1 day
-                        "https://kibacheats.mykomerza.com/product?id=cod", // 1 week
-                        "https://kibacheats.mykomerza.com/product?id=cod", // 1 month
-                        "https://kibacheats.mykomerza.com/product?id=cod", // lifetime
-                      ],
-                      "rainbow-six-siege": [
-                        "https://kibacheats.mykomerza.com/product?id=r6s", // 1 day
-                        "https://kibacheats.mykomerza.com/product?id=r6s", // 1 week
-                        "https://kibacheats.mykomerza.com/product?id=r6s", // 1 month
-                        "https://kibacheats.mykomerza.com/product?id=r6s", // lifetime
-                      ],
                       "hwid-spoofer-perm": [
                         "https://kibacheats.mykomerza.com/product?id=perm", // onetime
                         "https://kibacheats.mykomerza.com/product?id=perm", // lifetime
@@ -915,29 +945,46 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                       ],
                     }
                     
-                    // Handle HWID spoofer with variants
-                    let checkoutKey = actualId
-                    if (actualId === "hwid-spoofer" && selectedVariant) {
-                      checkoutKey = `hwid-spoofer-${selectedVariant}`
+                    // First check if product price has checkoutUrl
+                    const selectedPrice = product.prices[selectedPlan] as { checkoutUrl?: string }
+                    if (selectedPrice?.checkoutUrl) {
+                      window.open(selectedPrice.checkoutUrl, "_blank")
+                      return
                     }
                     
-                    const checkoutUrls = stripeUrls[checkoutKey]
-                    if (checkoutUrls && checkoutUrls[selectedPlan]) {
-                      const url = checkoutUrls[selectedPlan]
-                      if (url.includes("myshopify.com")) {
-                        setShopifyUrl(url)
-                      } else {
-                        window.open(url, "_blank")
-                      }
-                    } else if (actualId === "hwid-spoofer" && !selectedVariant) {
+                    // Handle HWID spoofer with variants
+                    if (actualId === "hwid-spoofer" && !selectedVariant) {
                       setShowVariantModal(true)
-                    } else {
-                      setIsCheckoutOpen(true)
+                      return
                     }
+                    
+                    if (actualId === "hwid-spoofer" && selectedVariant) {
+                      const checkoutKey = `hwid-spoofer-${selectedVariant}`
+                      const checkoutUrls = stripeUrls[checkoutKey]
+                      if (checkoutUrls && checkoutUrls[selectedPlan]) {
+                        window.open(checkoutUrls[selectedPlan], "_blank")
+                        return
+                      }
+                    }
+                    
+                    // Fallback to checkout modal
+                    setIsCheckoutOpen(true)
                   }}
                   className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold py-6 text-lg"
                 >
                   Buy Here
+                </Button>
+
+                {/* Pay with Crypto or PayPal */}
+                <Button
+                  onClick={() => window.open("https://kibacheats.mykomerza.com/products", "_blank")}
+                  variant="outline"
+                  className="w-full border-white/10 bg-transparent hover:bg-white/5 text-white font-bold py-6 text-lg"
+                >
+                  <svg className="w-5 h-5 mr-2 text-[#F7931A]" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.975.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.242-.54 2.19 1.32.327.54-2.17c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z" />
+                  </svg>
+                  Pay with Crypto / PayPal
                 </Button>
 
                 {/* Secure Payment Badge */}

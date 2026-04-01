@@ -37,73 +37,54 @@ export default function Home() {
     },
   ]
 
-  const handleProductClick = (productId: string) => {
-    window.location.href = `/products/${productId}`
-  }
-
-  const products = [
+  const categories = [
     {
       id: "fortnite",
       title: "FORTNITE",
-      game: "Fortnite",
-      image: "/images/fortnite-extra.png",
-      price: "$10.99",
-      rating: 5,
-      color: "from-zinc-500/20 to-zinc-900/20",
-    },
-    {
-      id: "hwid-spoofer",
-      title: "HWID SPOOFER",
-      game: "Universal Spoofer",
-      image: "/images/hwid-spoofer.png",
-      price: "$7.99",
-      rating: 5,
-      color: "from-green-500/20 to-green-900/20",
-    },
-    {
-      id: "arc-raiders",
-      title: "ARC RAIDERS",
-      game: "Arc Raiders",
-      image: "/images/arc-raiders-extra.png",
-      price: "$10.99",
-      rating: 5,
-      color: "from-green-500/20 to-green-900/20",
-    },
-    {
-      id: "apex-legends",
-      title: "APEX LEGENDS",
-      game: "Apex Legends",
-      image: "/images/apex-legends.png",
-      price: "$8.99",
-      rating: 5,
-      color: "from-teal-500/20 to-teal-900/20",
-    },
-    {
-      id: "rainbow-six-siege",
-      title: "RAINBOW SIX SIEGE",
-      game: "Rainbow Six Siege",
-      image: "/images/rainbow-six-siege.webp",
-      price: "$9.99",
-      rating: 5,
-      color: "from-orange-500/20 to-orange-900/20",
+      subtitle: "Premium Cheats",
+      image: "/images/category-fortnite.webp",
     },
     {
       id: "call-of-duty",
       title: "CALL OF DUTY",
-      game: "Call of Duty",
-      image: "/images/cod-extra.png",
-      price: "$11.99",
-      rating: 5,
-      color: "from-zinc-500/20 to-zinc-900/20",
+      subtitle: "Premium Cheats",
+      image: "/images/category-cod.webp",
     },
     {
-      id: "accounts",
-      title: "ACCOUNTS",
-      game: "Accounts",
-      image: "/images/accounts.png",
-      price: "$9.99",
-      rating: 5,
-      color: "from-teal-500/20 to-teal-900/20",
+      id: "arc-raiders",
+      title: "ARC RAIDERS",
+      subtitle: "Premium Cheats",
+      image: "/images/category-arc-raiders-new.webp",
+    },
+    {
+      id: "hwid-spoofer",
+      title: "HWID SPOOFER",
+      subtitle: "Universal Spoofer",
+      image: "/images/category-spoofer.webp",
+    },
+    {
+      id: "rainbow-six",
+      title: "RAINBOW SIX",
+      subtitle: "Premium Cheats",
+      image: "/images/category-r6.webp",
+    },
+    {
+      id: "valorant",
+      title: "VALORANT",
+      subtitle: "Premium Cheats",
+      image: "/images/category-warframe.webp",
+    },
+    {
+      id: "apex-legends",
+      title: "APEX LEGENDS",
+      subtitle: "Premium Cheats",
+      image: "/images/category-apex.webp",
+    },
+    {
+      id: "rust",
+      title: "RUST",
+      subtitle: "Premium Cheats",
+      image: "/images/category-cs2.webp",
     },
   ]
 
@@ -129,25 +110,26 @@ export default function Home() {
           </div>
 
           {/* Content */}
-          <div className="container relative z-10 px-6 md:px-12 py-16">
-            <div className="flex flex-col items-start max-w-2xl">
+          <div className="container relative z-10 px-4">
+            <div className="flex flex-col items-start text-left max-w-4xl mx-auto py-16 md:py-24">
               {/* Badge */}
-              <div className="mb-6 flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
-                <svg className="h-3.5 w-3.5 fill-white" viewBox="0 0 20 20">
-                  <path d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+              <div className="inline-flex items-center gap-2 bg-zinc-900/80 border border-zinc-700 rounded-full px-4 py-2 mb-6">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-xs font-semibold tracking-widest text-white uppercase">KIBACHEATS — #1 Provider</span>
+                <span className="text-sm font-medium text-white tracking-wide">EXTRA SERVICES — #1 PROVIDER</span>
               </div>
 
-              {/* Heading */}
-              <h1 className="mb-4 text-balance">
-                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight">Fastest Safest</span>
-                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400">Gaming Experience</span>
+              {/* Headline */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold italic mb-4">
+                <span className="text-white">Fastest Safest</span>
+                <br />
+                <span className="text-blue-500">Gaming Experience</span>
               </h1>
 
               {/* Subtitle */}
-              <p className="text-base md:text-lg text-zinc-400 max-w-lg leading-relaxed">
-                Top Provider of Undetected Premium Game Cheats – Instant Delivery &amp; 24/7 Support
+              <p className="text-zinc-400 text-base md:text-lg max-w-xl">
+                Top Provider of Undetected Premium Game Cheats – Instant Delivery & 24/7 Support
               </p>
             </div>
           </div>
@@ -188,59 +170,42 @@ export default function Home() {
           <div className="container">
             <div className="mb-12 text-center">
               <div className="mb-4">
-                <h2 className="text-3xl font-bold text-white sm:text-4xl">Featured Products</h2>
-                <Separator className="mt-4 w-16 bg-white" />
+                <h2 className="text-3xl font-bold text-white sm:text-4xl">Browse Categories</h2>
+                <Separator className="mt-4 w-16 bg-white mx-auto" />
               </div>
             </div>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {products.map((product, index) => (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {categories.map((category, index) => (
                 <Link
-                  key={product.id}
-                  href={`/products/${product.id}`}
+                  key={category.id}
+                  href={`/products/${category.id}`}
                   className="animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
                 >
-                  <Card className="overflow-hidden bg-card border-border hover:border-white/50 transition-all duration-500 cursor-pointer group hover-lift hover-border-glow hover:shadow-2xl hover:shadow-white/20">
-                    <div className="relative overflow-hidden">
+                  <Card className="overflow-hidden bg-black border-zinc-800 hover:border-blue-500/50 transition-all duration-500 cursor-pointer group hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2">
+                    <div className="relative overflow-hidden aspect-[3/4]">
                       <Image
-                        src={product.image || "/placeholder.svg"}
-                        alt={`${product.game} product`}
-                        width={1050}
-                        height={1050}
-                        className="object-cover w-full aspect-square transition-transform duration-700 group-hover:scale-115"
+                        src={category.image || "/placeholder.svg"}
+                        alt={`${category.title} category`}
+                        width={800}
+                        height={1000}
+                        className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer transition-opacity duration-300" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                        <span className="inline-flex items-center gap-1 text-sm font-semibold text-black bg-white/90 px-3 py-1.5 rounded-lg backdrop-blur-sm">
-                          View Product
-                          <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-                        </span>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                      <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-2xl font-bold text-white mb-1 transition-all duration-300 group-hover:text-blue-400">
+                          {category.title}
+                        </h3>
+                        <p className="text-sm text-zinc-400 transition-all duration-300 group-hover:text-zinc-300">{category.subtitle}</p>
+                        <div className="mt-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500">
+                          <span className="inline-flex items-center gap-1 text-sm font-semibold text-white">
+                            View Product
+                            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+                          </span>
+                        </div>
                       </div>
                     </div>
-                    <CardContent className="p-6">
-                      <h3 className="mb-2 text-xl font-bold transition-all duration-300 group-hover:text-zinc-300 group-hover:translate-x-1 hover-text-glow">
-                        {product.title}
-                      </h3>
-                      <p className="mb-4 text-sm text-muted-foreground transition-all duration-300 group-hover:text-zinc-300">{product.game}</p>
-                      <div className="mb-4 flex items-center gap-1">
-                        {[...Array(5)].map((_, i) => (
-                          <svg
-                            key={i}
-                            className="h-4 w-4 fill-yellow-400 transition-all duration-300 group-hover:scale-125 group-hover:fill-yellow-300"
-                            viewBox="0 0 20 20"
-                            style={{ transitionDelay: `${i * 80}ms` }}
-                          >
-                            <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                          </svg>
-                        ))}
-                      </div>
-                      <div className="flex items-center justify-between">
-                        <span className="text-xl font-bold text-white transition-all duration-300 group-hover:text-zinc-300 group-hover:scale-110 origin-left">
-                          {product.price}
-                        </span>
-                      </div>
-                    </CardContent>
                   </Card>
                 </Link>
               ))}
