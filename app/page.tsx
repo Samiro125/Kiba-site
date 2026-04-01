@@ -111,14 +111,26 @@ export default function Home() {
 
           {/* Content */}
           <div className="container relative z-10 px-4">
-            <div className="flex flex-col items-center text-center max-w-4xl mx-auto py-12">
-              {/* Logo */}
-              <div className="mb-4">
-                <h1 className="text-6xl md:text-7xl font-bold text-white tracking-tight">EXTRA</h1>
-                <div className="text-sm text-zinc-400 tracking-[0.3em] mt-1">SERVICES</div>
+            <div className="flex flex-col items-start text-left max-w-4xl mx-auto py-16 md:py-24">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-zinc-900/80 border border-zinc-700 rounded-full px-4 py-2 mb-6">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-sm font-medium text-white tracking-wide">EXTRA SERVICES — #1 PROVIDER</span>
               </div>
 
-              
+              {/* Headline */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold italic mb-4">
+                <span className="text-white">Fastest Safest</span>
+                <br />
+                <span className="text-red-500">Gaming Experience</span>
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-zinc-400 text-base md:text-lg max-w-xl">
+                Top Provider of Undetected Premium Game Cheats – Instant Delivery & 24/7 Support
+              </p>
             </div>
           </div>
         </section>
