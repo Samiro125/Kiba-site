@@ -931,43 +931,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 {/* Buy Button */}
                 <Button
                   onClick={() => {
-                    // Stripe checkout URLs for HWID spoofer variants only
-                    const stripeUrls: Record<string, string[]> = {
-                      "hwid-spoofer-perm": [
-                        "https://kibacheats.mykomerza.com/product?id=perm", // onetime
-                        "https://kibacheats.mykomerza.com/product?id=perm", // lifetime
-                      ],
-                      "hwid-spoofer-temp": [
-                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 day
-                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 week
-                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 month
-                        "https://kibacheats.mykomerza.com/product?id=temp", // lifetime
-                      ],
-                    }
-                    
-                    // First check if product price has checkoutUrl
-                    const selectedPrice = product.prices[selectedPlan] as { checkoutUrl?: string }
-                    if (selectedPrice?.checkoutUrl) {
-                      window.open(selectedPrice.checkoutUrl, "_blank")
-                      return
-                    }
-                    
-                    // Handle HWID spoofer with variants
+                    // Handle HWID spoofer with variants - must select variant first
                     if (actualId === "hwid-spoofer" && !selectedVariant) {
                       setShowVariantModal(true)
                       return
                     }
                     
-                    if (actualId === "hwid-spoofer" && selectedVariant) {
-                      const checkoutKey = `hwid-spoofer-${selectedVariant}`
-                      const checkoutUrls = stripeUrls[checkoutKey]
-                      if (checkoutUrls && checkoutUrls[selectedPlan]) {
-                        window.open(checkoutUrls[selectedPlan], "_blank")
-                        return
-                      }
-                    }
-                    
-                    // Fallback to checkout modal
+                    // Always show checkout modal for all products
                     setIsCheckoutOpen(true)
                   }}
                   className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold py-6 text-lg"
@@ -1083,7 +1053,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         planName={currentPrices[selectedPlan]?.duration || ""}
         price={currentPrices[selectedPlan]?.amount || "$0"}
         checkoutUrl={
-          actualId === "fortnite"
+          // First check if the selected price has a checkoutUrl
+          (currentPrices[selectedPlan] as { checkoutUrl?: string })?.checkoutUrl ||
+          // Fallback to product-specific URLs
+          (actualId === "fortnite"
             ? "https://kibacheats.mykomerza.com/product?id=fortnitech"
             : actualId === "arc-raiders"
               ? "https://kibacheats.mykomerza.com/product?id=arc-raiders"
@@ -1102,8 +1075,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     : actualId === "hwid-spoofer" && selectedVariant === "temp"
                       ? "https://kibacheats.mykomerza.com/product?id=temp"
                       : actualId === "accounts"
-                        ? "https://storrik.com" // Accounts use Storrik modal
-                        : "https://kibacheats.mykomerza.com"
+                        ? "https://storrik.com"
+                        : "https://kibacheats.mykomerza.com")
         }
       />
 
