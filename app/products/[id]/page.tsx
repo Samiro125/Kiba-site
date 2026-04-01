@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, use } from "react"
+import { useEffect, useState } from "react"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -16,13 +16,13 @@ const products = [
     id: "fortnite",
     name: "FORTNITE CHEAT",
     game: "Fortnite",
-    image: "/images/fortnite-extra.png",
+    image: "/images/fortnite-product.png",
     prices: [
-      { duration: "1 day", amount: "$10.99", originalAmount: "$19.99" },
-      { duration: "3 day", amount: "$17.99", originalAmount: "$29.99" },
-      { duration: "7 day", amount: "$27.99", originalAmount: "$49.99", popular: true },
-      { duration: "30 day", amount: "$59.99", originalAmount: "$99.99" },
-      { duration: "lifetime", amount: "$249.99", originalAmount: "$399.99", popular: true, bestValue: true },
+      { duration: "1 day", amount: "$10.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/8x27sN3v1fRpg633TZcs80D" },
+      { duration: "3 day", amount: "$17.99", originalAmount: "$29.99", checkoutUrl: "https://buy.stripe.com/fZu14p2qX9t1075duzcs80E" },
+      { duration: "7 day", amount: "$27.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://buy.stripe.com/fZu28tfdJ34D6vt4Y3cs80F" },
+      { duration: "30 day", amount: "$59.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/9B65kF5D9bB95rp8afcs80G" },
+      { duration: "lifetime", amount: "$249.99", originalAmount: "$399.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/8x214p5D9fRp6vt76bcs80H" },
     ],
     rating: 5,
     totalReviews: 1248,
@@ -47,7 +47,7 @@ const products = [
     id: "call-of-duty",
     name: "CALL OF DUTY CHEAT",
     game: "Call of Duty",
-    image: "/images/cod-extra.png",
+    image: "/images/cod-product.png",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/8x200lghN5cLg63duzcs80h" },
       { duration: "1 week", amount: "$17.99", originalAmount: "$31.99", popular: true, checkoutUrl: "https://buy.stripe.com/7sY8wR9TpfRp7zxduzcs80i" },
@@ -77,7 +77,7 @@ const products = [
     id: "arc-raiders",
     name: "ARC RAIDERS CHEAT",
     game: "Arc Raiders",
-    image: "/images/category-arc-raiders-new.webp",
+    image: "/images/arc-raiders-product.png",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/7sY6oJd5B9t17zx8afcs80a" },
       { duration: "1 week", amount: "$21.99", originalAmount: "$39.99", popular: true, checkoutUrl: "https://buy.stripe.com/cNi6oJ2qX5cLg63bmrcs80m" },
@@ -113,37 +113,6 @@ const products = [
     ],
   },
   {
-    id: "apex-legends",
-    name: "APEX LEGENDS CHEAT",
-    game: "Apex Legends",
-    image: "/images/apex-legends.png",
-    prices: [
-      { duration: "1 day", amount: "$8.99", originalAmount: "$14.99" },
-      { duration: "3 day", amount: "$14.99", originalAmount: "$24.99", popular: true },
-      { duration: "7 day", amount: "$19.99", originalAmount: "$34.99" },
-      { duration: "30 day", amount: "$24.99", originalAmount: "$44.99" },
-      { duration: "lifetime", amount: "$49.99", originalAmount: "$99.99", bestValue: true },
-    ],
-    rating: 5.0,
-    totalReviews: 842,
-    color: "from-teal-600 to-teal-900",
-    specifications: [
-      { label: "Gameplay Modes", value: "AVAILABLE" },
-      { label: "Anti-Cheat System", value: "EAC" },
-      { label: "Intel & AMD CPU's", value: "SUPPORTED" },
-      { label: "Windows 10/11", value: "SUPPORTED" },
-    ],
-    features: [
-      "Aimbot with customizable FOV and smoothing",
-      "ESP for players, loot and distances",
-      "No recoil and no spread",
-      "Radar with enemy positions",
-      "Visibility check",
-      "Customizable hotkeys",
-      "Instant delivery and 24/7 support",
-    ],
-  },
-  {
     id: "fivem",
     name: "FIVEM CHEAT",
     game: "FiveM / GTA V",
@@ -176,7 +145,7 @@ const products = [
     id: "hwid-spoofer",
     name: "HWID SPOOFER",
     game: "Universal",
-    image: "/images/hwid-spoofer.png",
+    image: "/images/hwid-product.png",
     hasVariants: true,
     variants: [
       {
@@ -269,7 +238,7 @@ const products = [
     id: "rainbow-six",
     name: "RAINBOW SIX",
     game: "Rainbow Six Siege",
-    image: "/images/category-r6.webp",
+    image: "/images/rainbow-six-product.png",
     prices: [
       { duration: "1 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNi5kF5D90Wv1b9duzcs80p" },
       { duration: "1 week", amount: "$24.99", originalAmount: "$44.99", popular: true, checkoutUrl: "https://buy.stripe.com/4gM4gBe9F48HaLJeyDcs80q" },
@@ -332,7 +301,7 @@ const products = [
     id: "apex-legends",
     name: "APEX LEGENDS",
     game: "Apex Legends",
-    image: "/images/category-apex.webp",
+    image: "/images/apex-product.png",
     prices: [
       { duration: "1 day", amount: "$8.99", originalAmount: "$17.99", checkoutUrl: "https://buy.stripe.com/eVqcN7c1xcFd5rp2PVcs804" },
       { duration: "3 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/14A00l1mTfRpcTR2PVcs805" },
@@ -415,8 +384,8 @@ const relatedProducts = [
 const productIdMap: Record<string, string> = {
 }
 
-export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export default function ProductPage({ params }: { params: { id: string } }) {
+  const { id } = params
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
   
@@ -931,43 +900,13 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 {/* Buy Button */}
                 <Button
                   onClick={() => {
-                    // Stripe checkout URLs for HWID spoofer variants only
-                    const stripeUrls: Record<string, string[]> = {
-                      "hwid-spoofer-perm": [
-                        "https://kibacheats.mykomerza.com/product?id=perm", // onetime
-                        "https://kibacheats.mykomerza.com/product?id=perm", // lifetime
-                      ],
-                      "hwid-spoofer-temp": [
-                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 day
-                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 week
-                        "https://kibacheats.mykomerza.com/product?id=temp", // 1 month
-                        "https://kibacheats.mykomerza.com/product?id=temp", // lifetime
-                      ],
-                    }
-                    
-                    // First check if product price has checkoutUrl
-                    const selectedPrice = product.prices[selectedPlan] as { checkoutUrl?: string }
-                    if (selectedPrice?.checkoutUrl) {
-                      window.open(selectedPrice.checkoutUrl, "_blank")
-                      return
-                    }
-                    
-                    // Handle HWID spoofer with variants
+                    // Handle HWID spoofer with variants - must select variant first
                     if (actualId === "hwid-spoofer" && !selectedVariant) {
                       setShowVariantModal(true)
                       return
                     }
                     
-                    if (actualId === "hwid-spoofer" && selectedVariant) {
-                      const checkoutKey = `hwid-spoofer-${selectedVariant}`
-                      const checkoutUrls = stripeUrls[checkoutKey]
-                      if (checkoutUrls && checkoutUrls[selectedPlan]) {
-                        window.open(checkoutUrls[selectedPlan], "_blank")
-                        return
-                      }
-                    }
-                    
-                    // Fallback to checkout modal
+                    // Always show checkout modal for all products
                     setIsCheckoutOpen(true)
                   }}
                   className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white font-bold py-6 text-lg"
@@ -1083,7 +1022,10 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
         planName={currentPrices[selectedPlan]?.duration || ""}
         price={currentPrices[selectedPlan]?.amount || "$0"}
         checkoutUrl={
-          actualId === "fortnite"
+          // First check if the selected price has a checkoutUrl
+          (currentPrices[selectedPlan] as { checkoutUrl?: string })?.checkoutUrl ||
+          // Fallback to product-specific URLs
+          (actualId === "fortnite"
             ? "https://kibacheats.mykomerza.com/product?id=fortnitech"
             : actualId === "arc-raiders"
               ? "https://kibacheats.mykomerza.com/product?id=arc-raiders"
@@ -1102,8 +1044,8 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                     : actualId === "hwid-spoofer" && selectedVariant === "temp"
                       ? "https://kibacheats.mykomerza.com/product?id=temp"
                       : actualId === "accounts"
-                        ? "https://storrik.com" // Accounts use Storrik modal
-                        : "https://kibacheats.mykomerza.com"
+                        ? "https://storrik.com"
+                        : "https://kibacheats.mykomerza.com")
         }
       />
 
