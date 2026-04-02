@@ -269,7 +269,7 @@ const products = [
     id: "valorant",
     name: "VALORANT",
     game: "Valorant",
-    image: "/images/valorant-kiba.png",
+    image: "/images/category-warframe.webp",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/5kQcN78Pl6gP075aincs80t" },
       { duration: "3 day", amount: "$14.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/cNibJ39Tp48HbPNduzcs80C" },
@@ -301,7 +301,7 @@ const products = [
     id: "apex-legends",
     name: "APEX LEGENDS",
     game: "Apex Legends",
-    image: "/images/apex-kiba.png",
+    image: "/images/apex-product.png",
     prices: [
       { duration: "1 day", amount: "$8.99", originalAmount: "$17.99", checkoutUrl: "https://buy.stripe.com/eVqcN7c1xcFd5rp2PVcs804" },
       { duration: "3 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/14A00l1mTfRpcTR2PVcs805" },
@@ -333,7 +333,7 @@ const products = [
     id: "rust",
     name: "RUST",
     game: "Rust",
-    image: "/images/rust-kiba.png",
+    image: "/images/category-cs2.webp",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/cNidRbd5B8oXg63bmrcs80x" },
       { duration: "1 week", amount: "$27.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://buy.stripe.com/5kQ6oJd5BgVt8DBaincs80y" },

@@ -72,19 +72,19 @@ export default function Home() {
       id: "valorant",
       title: "VALORANT",
       subtitle: "Premium Cheats",
-      image: "/images/valorant-kiba.png",
+      image: "/images/category-warframe.webp",
     },
     {
       id: "apex-legends",
       title: "APEX LEGENDS",
       subtitle: "Premium Cheats",
-      image: "/images/apex-kiba.png",
+      image: "/images/category-apex.webp",
     },
     {
       id: "rust",
       title: "RUST",
       subtitle: "Premium Cheats",
-      image: "/images/rust-kiba.png",
+      image: "/images/category-cs2.webp",
     },
   ]
 
