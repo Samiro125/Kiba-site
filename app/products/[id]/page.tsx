@@ -382,7 +382,8 @@ const relatedProducts = [
 ]
 
 const productIdMap: Record<string, string> = {
-}
+    "rainbow-six-siege": "rainbow-six",
+  }
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const { id } = params
