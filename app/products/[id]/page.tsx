@@ -158,7 +158,7 @@ const products = [
         startingPrice: "$24.99",
         prices: [
           { duration: "one-time", amount: "$24.99", originalAmount: "$39.99", checkoutUrl: "https://buy.stripe.com/4gM8wIf6w4Q9bLWg6De3e07" },
-          { duration: "lifetime", amount: "$79.99", originalAmount: "$129.99", checkoutUrl: "https://buy.stripe.com/5kQ14g0bC5UddU4aMje3e08" },
+          { duration: "lifetime", amount: "$59.99", originalAmount: "$129.99", checkoutUrl: "https://buy.stripe.com/5kQ14g0bC5UddU4aMje3e08" },
         ],
       },
       {
