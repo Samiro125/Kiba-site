@@ -157,8 +157,8 @@ const products = [
         description: "Permanent HWID changes that persist after reboot",
         startingPrice: "$24.99",
         prices: [
-          { duration: "one-time", amount: "$24.99", originalAmount: "$39.99" },
-          { duration: "lifetime", amount: "$79.99", originalAmount: "$129.99" },
+          { duration: "one-time", amount: "$24.99", originalAmount: "$39.99", checkoutUrl: "https://buy.stripe.com/4gM8wIf6w4Q9bLWg6De3e07" },
+          { duration: "lifetime", amount: "$59.99", originalAmount: "$129.99", checkoutUrl: "https://buy.stripe.com/5kQ14g0bC5UddU4aMje3e08" },
         ],
       },
       {
@@ -170,10 +170,10 @@ const products = [
         description: "Session-based spoofing, resets on reboot",
         startingPrice: "$7.99",
         prices: [
-          { duration: "3 day", amount: "$7.99", originalAmount: "$12.99" },
-          { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
-          { duration: "1 month", amount: "$19.99", originalAmount: "$29.99" },
-          { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99" },
+          { duration: "3 day", amount: "$7.99", originalAmount: "$12.99", checkoutUrl: "https://buy.stripe.com/dRm6oA1fG6Yh5nycUre3e03" },
+          { duration: "1 week", amount: "$11.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/6oU9AM2jKdmF17i6w3e3e04" },
+          { duration: "1 month", amount: "$19.99", originalAmount: "$29.99", checkoutUrl: "https://buy.stripe.com/bJebIU0bC82l03e3jRe3e05" },
+          { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99", checkoutUrl: "https://buy.stripe.com/8x25kw1fG4Q9aHS2fNe3e06" },
         ],
       },
     ],
@@ -1043,7 +1043,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   : actualId === "hwid-spoofer" && selectedVariant === "perm"
                     ? "https://kibacheats.mykomerza.com/product?id=perm"
                     : actualId === "hwid-spoofer" && selectedVariant === "temp"
-                      ? "https://kibacheats.mykomerza.com/product?id=temp"
+                      ? "https://kibacheats.mykomerza.com/product?id=temp" // fallback for 3 day only
                       : actualId === "accounts"
                         ? "https://storrik.com"
                         : "https://kibacheats.mykomerza.com")
