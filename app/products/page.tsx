@@ -73,15 +73,6 @@ const products = [
     category: "Game Cheat",
   },
   {
-    id: "rainbow-six-siege",
-    title: "RAINBOW SIX SIEGE",
-    game: "Rainbow Six Siege",
-    image: "/images/rainbow-six-siege.webp",
-    price: "$9.99",
-    rating: 5,
-    category: "Game Cheat",
-  },
-  {
     id: "fivem",
     title: "FIVEM",
     game: "FiveM / GTA V",
