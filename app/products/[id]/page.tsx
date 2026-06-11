@@ -301,7 +301,7 @@ const products = [
     id: "apex-legends",
     name: "APEX LEGENDS",
     game: "Apex Legends",
-    image: "/images/apex-product.png",
+    image: "/images/apex-new.png",
     prices: [
       { duration: "1 day", amount: "$9.99", originalAmount: "$17.99", checkoutUrl: "https://buy.stripe.com/eVqcN7c1xcFd5rp2PVcs804" },
       { duration: "3 day", amount: "$12.99", originalAmount: "$24.99", checkoutUrl: "https://buy.stripe.com/14A00l1mTfRpcTR2PVcs805" },
