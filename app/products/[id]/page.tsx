@@ -170,10 +170,10 @@ const products = [
         description: "Session-based spoofing, resets on reboot",
         startingPrice: "$7.99",
         prices: [
-          { duration: "3 day", amount: "$7.99", originalAmount: "$12.99" },
-          { duration: "1 week", amount: "$11.99", originalAmount: "$19.99" },
-          { duration: "1 month", amount: "$19.99", originalAmount: "$29.99" },
-          { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99" },
+          { duration: "3 day", amount: "$7.99", originalAmount: "$12.99", checkoutUrl: "https://buy.stripe.com/dRm6oA1fG6Yh5nycUre3e03" },
+          { duration: "1 week", amount: "$11.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/cNieVdcUC4exgsT4m48so0A" },
+          { duration: "1 month", amount: "$19.99", originalAmount: "$29.99", checkoutUrl: "https://buy.stripe.com/cNiaEXbQy3at90r2dW8so0B" },
+          { duration: "lifetime", amount: "$39.99", originalAmount: "$54.99", checkoutUrl: "https://buy.stripe.com/8x29AT2fY8uN1xZaKs8so0C" },
         ],
       },
     ],
@@ -1043,7 +1043,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   : actualId === "hwid-spoofer" && selectedVariant === "perm"
                     ? "https://kibacheats.mykomerza.com/product?id=perm"
                     : actualId === "hwid-spoofer" && selectedVariant === "temp"
-                      ? "https://kibacheats.mykomerza.com/product?id=temp"
+                      ? "https://kibacheats.mykomerza.com/product?id=temp" // fallback for 3 day only
                       : actualId === "accounts"
                         ? "https://storrik.com"
                         : "https://kibacheats.mykomerza.com")
