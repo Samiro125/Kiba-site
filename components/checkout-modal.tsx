@@ -25,7 +25,7 @@ export function CheckoutModal({ isOpen, onClose, productName, planName, price, c
       "popup,width=500,height=850,resizable=yes,scrollbars=yes",
     )
 
-    if (checkoutWindow) {
+    if (checkoutWindow && !checkoutWindow.closed) {
       checkoutWindow.focus()
     }
 
