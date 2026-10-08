@@ -21,6 +21,7 @@ const products = [
       { duration: "3 day", amount: "$17.99", originalAmount: "$29.99", checkoutUrl: "https://vtdfcr-qt.myshopify.com/checkouts/cn/hWNHjq277xJv9XLd01UcKcHG/en-lu?_r=AQABVp9mxu-s4dgZs3G6c-LtzDx5zoRoEmyKZJwTQz-yB4iX-x5Q&preview_theme_id=207605924177&skip_shop_pay=true" },
       { duration: "7 day", amount: "$21.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://vtdfcr-qt.myshopify.com/checkouts/cn/hWNHjq4KovlBVfI4IAry1ia6/en-lu?_r=AQABBXeuYeS4jKf53DiCSUEvTzdAiWoLvu0QAv4NL1KQX9eLRwkF&preview_theme_id=207605924177&skip_shop_pay=true" },
       { duration: "1 month", amount: "$57.99", originalAmount: "$99.99", bestValue: true, checkoutUrl: "https://vtdfcr-qt.myshopify.com/checkouts/cn/hWNHjq5s8R6aw51n35kAQCGc/en-lu?_r=AQABv58wed4zYKxkzccYctezprkTmoqQudIzYlbPHONdR2E9ksQd&preview_theme_id=207605924177&skip_shop_pay=true" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$249.99", checkoutUrl: "https://vtdfcr-qt.myshopify.com/checkouts/cn/hWNHjqOTpeMHPY7XmJBAbGOU/en-lu?_r=AQABYyFG3H-j_yF93Dh_Rm3GsLrJ1ZkHAWAZi69sSYnTbgMjcIWR&preview_theme_id=207605924177&skip_shop_pay=true" },
     ],
     rating: 5,
     totalReviews: 1248,
