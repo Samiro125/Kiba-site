@@ -18,7 +18,7 @@ const products = [
     game: "Fortnite",
     image: "/images/fortnite-product.png",
     prices: [
-      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://buy.stripe.com/cNieV64rSdmFaHS5rZe3e09" },
+      { duration: "1 day", amount: "$9.99", originalAmount: "$19.99", checkoutUrl: "https://vtdfcr-qt.myshopify.com/products/rust/?variant=55182110097745" },
       { duration: "3 day", amount: "$17.99", originalAmount: "$29.99", checkoutUrl: "https://buy.stripe.com/cNicMY8I83M57vGf2ze3e0d" },
       { duration: "7 day", amount: "$21.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://buy.stripe.com/14AfZa4rS2I18zK9Ife3e0a" },
       { duration: "30 day", amount: "$57.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/aFadR20bC5Ud6rC4nVe3e0b" },
