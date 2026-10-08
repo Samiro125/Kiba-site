@@ -22,7 +22,7 @@ const products = [
       { duration: "3 day", amount: "$17.99", originalAmount: "$29.99", checkoutUrl: "https://buy.stripe.com/cNicMY8I83M57vGf2ze3e0d" },
       { duration: "7 day", amount: "$21.99", originalAmount: "$49.99", popular: true, checkoutUrl: "https://buy.stripe.com/14AfZa4rS2I18zK9Ife3e0a" },
       { duration: "30 day", amount: "$57.99", originalAmount: "$99.99", checkoutUrl: "https://buy.stripe.com/aFadR20bC5Ud6rC4nVe3e0b" },
-      { duration: "lifetime", amount: "$119.99", originalAmount: "$399.99", popular: true, bestValue: true, checkoutUrl: "https://buy.stripe.com/cNi9AMgaA6Yh5ny7A7e3e0c" },
+      { duration: "lifetime", amount: "$119.99", originalAmount: "$399.99", popular: true, bestValue: true, checkoutUrl: "https://vtdfcr-qt.myshopify.com/checkouts/cn/hWNHjpoLcGL2GSHH2x2y2ljq/en-lu?_r=AQAB2g7o4fFlEXsDl8266UmdVJybhtCFWyavaHWExBelEsG3X6fd&preview_theme_id=207605924177&skip_shop_pay=true" },
     ],
     rating: 5,
     totalReviews: 1248,

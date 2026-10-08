@@ -19,7 +19,16 @@ export function CheckoutModal({ isOpen, onClose, productName, planName, price, c
   if (!isOpen) return null
 
   const handleContinue = () => {
-    window.open(checkoutUrl, "_blank", "noopener,noreferrer")
+    const checkoutWindow = window.open(
+      checkoutUrl,
+      "kiba-shopify-checkout",
+      "popup,width=500,height=850,resizable=yes,scrollbars=yes",
+    )
+
+    if (checkoutWindow) {
+      checkoutWindow.focus()
+    }
+
     onClose()
   }
 
