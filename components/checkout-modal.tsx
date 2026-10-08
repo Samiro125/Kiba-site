@@ -15,24 +15,15 @@ interface CheckoutModalProps {
 
 export function CheckoutModal({ isOpen, onClose, productName, planName, price, checkoutUrl }: CheckoutModalProps) {
   const [email, setEmail] = useState("")
-  const [showCheckout, setShowCheckout] = useState(false)
 
   if (!isOpen) return null
 
-  const isShopifyCheckout = checkoutUrl.includes("myshopify.com")
-
   const handleContinue = () => {
-    if (isShopifyCheckout) {
-      setShowCheckout(true)
-      return
-    }
-
     window.open(checkoutUrl, "_blank", "noopener,noreferrer")
     onClose()
   }
 
   const handleClose = () => {
-    setShowCheckout(false)
     onClose()
   }
 
@@ -42,23 +33,16 @@ export function CheckoutModal({ isOpen, onClose, productName, planName, price, c
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={handleClose} />
 
       {/* Modal */}
-      <div className={`relative w-full mx-4 bg-zinc-900 rounded-lg shadow-2xl border border-zinc-800 ${showCheckout ? "max-w-5xl h-[90vh]" : "max-w-md"}`}>
+      <div className="relative w-full max-w-md mx-4 bg-zinc-900 rounded-lg shadow-2xl border border-zinc-800">
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-zinc-800">
-          <h2 className="text-xl font-bold text-white">{showCheckout ? "Shopify Checkout" : "Secure Checkout"}</h2>
+          <h2 className="text-xl font-bold text-white">Secure Checkout</h2>
           <button onClick={handleClose} aria-label="Close checkout" className="text-zinc-400 hover:text-white transition-colors">
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {showCheckout ? (
-          <iframe
-            src={checkoutUrl}
-            title="Shopify checkout"
-            className="h-[calc(90vh-81px)] w-full rounded-b-lg bg-white"
-          />
-        ) : (
-        /* Content */
+        {/* Content */}
         <div className="p-6 space-y-6">
           {/* Payment Details Header */}
           <div className="flex items-center justify-between">
@@ -141,7 +125,6 @@ export function CheckoutModal({ isOpen, onClose, productName, planName, price, c
             <span>Secure payment processing</span>
           </div>
         </div>
-        )}
       </div>
     </div>
   )

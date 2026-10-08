@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 
 import Image from "next/image"
 import Link from "next/link"
@@ -385,8 +385,8 @@ const productIdMap: Record<string, string> = {
     "rainbow-six-siege": "rainbow-six",
   }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const { id } = params
+export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params)
   const [selectedPlan, setSelectedPlan] = useState(0)
   const [showModal, setShowModal] = useState(false)
   
